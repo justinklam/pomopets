@@ -10,6 +10,8 @@ router.post('login', function(req, res) {
   });
   if (user) {
     
+  } else {
+    res.send('Account not found! Please create a new Account')    
   }
 
 });
