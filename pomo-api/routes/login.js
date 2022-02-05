@@ -3,13 +3,15 @@ const { post } = require('.');
 const router = express.Router();
 
 /* GET users listing. */
-router.get('users', function(req, res, next) {
-  // res.send('respond with a resource');
+router.post('login', function(req, res) {
 
-  // const findUsers = User.findAll();
+  const user = User.findOne({
+    where: { email: req.body.email}
+  });
+  if (user) {
+    
+  }
 
 });
-
-router.post()
 
 module.exports = router;
