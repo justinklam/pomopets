@@ -1,1 +1,8 @@
-{}
+{
+  "devDependencies": {
+    "sequelize-cli": "^6.4.1"
+  },
+  "dependencies": {
+    "npx": "^10.2.2"
+  }
+}
