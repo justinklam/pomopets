@@ -1,17 +1,14 @@
 const express = require('express');
-const { post } = require('.');
 const router = express.Router();
+const bcrypt = require('bcrypt');
 
-/* GET users listing. */
 router.post('login', function(req, res) {
 
   const user = User.findOne({
     where: { email: req.body.email}
   });
-  if (user) {
-    
-  } else {
-    res.send('Account not found! Please create a new Account')    
+  if (!user || bcrypt.compareSync(password, user.password)) {
+    res.send('Account Credentials are incorrect!')    
   }
 
 });
