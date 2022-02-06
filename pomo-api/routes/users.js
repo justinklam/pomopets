@@ -15,12 +15,14 @@ router.get('/', function(req, res) {
 
 });
 
-router.post('/register', function(req, res) {
+router.post('/register', async function(req, res) {
   const email = req.body.email;
   const password = req.body.password;
-  const userID = User.findOne({
+  const userID = await User.findOne({
     where: { email: req.body.email}
   });
+
+  console.log('userID----->', userID);
 
   if (!email || !password) {
     return res.status(400).send("Error - A field is empty!");
@@ -30,27 +32,29 @@ router.post('/register', function(req, res) {
       return res.status(400).send("Error - An account with this Email already exists!");
   }
 
-  // Password Hasher
-  const hashedPassword = bcrypt.hashSync(password, 10);
-  // SALT - random string that makes the password unpredictable, 10 is the encryption cost factor/Salt round
+  // Password Hasher, SALT 10
+  // const hashedPassword = bcrypt.hashSync(password, 10);
   
   // sequelize - insert into database
-  const newUser = await User.Create({
-    first_name: req.body.firstName,
-    last_name: req.body.lastName,
-    email: email,
-    password: hashedPassword
+  const newUser = await User.create({
+    id: 3,
+    firstName: req.body.first_name,
+    lastName: req.body.last_name,
+    // first_name: req.body.first_name,
+    // last_name: req.body.last_name,
+    email: email
+    // password: hashedPassword
   });
+
+  // change hard-coded ID from Sequelize return
+  console.log('Sequelize USER----->', newUser);
   
+  res.cookie('user_id', newUser.id, {
+    maxAge: 900000, httpOnly: true
+  });
 
-  // users[ID] = {
-  //   id: ID,
-  //   email: email,
-  //   password: hashedPassword,
-  // };
-  // req.session.userID = (ID);
+  res.send('Successful');
 
-  // res.send({ title: '/users' });
 });
 
 module.exports = router;
