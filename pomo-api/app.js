@@ -49,3 +49,11 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+// const { sequelize } = require('./db/models')
+
+// async function main() {
+//   await sequelize.sync({ force: true })
+// }
+
+// main()

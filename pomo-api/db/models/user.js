@@ -1,5 +1,4 @@
 'use strict';
-import Pets from './pet';
 const {
   Model
 } = require('sequelize');
@@ -11,17 +10,32 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+    
     }
   }
   User.init({
-    firstName: DataTypes.STRING,
-    lastName: DataTypes.STRING,
-    email: DataTypes.STRING
+    first_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    last_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    is_active: DataTypes.BOOLEAN
   }, {
     sequelize,
+    tableName: "users",
     modelName: 'User',
   });
-  User.belongsTo(Pets);
+  // User.belongsToMany(Pet, { through: user_pets });
   return User;
 };
