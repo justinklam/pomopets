@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { User } = require('../db/models');
+const bcrypt = require('bcryptjs');
 
 /* GET users listing. */
 router.get('/', function(req, res) {
@@ -33,17 +34,14 @@ router.post('/register', async function(req, res) {
   }
 
   // Password Hasher, SALT 10
-  // const hashedPassword = bcrypt.hashSync(password, 10);
+  const hashedPassword = bcrypt.hashSync(password, 10);
   
   // sequelize - insert into database
   const newUser = await User.create({
-    id: 3,
-    firstName: req.body.first_name,
-    lastName: req.body.last_name,
-    // first_name: req.body.first_name,
-    // last_name: req.body.last_name,
-    email: email
-    // password: hashedPassword
+    first_name: req.body.first_name,
+    last_name: req.body.last_name,
+    email: email,
+    password: hashedPassword,
   });
 
   // change hard-coded ID from Sequelize return
