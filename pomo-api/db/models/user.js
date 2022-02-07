@@ -10,7 +10,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-    
+      // User.hasMany(models.Timer);
+      // User.belongsToMany(models.Pet, { through: models.users_pets });
     }
   }
   User.init({
@@ -30,12 +31,17 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    is_active: DataTypes.BOOLEAN
+    is_active: {
+      type: DataTypes.BOOLEAN, defaultValue: true
+    }
   }, {
     sequelize,
     tableName: "users",
     modelName: 'User',
   });
-  // User.belongsToMany(Pet, { through: user_pets });
+  User.associate = (models) => {
+    User.hasMany(models.Timer);
+    User.belongsToMany(models.Pet, { through: models.users_pets });
+  }
   return User;
 };
