@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
   
   // console.log("USERS", findUsers);
   
-  res.send({ title: 'Express' });
+  res.send("<h1> Hello World! This is the Express Backend for PomoPets </h1>");
 });
 
 module.exports = router;
