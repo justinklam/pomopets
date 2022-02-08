@@ -4,14 +4,17 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const bcrypt = require('bcryptjs');
 const logger = require('morgan');
-require('dotenv').config()
+require('dotenv').config();
 const { Sequelize } = require('sequelize');
+
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const loginRouter = require('./routes/login');
 const timersRouter = require('./routes/timers');
 const petsRouter = require('./routes/pets');
+const logoutRouter = require('./routes/logout');
+
 
 const app = express();
 
@@ -21,7 +24,7 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USERNAME, pr
 });
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '/public/views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
@@ -34,6 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
+app.use('/logout', logoutRouter);
 app.use('/timers', timersRouter);
 app.use('/pets', petsRouter);
 
