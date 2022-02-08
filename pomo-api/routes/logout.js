@@ -12,10 +12,11 @@ router.get('/', async function(req, res) {
 });
 
 router.post('/', async function(req, res) {
+  
+  res.cookie('user_id', null);
   console.log('cookie-----', req.cookies);
-  // let user = req.cookies.
-  // res.clearCookie();
-  // res.render('logout');
+
+  res.render('logout');
 });
 
 module.exports = router;
