@@ -3,7 +3,8 @@ const router = express.Router();
 const { User } = require('../db/models');
 const bcrypt = require('bcryptjs');
 
-/* GET users listing. */
+// GET users
+    //  /users/
 router.get('/', function(req, res) {
 
   const findUsers = User.findAll();
@@ -16,7 +17,8 @@ router.get('/', function(req, res) {
 
 });
 
-// /users/register
+// POST register
+    // /users/register
 router.post('/register', async function(req, res) {
   const email = req.body.email;
   const password = req.body.password;
