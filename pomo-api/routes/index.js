@@ -4,6 +4,10 @@ const { User } = require('../db/models');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  res.send("<h1> Hello World! This is the Express Backend for PomoPets </h1>");
+});
+
+module.exports = router;
 
   // Test - Find Users
   // const findUsers = User.findAll();
@@ -12,8 +16,3 @@ router.get('/', function(req, res, next) {
   // })
   
   // console.log("USERS", findUsers);
-  
-  res.send("<h1> Hello World! This is the Express Backend for PomoPets </h1>");
-});
-
-module.exports = router;
