@@ -62,10 +62,12 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-// const { sequelize } = require('./db/models')
 
-// async function main() {
-//   await sequelize.sync({ force: true })
-// }
+// this is to sync the db
+    // const { sequelize } = require('./db/models')
 
-// main()
+    // async function main() {
+    //   await sequelize.sync({ force: true })
+    // }
+
+    // main()
