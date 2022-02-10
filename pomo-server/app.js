@@ -6,6 +6,7 @@ const bcrypt = require('bcryptjs');
 const logger = require('morgan');
 require('dotenv').config();
 
+// Routers
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
@@ -21,6 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Use Routers
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
@@ -33,11 +35,14 @@ app.use(function(req, res, next) {
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
+  console.log(err.message);
+
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  // res.render('error');
+  res.send('error');
 });
 
 module.exports = app;
