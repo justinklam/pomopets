@@ -9,3 +9,26 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id Int @default(autoincrement()) @id @unique
+  username String @db.VarChar(255) @unique
+  email String @db.VarChar(255) @unique
+  password String @db.VarChar(255)
+  is_active Boolean @default(true)
+}
+
+model Timer {
+  id Int @default(autoincrement()) @id @unique
+
+}
+
+model Pet {
+  id Int @default(autoincrement()) @id @unique
+
+}
+
+model User_pets {
+  id Int @default(autoincrement()) @id @unique
+
+}
