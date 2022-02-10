@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
+      User.hasMany(models.Timer);
       // User.hasMany(models.Timer);
       // User.belongsToMany(models.Pet, { through: models.users_pets });
     }
