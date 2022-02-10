@@ -2,11 +2,12 @@ import React from "react";
 import axios from "axios";
 import './styles/App.scss';
 
+// components
+import Main from "./components/Main";
+
 function App() {
   return (
-    <h1>
-      PomoPets
-    </h1>
+    <Main title="PomoPets" />
   );
 }
 
