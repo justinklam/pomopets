@@ -20,9 +20,7 @@ model User {
   is_active Boolean @default(true)
 
   timers Timer[]
-
-  user_pet User_pet @relation(fields: [user_pet_id], references: [id])
-  user_pet_id Int
+  user_pets User_pet[]
 }
 
 model Timer {
@@ -50,7 +48,8 @@ model User_pet {
   @@map(name: "user_pets")
   id Int @default(autoincrement()) @id @unique
 
-  user User[]
+  user User @relation(fields: [user_id], references: [id])
+  user_id Int
 
   pet Pet @relation(fields: [pet_id], references: [id])
   pet_id Int
