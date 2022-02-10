@@ -18,6 +18,11 @@ model User {
   email String @db.VarChar(255) @unique
   password String @db.VarChar(255)
   is_active Boolean @default(true)
+
+  timers Timer[]
+
+  user_pet User_pet @relation(fields: [user_pet_id], references: [id])
+  user_pet_id Int
 }
 
 model Timer {
@@ -25,6 +30,11 @@ model Timer {
   id Int @default(autoincrement()) @id @unique
   description String @db.VarChar(255)
   is_active Boolean @default(true)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  user User @relation(fields: [user_id], references: [id])
+  user_id Int
 }
 
 model Pet {
@@ -32,10 +42,16 @@ model Pet {
   id Int @default(autoincrement()) @id @unique
   name String @db.VarChar(255) @unique
   description String @db.VarChar(255)
+
+  user_pets User_pet[]
 }
 
-model User_pets {
+model User_pet {
   @@map(name: "user_pets")
   id Int @default(autoincrement()) @id @unique
 
+  user User[]
+
+  pet Pet @relation(fields: [pet_id], references: [id])
+  pet_id Int
 }
