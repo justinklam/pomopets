@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const { Sequelize } = require('.');
 module.exports = (sequelize, DataTypes) => {
   class Timer extends Model {
     /**
@@ -10,15 +11,26 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
+      Timer.belongsTo(models.User, {foreignKey: 'user_id'});
 
 
       // Timer.belongsTo(models.User, {foreignKey: 'userId'});
     }
   }
   Timer.init({
-    user_id: {
+    id: {
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+      type: DataTypes.INTEGER
+    },
+    UserId: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: "User",
+        key: "id"
+      }
     },
     description: {
       type: DataTypes.TEXT,

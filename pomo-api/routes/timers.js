@@ -2,20 +2,20 @@ const express = require('express');
 const router = express.Router();
 const { User, Timer } = require('../db/models');
 
-
 router.get('/', async function(req, res) {
   res.render('timer');
 });
 
-router.post('/', async function(req, res, next) {
+router.post('/', async function(req, res) {
+  console.log('user.id----', User.id);
 
   const new_timer = await Timer.create({
-    user_id: User.id,
+    UserId: 1,
     description: 'Example',
     is_active: true
   });
 
-  console.log('newTimer-----', new_timer)
+  // console.log('new_timer-----', new_timer)
   
   res.send('Timer created');
 });
