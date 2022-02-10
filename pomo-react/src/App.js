@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import './styles/App.scss';
 
@@ -7,7 +8,13 @@ import Main from "./components/Main";
 
 function App() {
   return (
-    <Main title="PomoPets" />
+    <div>
+      <nav className="navbar">
+        <Link to="/timer">Timers</Link> |{" "}
+        <Link to="/pets">Pets</Link>
+      </nav>
+      <Main title="PomoPets" />
+    </div>
   );
 }
 
