@@ -33,7 +33,7 @@ router.post('/register', async function(req, res) {
   const hashedPassword = bcrypt.hashSync(password, 10);
   
   // prisma - insert into database
-  const newUser = await prisma.user.create({
+  const new_user = await prisma.user.create({
     data: {
       username: req.body.username,
       email: email,
@@ -42,9 +42,9 @@ router.post('/register', async function(req, res) {
   });
 
   // change hard-coded ID from Sequelize return
-  console.log('PRISMA USER----->', newUser);
+  console.log('PRISMA USER----->', new_user);
   
-  res.cookie('user_id', newUser.id, {
+  res.cookie('user_id', new_user.id, {
     maxAge: 900000, httpOnly: true
   });
 

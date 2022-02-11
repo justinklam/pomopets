@@ -8,7 +8,12 @@ router.get('/', async function(req, res) {
 });
 
 router.post('/', async function(req, res) {
-  // console.log('user.id----', User.id);
+
+  const new_timer = await prisma.timer.create({
+    data: {
+      description: 'Example',
+    }
+  });
 
   // const new_timer = await Timer.create({
   //   UserId: 1,
