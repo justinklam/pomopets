@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "nodemon": "nodemon ./bin/www.js localhost 3030",
-    "prisma": "prisma"
+    "nodemon": "nodemon ./bin/www.js localhost 3030"
   },
   "dependencies": {
     "@prisma/client": "^3.9.2",

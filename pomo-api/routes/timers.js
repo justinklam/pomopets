@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-// const { User, Timer } = require('../db/models');
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
 
 router.get('/', async function(req, res) {
   res.render('timer');
