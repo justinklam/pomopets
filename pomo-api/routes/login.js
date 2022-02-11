@@ -11,24 +11,21 @@ router.get('/', async function(req, res) {
 router.post('/', async function(req, res) {
   const email = req.body.email;
   const password = req.body.password;
-
-  // const userID = await User.findOne({
-  //   where: { 
-  //     email: email
-  //   }
-  // });
-  // console.log('user-----', userID)
+  const user = await prisma.user.findUnique({
+    where: { email: req.body.email}
+  });
+  console.log('user-----', user)
 
   if (!email || !password) {
     return res.send('A field is empty!')  
   };
 
-  if (!userID || !bcrypt.compareSync(password, userID.password)) {
+  if (!user || !bcrypt.compareSync(password, user.password)) {
     return res.send('Account Credentials are incorrect!')    
   };
 
   // user_id key, newUser.id is the value of the cookie
-  res.cookie('user_id', User.id, {
+  res.cookie('user_id', user.id, {
     maxAge: 900000, httpOnly: true
   });
   res.send('Successful login');

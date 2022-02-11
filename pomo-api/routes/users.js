@@ -23,17 +23,17 @@ router.get('/', function(req, res) {
 router.post('/register', async function(req, res) {
   const email = req.body.email;
   const password = req.body.password;
-  const userID = await User.findOne({
+  const user = await prisma.user.findUnique({
     where: { email: req.body.email}
   });
 
-  console.log('userID----->', userID);
+  console.log('userID----->', user);
 
   if (!email || !password) {
     return res.status(400).send("Error - A field is empty!");
   }
 
-  if (userID) {
+  if (user) {
       return res.status(400).send("Error - An account with this Email already exists!");
   }
 
@@ -41,10 +41,9 @@ router.post('/register', async function(req, res) {
   const hashedPassword = bcrypt.hashSync(password, 10);
   
   // prisma - insert into database
-  const newUser = await User.create({
+  const newUser = await prisma.user.create({
     data: {
-      first_name: req.body.first_name,
-      last_name: req.body.last_name,
+      username: req.body.username,
       email: email,
       password: hashedPassword
     }
