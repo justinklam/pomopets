@@ -7,15 +7,7 @@ const bcrypt = require('bcryptjs');
 // GET users
     //  /users/
 router.get('/', function(req, res) {
-
-  // const findUsers = User.findAll();
-  // findUsers.then(result => {
-  //   console.log('RESULT', result)
-  // })
-  
-  // console.log("USERS", findUsers);
   res.send({ title: '/users' });
-
 });
 
 // POST register
