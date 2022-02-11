@@ -4,7 +4,7 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 router.get('/', async function(req, res) {
-  res.render('/logout');
+  res.render('logout');
 });
 
 router.post('/', async function(req, res) {
