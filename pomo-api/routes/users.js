@@ -23,9 +23,9 @@ router.get('/', function(req, res) {
 router.post('/register', async function(req, res) {
   const email = req.body.email;
   const password = req.body.password;
-  // const userID = await User.findOne({
-  //   where: { email: req.body.email}
-  // });
+  const userID = await User.findOne({
+    where: { email: req.body.email}
+  });
 
   console.log('userID----->', userID);
 
@@ -40,16 +40,18 @@ router.post('/register', async function(req, res) {
   // Password Hasher, SALT 10
   const hashedPassword = bcrypt.hashSync(password, 10);
   
-  // sequelize - insert into database
-  // const newUser = await User.create({
-  //   first_name: req.body.first_name,
-  //   last_name: req.body.last_name,
-  //   email: email,
-  //   password: hashedPassword,
-  // });
+  // prisma - insert into database
+  const newUser = await User.create({
+    data: {
+      first_name: req.body.first_name,
+      last_name: req.body.last_name,
+      email: email,
+      password: hashedPassword
+    }
+  });
 
   // change hard-coded ID from Sequelize return
-  console.log('Sequelize USER----->', newUser);
+  console.log('PRISMA USER----->', newUser);
   
   res.cookie('user_id', newUser.id, {
     maxAge: 900000, httpOnly: true
