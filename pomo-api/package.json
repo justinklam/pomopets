@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "nodemon": "nodemon ./bin/www.js localhost 3030"
+    "nodemon": "nodemon ./bin/www localhost 3030"
   },
   "dependencies": {
     "@prisma/client": "^3.9.2",
@@ -16,10 +16,10 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "pg": "^8.7.3",
-    "prisma": "^3.0.2"
+    "pg": "^8.7.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "prisma": "^3.9.2"
   }
 }
