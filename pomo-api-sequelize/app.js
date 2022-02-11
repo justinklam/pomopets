@@ -5,12 +5,23 @@ const cookieParser = require('cookie-parser');
 const bcrypt = require('bcryptjs');
 const logger = require('morgan');
 require('dotenv').config();
+const { Sequelize } = require('sequelize');
 
-// Routers
+
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const loginRouter = require('./routes/login');
+const timersRouter = require('./routes/timers');
+const petsRouter = require('./routes/pets');
+const logoutRouter = require('./routes/logout');
+
 
 const app = express();
+
+const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USERNAME, process.env.DB_PASSWORD, {
+  host: 'localhost',
+  dialect: 'postgres'
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, '/public/views'));
@@ -22,9 +33,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Use Routers
+// Routers
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/login', loginRouter);
+app.use('/logout', logoutRouter);
+app.use('/timers', timersRouter);
+app.use('/pets', petsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -46,3 +61,13 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
+// this is to sync the db
+    // const { sequelize } = require('./db/models')
+
+    // async function main() {
+    //   await sequelize.sync({ force: true })
+    // }
+
+    // main()

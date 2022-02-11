@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const bcrypt = require('bcryptjs');
 
 // router.use(function timeLog (req, res, next) {
 //   console.log('Time: ', Date.now())

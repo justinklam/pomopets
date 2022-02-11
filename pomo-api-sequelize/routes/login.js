@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
-// const { User } = require('../db/models');
+const { User } = require('../db/models');
 
 router.get('/', async function(req, res) {
   res.render('login');
@@ -11,12 +11,12 @@ router.post('/', async function(req, res) {
   const email = req.body.email;
   const password = req.body.password;
 
-  // const userID = await User.findOne({
-  //   where: { 
-  //     email: email
-  //   }
-  // });
-  // console.log('user-----', userID)
+  const userID = await User.findOne({
+    where: { 
+      email: email
+    }
+  });
+  console.log('user-----', userID)
 
   if (!email || !password) {
     return res.send('A field is empty!')  
