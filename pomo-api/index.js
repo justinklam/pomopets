@@ -3,7 +3,7 @@ const { PrismaClient } = require('@prisma/client')
 
 const prisma = new PrismaClient()
 
-console.log('prisma-----', prisma);
+// console.log('prisma-----', prisma);
 
 async function main() {
   // ... you will write your Prisma Client queries here
