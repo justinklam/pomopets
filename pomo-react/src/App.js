@@ -1,18 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
+//import { Link } from "react-router-dom";
+//import axios from "axios";
 import './styles/App.scss';
 
 // components
 import Main from "./components/Main";
+import MainNavBar from "./components/MainNavBar";
 
 function App() {
   return (
     <div>
-      <nav className="navbar">
-        <Link to="/timer">Timers</Link> |{" "}
-        <Link to="/pets">Pets</Link>
-      </nav>
+      <MainNavBar />
       <Main title="PomoPets" />
     </div>
   );
