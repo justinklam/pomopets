@@ -1,1 +1,27 @@
-@import './variables'
+@import './variables';
+
+.body {
+  background-color: #F6EBDF;
+}
+
+.container {
+  font-family: $logo-font;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #84A59D;
+  padding-top: 50px;
+  width: 70%;
+}
+
+.subheader {
+  font-family: $subheader-font
+}
+
+.navbar {
+  padding-top: 30px;
+  padding-bottom: 1rem;
+  padding-left: 50px;
+  display: block;
+  font-family: $text-font;
+  background-color: #E9CDAF;
+}

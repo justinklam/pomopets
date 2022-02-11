@@ -11118,5 +11118,30 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.body {
+  background-color: #F6EBDF;
+}
+
+.container {
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #84A59D;
+  padding-top: 50px;
+  width: 70%;
+}
+
+.subheader {
+  font-family: "Mada", sans-serif;
+}
+
+.navbar {
+  padding-top: 30px;
+  padding-bottom: 1rem;
+  padding-left: 50px;
+  display: block;
+  font-family: "Hind Guntur", sans-serif;
+  background-color: #E9CDAF;
+}
 
 /*# sourceMappingURL=App.css.map */
