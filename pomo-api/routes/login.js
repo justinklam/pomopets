@@ -14,7 +14,7 @@ router.post('/', async function(req, res) {
   const user = await prisma.user.findUnique({
     where: { email: req.body.email}
   });
-  console.log('user-----', user)
+  // console.log('current_user-----', current_user)
 
   if (!email || !password) {
     return res.send('A field is empty!')  
@@ -28,7 +28,8 @@ router.post('/', async function(req, res) {
   res.cookie('user_id', user.id, {
     maxAge: 900000, httpOnly: true
   });
-  res.send(user, 'Successful login');
+
+  res.status(200).json(user);
 
 });
 

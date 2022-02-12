@@ -12,12 +12,12 @@ router.post('/', async function(req, res) {
 
   const new_pet = await prisma.timer.create({
     data: {
-      user_id: req.body.user.id,
+      user_pets: req.body.user_pets,
       description: req.body.description
     }
   });
 
-  console.log('new_pet-----', new_pet);
+  // console.log('new_pet-----', new_pet);
   
   res.send('Pet created');
 
