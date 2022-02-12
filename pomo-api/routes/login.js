@@ -28,7 +28,7 @@ router.post('/', async function(req, res) {
   res.cookie('user_id', user.id, {
     maxAge: 900000, httpOnly: true
   });
-  res.send('Successful login');
+  res.send(user, 'Successful login');
 
 });
 
