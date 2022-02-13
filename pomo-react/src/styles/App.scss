@@ -1,20 +1,27 @@
-@import './variables';
+@import "./variables";
 
 .body {
-  background-color: #F6EBDF;
+  background-color: #f6ebdf;
+  height: 70vh;
+  font-family: $text-font;
+}
+
+#root {
+  height: 25%;
 }
 
 .container {
   font-family: $logo-font;
   display: flex;
+  height: 100%;
   justify-content: space-evenly;
-  background-color: #84A59D;
+  background-color: #84a59d;
   padding-top: 50px;
   width: 70%;
 }
 
 .subheader {
-  font-family: $subheader-font
+  font-family: $subheader-font;
 }
 
 .navbar {
@@ -23,9 +30,19 @@
   padding-left: 50px;
   display: block;
   font-family: $text-font;
-  background-color: #E9CDAF;
+  background-color: #e9cdaf;
 }
 
 .logo-header {
   font-family: $logo-font;
+}
+
+.pomodoro {
+  font-size: 4em;
+}
+
+.message {
+  font-size: 0.5em;
+  min-height: 1.3em;
+  margin-bottom: 0.5em;
 }
