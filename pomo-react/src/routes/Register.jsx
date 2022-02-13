@@ -8,8 +8,19 @@ export default function Register() {
       <title>Register</title>
     </head>
     <body>
-        <main style={{ padding: "1rem 0" }}>
+        <main>
           <h2>Register</h2>
+          <form action="/register" method="post">
+            <label>User Name:
+              <input type="text" name="username"></input>
+            </label>
+            <label>Email:
+              <input type="text" name="email"></input>
+            </label>
+            <label>Password:
+              <input type="password" name="password"></input></label>
+            <button type="submit">Register</button>
+          </form>
         </main>
     </body>
     </html>

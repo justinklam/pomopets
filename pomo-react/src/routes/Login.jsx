@@ -8,8 +8,16 @@ export default function Login() {
       <title>Login</title>
     </head>
     <body>
-        <main style={{ padding: "1rem 0" }}>
+        <main>
           <h2>Login</h2>
+          <form action="/login" method="post">
+          <label>Email:
+              <input type="text" name="email"></input>
+            </label>
+            <label>Password:
+              <input type="password" name="password"></input></label>
+            <button type="submit">Login</button>
+          </form>
         </main>
     </body>
     </html>
