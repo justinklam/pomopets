@@ -15,7 +15,7 @@ render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="timer" element={<Timers />} />
+      <Route path="timers" element={<Timers />} />
       <Route path="pets" element={<Pets />} />
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
