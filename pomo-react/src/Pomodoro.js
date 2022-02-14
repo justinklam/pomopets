@@ -6,7 +6,30 @@ export default function Pomodoro() {
   const [ seconds, setSeconds ] = useState(0);
   const [ displayMessage, setDisplayMessage ] = useState(false);
 
-  useEffect(() => { }, [ seconds ]) // side-effect every time seconds are updated
+  useEffect(() => {
+    // timer set-up
+    let interval = setInterval(() => {
+      clearInterval(interval);
+
+      if (seconds === 0) {
+        if (minutes !== 0) {
+          setSeconds(59);
+          setMinutes(minutes - 1);
+        } else {
+          // case timer has ended, start a break, or break is finished so start a new timer
+          let minutes = displayMessage ? 24 : 4 // if message is displayed have timer start at 24:59, if not, set at 4 mins for duration of break session
+          let seconds = 59;
+
+          setSeconds(seconds);
+          setMinutes(minutes);
+          setDisplayMessage(!displayMessage); // if false set to true, if ture, set to false
+        }
+      } else {
+        // case where seconds are not 0, lower by 1
+        setSeconds(seconds - 1);
+      }
+    }, 1000)
+  }, [ seconds ]) // side-effect every time seconds are updated
 
   // ensure double digits in timer are always present
   const timerMinutes = minutes < 10 ? `0${minutes}` : minutes;
