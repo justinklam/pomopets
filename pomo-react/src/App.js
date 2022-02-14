@@ -2,9 +2,9 @@ import React from "react";
 //import { Link } from "react-router-dom";
 //import axios from "axios";
 import './styles/App.scss';
-import Pomodoro from "./Pomodoro";
 
 // components
+import Pomodoro from "./components/Pomodoro";
 import Main from "./components/Main";
 import MainNavBar from "./components/MainNavBar";
 
