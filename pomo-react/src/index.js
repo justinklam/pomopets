@@ -8,7 +8,9 @@ import App from "./App";
 import Login from "./routes/Login";
 import Pets from "./routes/Pets";
 import Register from "./routes/Register";
+import Statistics from "./routes/Statistics";
 import Timers from "./routes/Timers";
+
 
 const rootElement = document.getElementById("root");
 render(
@@ -19,6 +21,7 @@ render(
       <Route path="pets" element={<Pets />} />
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
+      <Route path="statistics" element={<Statistics />} />
     </Routes>
   </BrowserRouter>,
   rootElement
