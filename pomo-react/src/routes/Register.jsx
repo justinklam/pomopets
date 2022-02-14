@@ -1,3 +1,5 @@
+// import { register } from "../helpers/helpers"
+
 export default function Register() {
   return (
     <html lang="en">
