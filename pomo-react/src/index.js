@@ -16,6 +16,7 @@ import Pets from "./routes/Pets";
 import Register from "./routes/Register";
 import Statistics from "./routes/Statistics";
 import Timers from "./routes/Timers";
+import About from "./routes/About";
 
 // styles
 import './styles/App.scss';
@@ -31,6 +32,7 @@ render(
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
       <Route path="statistics" element={<Statistics />} />
+      <Route path="about" element={<About />} />
     </Routes>
     {/* <Pomodoro /> */}
   </BrowserRouter>,
