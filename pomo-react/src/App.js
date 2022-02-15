@@ -11,9 +11,9 @@ import MainNavBar from "./components/MainNavBar";
 function App() {
   return (
     <div>
-      <MainNavBar />
+      {/* <MainNavBar /> */}
       <Main title="PomoPets" />
-      <Pomodoro />
+      {/* <Pomodoro /> */}
     </div>
   );
 }
