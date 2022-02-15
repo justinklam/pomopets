@@ -2,7 +2,6 @@ import {useState} from "react";
 import { login } from "../helpers/helpers"
 import { Form, Button } from 'react-bootstrap';
 
-
 export default function Login() {
   const [user, setUser] = useState({
     email: "",
@@ -24,6 +23,7 @@ export default function Login() {
     <main>
       <h2>Login</h2>
       <Form action="/login" method="post">
+
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" name="email" value={user.email} onChange={handleChange}/>
@@ -35,9 +35,10 @@ export default function Login() {
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" placeholder="Password" name="password" value={user.password} onChange={handleChange}/>
         </Form.Group>
-          <Button variant="primary" type="submit" onClick={handleSubmit}>
-            Login
-          </Button>
+
+        <Button variant="primary" type="submit" onClick={handleSubmit}>
+          Login
+        </Button>
       </Form>
     </main>
 )};

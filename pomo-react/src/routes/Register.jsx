@@ -44,21 +44,10 @@ export default function Register() {
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" placeholder="Password" name="password" value={user.password} onChange={handleChange}/>
         </Form.Group>
-          <Button variant="primary" type="submit" onClick={handleSubmit}>
-            Register
-          </Button>
-      </Form>
 
-        {/* <form action="/register" method="post">
-          <label>User Name:
-            <input type="text" name="username"></input>
-          </label>
-          <label>Email:
-            <input type="text" name="email"></input>
-          </label>
-          <label>Password:
-            <input type="password" name="password"></input></label>
-          <button type="submit">Register</button>
-        </form> */}
-      </main>
+        <Button variant="primary" type="submit" onClick={handleSubmit}>
+          Register
+        </Button>
+      </Form>
+    </main>
 )};
