@@ -3,9 +3,9 @@ import egg from '../assets/egg.png'
 
 export default function Main(props) {
   return (
-    <div className="body">
+    <div className="body pt-5">
       <div className="main-container">
-        <div className="text-container">
+        <div className="text-container pt-5 ps-2">
           <h1> {props.title} </h1>
           <h4 className="subheader">
             This is {props.title}
