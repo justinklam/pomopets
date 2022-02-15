@@ -3,7 +3,7 @@ import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-export default function MainNavBar() {
+export default function HomeNavBar() {
   return (
     <Navbar className="main-navbar" bg="light" expand="lg">
       <Container>
@@ -22,13 +22,11 @@ export default function MainNavBar() {
               <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>
             </NavDropdown>
             <div className="button-div">
-              <Button className="login-button" href="/login" variant="primary">Login</Button>{' '}
-              <Button className="register-button" href="/register" variant="outline-primary">Register</Button>{' '}
+              <Button className="login-button" href="/" variant="primary">Logout</Button>{' '}
             </div>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-
   );
 };
