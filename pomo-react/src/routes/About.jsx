@@ -15,7 +15,7 @@ export default function About() {
 
                 <p>Other benefits:
                   <ul>
-                  <li>Alleviate anxiety linked to beginning</li>
+                  <li>Alleviate anxiety linked to beginning a task</li>
                     <li>Enhance focus and concentration by cutting down on interruptions</li>
                     <li>Increase awareness of your decisions</li>
                     <li>Boost motivation and keep it constant</li>
