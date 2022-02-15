@@ -7,7 +7,7 @@ import {
 
 // component imports
 import Main from "./components/Main";
-import MainNavBar from "./components/MainNavBar";
+import HomeNavBar from "./components/HomeNavBar";
 import Pomodoro from "./components/Pomodoro";
 
 // route imports
@@ -24,7 +24,6 @@ import './styles/App.scss';
 const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>
-    <MainNavBar />
     <Routes>
       <Route path="/" element={<Main title="PomoPets"/>} />
       <Route path="timers" element={<Timers />} />

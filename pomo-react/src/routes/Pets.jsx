@@ -1,7 +1,12 @@
+import AltNavBar from '../components/AltNavBar';
+
 export default function Pets() {
   return (
-    <main style={{ padding: "1rem 0" }}>
-      <h2>Pets</h2>
-    </main>
+    <>
+      <AltNavBar />
+      <main style={{ padding: "1rem 0" }}>
+        <h2>Pets</h2>
+      </main>
+    </>
   );
 }
