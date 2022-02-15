@@ -22,7 +22,7 @@ export default function HomeNavBar() {
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>
+              {!location.state?.email ? '' : <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>}
             </NavDropdown>
             <div className="button-div">
               {location.state?.email ? '' : <Button className="login-button" href="/login" variant="primary">Login</Button>}{' '}
