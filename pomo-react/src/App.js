@@ -4,7 +4,6 @@ import React from "react";
 import './styles/App.scss';
 
 // components
-import Pomodoro from "./components/Pomodoro";
 import Main from "./components/Main";
 import MainNavBar from "./components/MainNavBar";
 
@@ -13,7 +12,6 @@ function App() {
     <div>
       <MainNavBar />
       <Main title="PomoPets" />
-      <Pomodoro />
     </div>
   );
 }
