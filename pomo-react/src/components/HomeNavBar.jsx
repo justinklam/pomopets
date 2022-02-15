@@ -25,8 +25,8 @@ export default function HomeNavBar() {
               <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>
             </NavDropdown>
             <div className="button-div">
-              {location.state?.email ? null: <Button className="login-button" href="/login" variant="primary">Login</Button>}{' '}
-              {location.state?.email ? null: <Button className="register-button" href="/register" variant="outline-primary">Register</Button>}{' '}
+              {location.state?.email ? '' : <Button className="login-button" href="/login" variant="primary">Login</Button>}{' '}
+              {location.state?.email ? '' : <Button className="register-button" href="/register" variant="outline-primary">Register</Button>}{' '}
             </div>
           </Nav>
         </Navbar.Collapse>
