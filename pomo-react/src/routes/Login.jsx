@@ -1,16 +1,26 @@
 import {useState} from "react";
 import { login } from "../helpers/helpers"
 import { Form, Button } from 'react-bootstrap';
+import { useNavigate } from "react-router-dom";
 
-export default function Login() {
+export default function Login(props) {
   const [user, setUser] = useState({
     email: "",
     password: ""
   });
 
+  let navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    login(user);
+
+    login(user).then((response) => {
+      console.log('response', response);
+      navigate("/", { state: response.data });
+    })
+    .catch((error) => {
+      throw error;
+    });
   };
 
   const handleChange = (e) => {
