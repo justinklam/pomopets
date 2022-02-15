@@ -9,6 +9,7 @@ export default function Pomodoro() {
   useEffect(() => {
     // timer set-up
     let interval = setInterval(() => {
+      // NOTE: must clear interval! otherwise bad practice - see what happens without clearing interval 
       clearInterval(interval);
 
       if (seconds === 0) {
