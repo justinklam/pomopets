@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 
 export default function Pomodoro() {
 
-  const [ minutes, setMinutes ] = useState(25);
-  const [ seconds, setSeconds ] = useState(0);
+  const [ minutes, setMinutes ] = useState(0);
+  const [ seconds, setSeconds ] = useState(1);
   const [ displayMessage, setDisplayMessage ] = useState(false);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function Pomodoro() {
 
           setSeconds(seconds);
           setMinutes(minutes);
-          setDisplayMessage(!displayMessage); // if false set to true, if ture, set to false
+          setDisplayMessage(!displayMessage); // if false set to true, if true, set to false
         }
       } else {
         // case where seconds are not 0, lower by 1
