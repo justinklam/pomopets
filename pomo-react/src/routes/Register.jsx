@@ -1,9 +1,7 @@
+// import { register } from "../helpers/helpers"
+
 export default function Register() {
   return (
-    <html lang="en">
-    <head>
-      <title>Register</title>
-    </head>
     <body>
         <main>
           <h2>Register</h2>
@@ -20,5 +18,4 @@ export default function Register() {
           </form>
         </main>
     </body>
-    </html>
 )};
