@@ -10,7 +10,7 @@
   height: 25%;
 }
 
-.container {
+.main-container {
   font-family: $logo-font;
   display: flex;
   height: 100%;
@@ -24,14 +24,14 @@
   font-family: $subheader-font;
 }
 
-.navbar {
-  padding-top: 30px;
-  padding-bottom: 1rem;
-  padding-left: 50px;
-  display: block;
-  font-family: $text-font;
-  background-color: #e9cdaf;
-}
+// .navbar {
+//   padding-top: 30px;
+//   padding-bottom: 1rem;
+//   padding-left: 50px;
+//   display: block;
+//   font-family: $text-font;
+//   background-color: #e9cdaf;
+// }
 
 .logo-header {
   font-family: $logo-font;
