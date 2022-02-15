@@ -1,37 +1,39 @@
 @import "./variables";
 
 .body {
-  background-color: #f6ebdf;
-  height: 70vh;
+  background-image: url("../assets/5.jpg");
+  background-size: 100%;
+  height: 100vh;
   font-family: $text-font;
-}
-
-#root {
-  height: 25%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .main-container {
   font-family: $logo-font;
   display: flex;
-  height: 100%;
+  height: 70%;
   justify-content: space-evenly;
-  background-color: #84a59d;
+  background-color: $main-background;
   padding-top: 50px;
-  width: 70%;
+  width: 50%;
+  border: 10px $nav-bar solid;
+  border-radius: 1%;
+  margin-top: 50px;
 }
 
 .subheader {
   font-family: $subheader-font;
 }
 
-// .navbar {
-//   padding-top: 30px;
-//   padding-bottom: 1rem;
-//   padding-left: 50px;
-//   display: block;
-//   font-family: $text-font;
-//   background-color: #e9cdaf;
-// }
+.main-navbar {
+  padding-top: 30px;
+  padding-bottom: 1rem;
+  padding-left: 50px;
+  font-family: $text-font;
+  background-color: $nav-bar !important;
+  font-size: larger;
+}
 
 .logo-header {
   font-family: $logo-font;
@@ -45,4 +47,121 @@
   font-size: 0.5em;
   min-height: 1.3em;
   margin-bottom: 0.5em;
+}
+
+.text-container {
+  margin-left: 8px;
+  padding-left: 50px;
+}
+
+.about-text-container {
+  margin-left: 8px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+}
+
+.about-text {
+  font-family: $text-font;
+  font-size: large;
+  padding-top: 10px;
+}
+
+.logo-text {
+  font-size: -webkit-xxx-large;
+}
+
+.blurb {
+  font-family: $logo-font;
+}
+
+// buttons
+
+.button-div {
+  padding-left: 30rem;
+}
+
+.login-button {
+  background-color: $login-button-color;
+  color: white;
+  &:hover {
+    background-color: $register-button-color !important;
+    border-color: $register-button-color;
+  }
+  border-color: $register-button-color;
+  border-width: 3px;
+  border-radius: 15px;
+  height: 35px;
+}
+
+.register-button {
+  background-color: $register-button-color;
+  color: white;
+  &:hover {
+    background-color: $login-button-color !important;
+    border-color: $login-button-color;
+  }
+  border-color: $login-button-color;
+  border-width: 3px;
+  border-radius: 15px;
+  height: 35px;
+  margin-left: 10px;
+
+}
+
+
+
+
+
+// egg animations
+.egg {
+  margin-top: 8rem;
+  animation: wiggle 1s linear infinite;
+  :after {
+    animation: anti-wiggle 1s linear infinite;
+  }
+}
+
+@keyframes wiggle {
+  20% {
+    transform: rotate(7deg);
+  }
+
+  40% {
+    transform: rotate(-14deg);
+  }
+
+  60% {
+    transform: rotate(4deg);
+  }
+
+  80% {
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes anti-wiggle {
+  20% {
+    transform: translateX(4px) rotate(-7deg);
+  }
+
+  40% {
+    transform: translateX(-8px) rotate(14deg);
+  }
+
+  60% {
+    transform: translateX(2px) rotate(-4deg);
+  }
+
+  80% {
+    transform: translateX(-1px) rotate(2deg);
+  }
+
+  100% {
+    transform: translateX(0px) rotate(0deg);
+  }
 }
