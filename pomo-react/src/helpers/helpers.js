@@ -27,18 +27,11 @@ const axios = require('axios').default;
 const login = (user) => {
   const {email, password} = user;
   // console.log('email', email, 'password', password)
-  axios.post('//localhost:3030/login',
+  return axios.post('//localhost:3030/login',
   {
     email: email,
     password: password
   })
-  .then((response) => {
-    console.log('response', response)
-    // throw response;
-  })
-  .catch((error) => {
-    throw error;
-  });
 };
 
 const register = (user) => {
