@@ -4,7 +4,7 @@ export default function Pets() {
       <div className="body pt-5">
         <div className="main-container">
           <div className="text-container pt-2">
-            <h1 className="logo-text"> Pets </h1>
+            <h1 className="logo-text text-center"> Pets </h1>
 
           </div>
         </div>
