@@ -49,7 +49,50 @@
 
 .text-container {
   margin-left: 8px;
-  padding-left: 25px;
+  padding-left: 50px;
+}
+
+.about-text {
+  font-family: "Hind Guntur", sans-serif;
+}
+
+.logo-text {
+  font-size: -webkit-xxx-large;
+}
+
+.blurb {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.button-div {
+  padding-left: 30rem;
+}
+
+.login-button {
+  background-color: #453750;
+  color: white;
+  border-color: #4D90CC;
+  border-width: 3px;
+  border-radius: 15px;
+  height: 35px;
+}
+.login-button:hover {
+  background-color: #4D90CC !important;
+  border-color: #4D90CC;
+}
+
+.register-button {
+  background-color: #4D90CC;
+  color: white;
+  border-color: #453750;
+  border-width: 3px;
+  border-radius: 15px;
+  height: 35px;
+  margin-left: 10px;
+}
+.register-button:hover {
+  background-color: #453750 !important;
+  border-color: #453750;
 }
 
 .egg {
