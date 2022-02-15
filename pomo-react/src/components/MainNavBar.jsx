@@ -1,14 +1,28 @@
 import { Link } from "react-router-dom";
-import { Navbar, Nav, NavDropdown } from '../../node_modules/react-bootstrap/Navbar'
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function MainNavBar() {
   return (
-  <div className="navbar">
-    <p className="logo-header">PomoPets |{" "}</p>
-    <Link to="/timer">Timers</Link> |{" "}
-    <Link to="/pets">Pets</Link> |{" "}
-    <Link to="/register">Register</Link> |{" "}
-    <Link to="/login">Login</Link>
-  </div>
+    <Navbar bg="light" expand="lg">
+      <Container>
+        <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/pets">Pets</Nav.Link>
+            <Nav.Link href="/timers">Timers</Nav.Link>
+            <NavDropdown title="My Accounts" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+
   );
 };
