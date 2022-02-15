@@ -1,37 +1,43 @@
 @import "./variables";
 
 .body {
-  background-color: #f6ebdf;
-  height: 70vh;
+  // background-color: #f6ebdf;
+  background-image: url("../assets/5.jpg");
+  background-size: 100%;
+  height: 100vh;
   font-family: $text-font;
+  display: flex;
+  justify-content: space-around;
 }
 
-#root {
-  height: 25%;
-}
+// #root {
+//   height: 25%;
+// }
 
 .main-container {
   font-family: $logo-font;
   display: flex;
   height: 100%;
   justify-content: space-evenly;
-  background-color: #84a59d;
+  background-color: #FEDED7;
   padding-top: 50px;
-  width: 70%;
+  width: 50%;
+  border: 10px white solid;
+  border-radius: 1%;
+  margin-top: 50px;
 }
 
 .subheader {
   font-family: $subheader-font;
 }
 
-// .navbar {
-//   padding-top: 30px;
-//   padding-bottom: 1rem;
-//   padding-left: 50px;
-//   display: block;
-//   font-family: $text-font;
-//   background-color: #e9cdaf;
-// }
+.main-navbar {
+  padding-top: 30px;
+  padding-bottom: 1rem;
+  padding-left: 50px;
+  font-family: $text-font;
+  background-color: #DDBBD5 !important;
+}
 
 .logo-header {
   font-family: $logo-font;

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function MainNavBar() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar className="main-navbar" bg="light" expand="lg">
       <Container>
         <Navbar.Brand href="/">PomoPets</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

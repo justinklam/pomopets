@@ -26,13 +26,13 @@ render(
     <MainNavBar />
     <Routes>
       <Route path="/" element={<Main title="PomoPets"/>} />
-      <Route path="timer" element={<Timers />} />
+      <Route path="timers" element={<Timers />} />
       <Route path="pets" element={<Pets />} />
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
       <Route path="statistics" element={<Statistics />} />
     </Routes>
-    <Pomodoro />
+    {/* <Pomodoro /> */}
   </BrowserRouter>,
   rootElement
 );
