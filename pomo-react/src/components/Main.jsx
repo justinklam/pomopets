@@ -1,11 +1,9 @@
 import React from "react";
 import egg from '../assets/egg.png';
-import HomeNavBar from './HomeNavBar';
 
 export default function Main(props) {
   return (
     <>
-      <HomeNavBar />
       <div className="body pt-5">
         <div className="main-container">
           <div className="text-container pt-2">

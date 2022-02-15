@@ -24,6 +24,7 @@ import './styles/App.scss';
 const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>
+    <HomeNavBar/>
     <Routes>
       <Route path="/" element={<Main title="PomoPets"/>} />
       <Route path="timers" element={<Timers />} />

@@ -1,9 +1,8 @@
-import AltNavBar from '../components/AltNavBar';
+// import AltNavBar from '../components/AltNavBar';
 
 export default function About() {
   return (
     <>
-      <AltNavBar />
       <div className="body pt-5">
         <div className="main-container">
           <div className="about-text-container pt-2">
