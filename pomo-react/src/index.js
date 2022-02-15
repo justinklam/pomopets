@@ -12,7 +12,6 @@ import Statistics from "./routes/Statistics";
 import Timers from "./routes/Timers";
 import Main from "./components/Main";
 import MainNavBar from "./components/MainNavBar";
-import Pomodoro from "./components/Pomodoro";
 import './styles/App.scss';
 
 const rootElement = document.getElementById("root");
@@ -27,7 +26,6 @@ render(
       <Route path="register" element={<Register />} />
       <Route path="statistics" element={<Statistics />} />
     </Routes>
-    <Pomodoro />
   </BrowserRouter>,
   rootElement
 );
