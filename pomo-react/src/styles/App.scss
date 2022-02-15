@@ -15,10 +15,10 @@
   display: flex;
   height: 80%;
   justify-content: space-evenly;
-  background-color: #feded7;
+  background-color: $main-background;
   padding-top: 50px;
   width: 50%;
-  border: 10px #ddbbd5 solid;
+  border: 10px $nav-bar solid;
   border-radius: 1%;
   margin-top: 50px;
 }
@@ -32,7 +32,7 @@
   padding-bottom: 1rem;
   padding-left: 50px;
   font-family: $text-font;
-  background-color: #ddbbd5 !important;
+  background-color: $nav-bar !important;
   font-size: larger;
 }
 
