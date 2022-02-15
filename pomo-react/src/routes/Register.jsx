@@ -1,6 +1,6 @@
 import {useState} from "react";
-import { Form, Button } from 'react-bootstrap';
 import { register } from "../helpers/helpers"
+import { Form, Button } from 'react-bootstrap';
 
 export default function Register() {
   const [user, setUser] = useState({
