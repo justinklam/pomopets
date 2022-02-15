@@ -56,3 +56,54 @@
 .text-container {
   margin-left: 8px;
 }
+
+.egg {
+  animation: wiggle 1s linear infinite;
+  :after {
+    animation: anti-wiggle 1s linear infinite;
+  }
+}
+
+@keyframes wiggle {
+  20% {
+    transform: rotate(7deg);
+  }
+
+  40% {
+    transform: rotate(-14deg);
+  }
+
+  60% {
+    transform: rotate(4deg);
+  }
+
+  80% {
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes anti-wiggle {
+  20% {
+    transform: translateX(4px) rotate(-7deg);
+  }
+
+  40% {
+    transform: translateX(-8px) rotate(14deg);
+  }
+
+  60% {
+    transform: translateX(2px) rotate(-4deg);
+  }
+
+  80% {
+    transform: translateX(-1px) rotate(2deg);
+  }
+
+  100% {
+    transform: translateX(0px) rotate(0deg);
+  }
+}
