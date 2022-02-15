@@ -4,15 +4,20 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-// import App from "./App";
+
+// component imports
+import Main from "./components/Main";
+import MainNavBar from "./components/MainNavBar";
+import Pomodoro from "./components/Pomodoro";
+
+// route imports
 import Login from "./routes/Login";
 import Pets from "./routes/Pets";
 import Register from "./routes/Register";
 import Statistics from "./routes/Statistics";
 import Timers from "./routes/Timers";
-import Main from "./components/Main";
-import MainNavBar from "./components/MainNavBar";
-import Pomodoro from "./components/Pomodoro";
+
+// styles
 import './styles/App.scss';
 
 const rootElement = document.getElementById("root");
