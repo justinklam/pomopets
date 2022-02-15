@@ -1,9 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function HomeNavBar() {
+
+  let location = useLocation();
+
   return (
     <Navbar className="main-navbar" bg="light" expand="lg">
       <Container>
@@ -22,8 +25,8 @@ export default function HomeNavBar() {
               <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>
             </NavDropdown>
             <div className="button-div">
-              <Button className="login-button" href="/login" variant="primary">Login</Button>{' '}
-              <Button className="register-button" href="/register" variant="outline-primary">Register</Button>{' '}
+              {location.state?.email ? null: <Button className="login-button" href="/login" variant="primary">Login</Button>}{' '}
+              {location.state?.email ? null: <Button className="register-button" href="/register" variant="outline-primary">Register</Button>}{' '}
             </div>
           </Nav>
         </Navbar.Collapse>
