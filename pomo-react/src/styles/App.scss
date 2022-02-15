@@ -12,7 +12,7 @@
 .main-container {
   font-family: $logo-font;
   display: flex;
-  height: 80%;
+  height: 70%;
   justify-content: space-evenly;
   background-color: $main-background;
   padding-top: 50px;
@@ -54,8 +54,17 @@
   padding-left: 50px;
 }
 
+.about-text-container {
+  margin-left: 8px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+}
+
 .about-text {
   font-family: $text-font;
+  font-size: large;
+  padding-top: 10px;
 }
 
 .logo-text {
