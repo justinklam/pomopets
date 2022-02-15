@@ -1,8 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function MainNavBar() {
+
+  let location = useLocation();
+  
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -19,10 +22,12 @@ export default function MainNavBar() {
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link href="/login">{location.state?.email ? 'Logout':'Login'}
+            </Nav.Link>
+            {location.state?.email ? null: <Nav.Link href="/register">Register</Nav.Link>}
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-
   );
 };
