@@ -25,6 +25,15 @@ export default function About() {
                     <li>Strengthen your resolve to keep on applying yourself in the face of complex situations</li>
                     </ul>
                 </p>
+
+                <p>Tips to keep in mind:
+                  <ul>
+                    <li>If a task takes more than 5 Pomodoros, break it down</li>
+                    <li>If it takes less than one Pomodoro, add it up, and combine it with another task</li>
+                    <li>The next Pomodoro will go better</li>
+                    <li>The Pomodoro Technique should <strong><u>not</u></strong> be used for activities you do in your free time. Enjoy your free time!</li>
+                  </ul>
+                </p>
               </div>
             </div>
           </div>
