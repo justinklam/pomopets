@@ -38,6 +38,7 @@ model Pet {
   id Int @default(autoincrement()) @id @unique
   name String @db.VarChar(255) @unique
   description String @db.VarChar(255)
+  stage Int @default(0)
 
   user_pets User_pet[]
 }
