@@ -1,5 +1,10 @@
+import Pomodoro from "../components/Pomodoro"
+
 export default function Timers() {
   return (
-    <h2>Timers</h2>
+    <div>
+      <h2>Timers</h2>
+      <Pomodoro />
+    </div>
   );
 }
