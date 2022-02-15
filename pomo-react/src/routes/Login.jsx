@@ -19,18 +19,16 @@ export default function Login() {
   };
 
   return (
-    <body>
-        <main>
-          <h2>Login</h2>
-          <form action="/login" method="post">
-          <label>Email:
-              <input type="text" name="email" value={user.email} onChange={handleChange}/>
-            </label>
-            <label>Password:
-              <input type="password" name="password" value={user.password} onChange={handleChange}/>
-            </label>
-            <button type="submit" onClick={handleSubmit}>Login</button>
-          </form>
-        </main>
-    </body>
+    <main>
+      <h2>Login</h2>
+      <form action="/login" method="post">
+      <label>Email:
+          <input type="text" name="email" value={user.email} onChange={handleChange}/>
+        </label>
+        <label>Password:
+          <input type="password" name="password" value={user.password} onChange={handleChange}/>
+        </label>
+        <button type="submit" onClick={handleSubmit}>Login</button>
+      </form>
+    </main>
 )};
