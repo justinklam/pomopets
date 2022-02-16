@@ -16,7 +16,7 @@ export default function Main(props) {
               <p className="blurb">Pomodoro sessions are typically 25 minutes in length, with a 5 minute break between sessions. After every session, take a longer break to recharge and refresh your mind! </p>
             </h3>
           </div>
-          <img src={egg} className="egg" width="400px" height="400px"/>
+          <img src={egg} alt="egg-on-homepage" className="egg" width="400px" height="400px"/>
         </div>
       </div>
     </>
