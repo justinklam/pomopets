@@ -33,10 +33,6 @@
   margin-top: 50px;
 }
 
-.subheader {
-  font-family: "Mada", sans-serif;
-}
-
 .main-navbar {
   padding-top: 30px;
   padding-bottom: 1rem;
@@ -91,7 +87,7 @@
 .login-button {
   background-color: #453750;
   color: white;
-  border-color: #4D90CC;
+  border-color: #453750;
   border-width: 2px;
   border-radius: 15px;
   height: 35px;
@@ -104,7 +100,7 @@
 .register-button {
   background-color: #4D90CC;
   color: white;
-  border-color: #453750;
+  border-color: #4D90CC;
   border-width: 2px;
   border-radius: 15px;
   height: 35px;
