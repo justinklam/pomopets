@@ -4,8 +4,8 @@ import 'react-circular-progressbar/dist/styles.css';
 
 export default function Pomodoro() {
 
-  const [ minutes, setMinutes ] = useState(25);
-  const [ seconds, setSeconds ] = useState(0);
+  const [ minutes, setMinutes ] = useState(0);
+  const [ seconds, setSeconds ] = useState(1);
   const [ displayMessage, setDisplayMessage ] = useState(false);
 
   useEffect(() => {
@@ -40,13 +40,12 @@ export default function Pomodoro() {
 
   return (
     <div className="pomodoro">
-      <CircularProgressbar value={50} text={`${timerMinutes}:${timerSeconds}`} />
-
-      <div className="message">
-        {displayMessage && <div>Time for a break! Your next session starts in: </div>}
-        {/* <div className="timer">
-          {timerMinutes}:{timerSeconds}
-        </div> */}
+      <div className="message text-center">
+          {displayMessage && <div>Time for a break! Your next session starts in: </div>}
+          <br />
+        <div className="circular-progress-bar" style={{ width: 300, height: 300 }}>
+          <CircularProgressbar value={50} text={`${timerMinutes}:${timerSeconds}`} />
+        </div>
       </div>
     </div>
   );
