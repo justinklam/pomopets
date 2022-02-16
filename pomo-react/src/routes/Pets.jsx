@@ -9,7 +9,7 @@ export default function Pets() {
               <img src={require('../assets/pets/cat1.gif')} width="185px" height="185px"/> 
               <img src={require('../assets/pets/cat2.gif')} width="185px" height="185px"/> 
               <img src={require('../assets/pets/dog3.gif')} width="400px" height="250px"/>
-              <img src={require('../assets/pets/pug.gif')} width="300px" height="250px"/> 
+              <img src={require('../assets/pets/dog4.gif')} width="300px" height="250px"/> 
               <img src={require('../assets/pets/dog2.gif')} width="325px" height="300px"/>
               <img src={require('../assets/pets/hedgehog1.gif')} width="200px" height="200px"/> 
               <img src={require('../assets/pets/hedgehog2.gif')} width="200px" height="200px"/> 
