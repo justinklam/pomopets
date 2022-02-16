@@ -40,11 +40,13 @@ export default function Pomodoro() {
 
   return (
     <div className="pomodoro">
+      <CircularProgressbar value={50} text={`${timerMinutes}:${timerSeconds}`} />
+
       <div className="message">
         {displayMessage && <div>Time for a break! Your next session starts in: </div>}
-        <div className="timer">
+        {/* <div className="timer">
           {timerMinutes}:{timerSeconds}
-        </div>
+        </div> */}
       </div>
     </div>
   );
