@@ -15,9 +15,9 @@ export default function HomeNavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/about">About Pomodoro</Nav.Link>
             <Nav.Link href="/pets">Pets</Nav.Link>
             <Nav.Link href="/timers">Timers</Nav.Link>
-            <Nav.Link href="/about">About Pomodoro</Nav.Link>
             <NavDropdown title="My Account" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>

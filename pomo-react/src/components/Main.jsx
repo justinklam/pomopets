@@ -5,8 +5,8 @@ export default function Main(props) {
   return (
     <>
       <div className="body pt-5">
-        <div className="main-container">
-          <div className="text-container pt-2">
+        <div className="home main-container">
+          <div className="text-container">
 
             <h1 className="logo-text"> {props.title} </h1>
             <br/>
