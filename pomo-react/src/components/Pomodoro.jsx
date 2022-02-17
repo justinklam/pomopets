@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { CircularProgressbar, buildStyles, CircularProgressbarWithChildren } from "react-circular-progressbar";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 export default function Pomodoro(props) {
@@ -20,7 +20,7 @@ export default function Pomodoro(props) {
       if (currentSeconds === 0) {
         if (displayMessage) { 
           setDisplayMessage(false); // hide the break
-          setCurrentSeconds(props.timeData.time * 60); // reset initial timer
+          setCurrentSeconds(props.timeData * 60); // reset initial timer
         } else { // break timer is running
           setDisplayMessage(true);
           setCurrentSeconds(breakTime);
@@ -54,7 +54,6 @@ export default function Pomodoro(props) {
             counterClockwise={true}
             value={(currentSeconds / maxSeconds) * 100}
             text={formatTime()}
-            
           />
         </div>
       </div>
