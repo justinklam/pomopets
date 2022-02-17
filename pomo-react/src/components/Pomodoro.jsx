@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import { CircularProgressbar, buildStyles, CircularProgressbarWithChildren } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 export default function Pomodoro(props) {
@@ -54,6 +54,7 @@ export default function Pomodoro(props) {
             counterClockwise={true}
             value={(currentSeconds / maxSeconds) * 100}
             text={formatTime()}
+            
           />
         </div>
       </div>
