@@ -18,11 +18,10 @@ export default function Login(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     login(user).then((response) => {
       // console.log('response', response);
-      navigate("/");
       setSession({ state: response.data });
+      navigate("/");
     })
     .catch((error) => {
       throw error;
