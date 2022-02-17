@@ -4,7 +4,6 @@ import "react-circular-progressbar/dist/styles.css";
 
 export default function Pomodoro(props) {
   const startingTimer = props.startingTimer || 0;
-  console.log("what is it?", startingTimer);
 
   const [displayMessage, setDisplayMessage] = useState(false);
   const [currentSeconds, setCurrentSeconds] = useState(60 * startingTimer);
@@ -15,13 +14,13 @@ export default function Pomodoro(props) {
   useEffect(() => {
     // timer set-up
     let interval = setInterval(() => {
-      // NOTE: must clear interval! otherwise bad practice - see what happens without clearing interval
+      // NOTE: must clear interval! otherwise bad practice
       clearInterval(interval);
 
       if (currentSeconds === 0) {
         if (displayMessage) { 
           setDisplayMessage(false); // hide the break
-          setCurrentSeconds(1 * 60); // reset initial timer
+          setCurrentSeconds(props.timeData.time * 60); // reset initial timer
         } else { // break timer is running
           setDisplayMessage(true);
           setCurrentSeconds(breakTime);
@@ -40,7 +39,7 @@ export default function Pomodoro(props) {
     seconds = seconds < 10 ? `0${seconds}` : seconds;
     return `${minutes}:${seconds}`;
   };
-  console.log("-----", {currentSeconds, maxSeconds, value:(currentSeconds / maxSeconds)*100});
+
   return (
     <div className="pomodoro">
       <div className="message text-center">
