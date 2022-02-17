@@ -13,7 +13,7 @@ export default function HomeNavBar() {
   return (
     <Navbar className="main-navbar" bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="/">PomoPets</Navbar.Brand>
+        <Link to="/">PomoPets</Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
