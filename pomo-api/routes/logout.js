@@ -12,7 +12,8 @@ router.post('/', async function(req, res) {
   res.cookie('user_id', null);
   console.log('cookie-----', req.cookies);
 
-  res.render('logout');
+  res.redirect('/')
+  // res.status(200);
 });
 
 module.exports = router;
