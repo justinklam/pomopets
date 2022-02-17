@@ -8,7 +8,7 @@ import { SessionsContext } from "../context/SessionsContext";
 export default function HomeNavBar() {
 
   const [session, setSession] = useContext(SessionsContext)
-  console.log('session', session);
+  // console.log('session', session);
 
   return (
     <Navbar className="main-navbar" bg="light" expand="lg">
