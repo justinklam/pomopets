@@ -38,7 +38,7 @@ function App() {
       <Route path="register" element={<Register />} />
       <Route path="statistics" element={<Statistics />} />
       <Route path="about" element={<About />} />
-      <Route path="logout" element={<Logout />} />
+      <Route path="logout" element={<Main />} />
     </Routes>
     </SessionsContext.Provider>
   </BrowserRouter>
