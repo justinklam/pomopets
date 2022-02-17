@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import { SessionsContext } from "../context/SessionsContext";
@@ -29,8 +28,8 @@ export default function HomeNavBar() {
               {!session?.state.email ? '' : <NavDropdown.Item href="/logout">Logout</NavDropdown.Item>}
             </NavDropdown>
             <div className="button-div">
-              {session?.state.email ? '' : <Button className="login-button" href="/login" variant="primary">Login</Button>}{' '}
-              {session?.state.email ? '' : <Button className="register-button" href="/register" variant="outline-primary">Register</Button>}{' '}
+              {session?.state.email ? '' : <Link className="login-button" to="/login" variant="primary">Login</Link>}{' '}
+              {session?.state.email ? '' : <Link className="register-button" to="/register" variant="outline-primary">Register</Link>}{' '}
             </div>
           </Nav>
         </Navbar.Collapse>
