@@ -26,7 +26,7 @@ export default function HomeNavBar() {
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
               <NavDropdown.Divider />
-              {!session?.state.email ? '' : <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>}
+              {!session?.state.email ? '' : <NavDropdown.Item href="/logout">Logout</NavDropdown.Item>}
             </NavDropdown>
             <div className="button-div">
               {session?.state.email ? '' : <Button className="login-button" href="/login" variant="primary">Login</Button>}{' '}
