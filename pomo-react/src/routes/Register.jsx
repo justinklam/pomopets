@@ -1,4 +1,5 @@
 import {useState} from "react";
+import { useNavigate } from "react-router-dom";
 import { register } from "../helpers/helpers"
 import { Form, Button } from 'react-bootstrap';
 
@@ -9,8 +10,11 @@ export default function Register() {
     password: ""
   });
 
+  let navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    navigate("/");
     register(user);
   };
 
