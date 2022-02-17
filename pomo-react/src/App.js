@@ -18,11 +18,6 @@ import Register from "./routes/Register";
 import Statistics from "./routes/Statistics";
 import Timers from "./routes/Timers";
 import About from "./routes/About";
-import Logout from "./routes/Logout";
-
-
-// styles
-// import './styles/App.scss';
 
 function App() {
   const [context, setContext] = useState();
