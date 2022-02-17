@@ -48,8 +48,8 @@ router.post('/register', async function(req, res) {
     maxAge: 900000, httpOnly: true
   });
 
-  res.send('Successful');
-
+  res.status(200).json(new_user)
+  // res.send('Successful');
 });
 
 module.exports = router;
