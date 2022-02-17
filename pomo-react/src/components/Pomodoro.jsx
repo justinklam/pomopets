@@ -2,13 +2,9 @@ import React, { useState, useEffect } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-export default function Pomodoro() {
-  const startingTimer = 2;
-  // let maxSeconds = 60 * startingTimer;
-  // let currentSeconds = maxSeconds;
+export default function Pomodoro(props) {
+  const startingTimer = props.startingTimer || 0;
 
-  // const [ minutes, setMinutes ] = useState(0);
-  // const [ seconds, setSeconds ] = useState(6);
   const [displayMessage, setDisplayMessage] = useState(false);
   const [currentSeconds, setCurrentSeconds] = useState(60 * startingTimer);
   const [maxSeconds, setMaxSeconds] = useState(60 * startingTimer);
@@ -18,43 +14,27 @@ export default function Pomodoro() {
     let interval = setInterval(() => {
       // NOTE: must clear interval! otherwise bad practice - see what happens without clearing interval
       clearInterval(interval);
-
-      // if (seconds === 0) {
-      //   if (minutes !== 0) {
-      //     setSeconds(59);
-      //     setMinutes(minutes - 1);
-
-      //   } else {
-      // case: timer has ended, start a break, or break is finished so start a new timer
-      // let minutes = displayMessage ? 24 : 4 // if message is displayed have timer start at 24:59, if not, set at 4 mins for duration of break session
-      // let seconds = 59;
-      // currentSeconds = 4 * 60 + seconds;
-      // maxSeconds = currentSeconds;
-      // setMaxSeconds(minutes * 60 + seconds);
-
-      // setSeconds(seconds);
-      // setMinutes(minutes);
-      // setDisplayMessage(!displayMessage); // if false set to true, if true, set to false
-      // }
-      // } else {
-      //   // case where seconds are not 0, lower by 1
-      //  setSeconds(seconds - 1);
-      // }
+      
+      if (currentSeconds === 0) {
+        if (displayMessage) {
+          setDisplayMessage(false)
+          setCurrentSeconds(24 * 60)
+        } else {
+          setDisplayMessage(true)
+          setCurrentSeconds(4 * 60 + 59)
+        }
+      } else {
       setCurrentSeconds(currentSeconds - 1);
+        
+      }
     }, 1000);
-  }, [currentSeconds]); // side-effect every time seconds are updated
-
-  // ensure double digits in timer are always present
-  // const timerMinutes = minutes < 10 ? `0${minutes}` : minutes;
-  // const timerSeconds = seconds < 10 ? `0${seconds}` : seconds;
-  // maxSeconds = displayMessage ? startingTimer * 60 : 4 * 60 + 59;
-  // currentSeconds = minutes * 60 + seconds;
+  }, [currentSeconds]); 
 
   const formatTime = () => {
     let minutes = Math.floor(currentSeconds / 60);
-    minutes = minutes < 10 ? `${minutes}` : minutes;
+    minutes = minutes < 10 ? `0${minutes}`: minutes;
     let seconds = currentSeconds % 60;
-    seconds = seconds < 10 ? `${seconds}` : seconds;
+    seconds = seconds < 10 ? `0${seconds}`: seconds;
     return `${minutes}:${seconds}`;
   };
 
@@ -66,7 +46,7 @@ export default function Pomodoro() {
         )}
         <div
           className="circular-progress-bar"
-          style={{ width: 300, height: 300 }}
+          style={{ width: 350, height: 350 }}
         >
           <CircularProgressbar
             counterClockwise={true}
