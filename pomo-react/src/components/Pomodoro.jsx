@@ -20,7 +20,7 @@ export default function Pomodoro(props) {
       if (currentSeconds === 0) {
         if (displayMessage) { 
           setDisplayMessage(false); // hide the break
-          setCurrentSeconds(props.timeData.time * 60); // reset initial timer
+          setCurrentSeconds(props.timeData * 60); // reset initial timer
         } else { // break timer is running
           setDisplayMessage(true);
           setCurrentSeconds(breakTime);
