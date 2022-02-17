@@ -1,7 +1,8 @@
-import {useState} from "react";
+import React, {useContext, useState} from 'react';
+import { useNavigate } from "react-router-dom";
 import { login } from "../helpers/helpers"
 import { Form, Button } from 'react-bootstrap';
-import { useNavigate } from "react-router-dom";
+import { SessionsContext } from "../context/SessionsContext";
 
 export default function Login(props) {
   const [user, setUser] = useState({
@@ -9,14 +10,19 @@ export default function Login(props) {
     password: ""
   });
 
+  const [session, setSession] = useContext(
+    SessionsContext
+  );
+
   let navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     login(user).then((response) => {
-      console.log('response', response);
-      navigate("/", { state: response.data });
+      // console.log('response', response);
+      navigate("/");
+      setSession({ state: response.data });
     })
     .catch((error) => {
       throw error;
