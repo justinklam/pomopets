@@ -34,27 +34,26 @@ const login = (user) => {
   })
 };
 
+const logout = () => {
+  // console.log('email', email, 'password', password)
+  return axios.post('//localhost:3030/logout')
+};
+
 const register = (user) => {
   const {username, email, password} = user;
   // console.log('email', email, 'password', password)
-  axios.post('//localhost:3030/users/register',
+  return axios.post('//localhost:3030/users/register',
   {
     username: username,
     email: email,
     password: password
   })
-  .then((response) => {
-    console.log('response', response)
-    // throw response;
-  })
-  .catch((error) => {
-    throw error;
-  });
 };
 
 export {
   // create_pet,
   // create_timer,
   login,
+  logout,
   register
 };
