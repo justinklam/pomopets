@@ -18,6 +18,8 @@ import Register from "./routes/Register";
 import Statistics from "./routes/Statistics";
 import Timers from "./routes/Timers";
 import About from "./routes/About";
+import Logout from "./routes/Logout";
+
 
 // styles
 // import './styles/App.scss';
@@ -36,6 +38,7 @@ function App() {
       <Route path="register" element={<Register />} />
       <Route path="statistics" element={<Statistics />} />
       <Route path="about" element={<About />} />
+      <Route path="logout" element={<Logout />} />
     </Routes>
     </SessionsContext.Provider>
   </BrowserRouter>
