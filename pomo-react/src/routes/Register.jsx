@@ -1,7 +1,8 @@
-import {useState} from "react";
+import React, {useContext, useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import { register } from "../helpers/helpers"
 import { Form, Button } from 'react-bootstrap';
+import { SessionsContext } from "../context/SessionsContext";
 
 export default function Register() {
   const [user, setUser] = useState({
@@ -10,12 +11,22 @@ export default function Register() {
     password: ""
   });
 
+  const [session, setSession] = useContext(
+    SessionsContext
+  );
+
   let navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/");
-    register(user);
+    register(user).then((response) => {
+      // console.log('response', response);
+      setSession({ state: response.data });
+      navigate("/");
+    })
+    .catch((error) => {
+      throw error;
+    });
   };
 
   const handleChange = (e) => {
