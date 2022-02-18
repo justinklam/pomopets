@@ -1,5 +1,5 @@
 import React from "react";
-import egg from '../assets/egg.png';
+import egg from '../assets/eggs/egg.png';
 
 export default function Main(props) {
   return (

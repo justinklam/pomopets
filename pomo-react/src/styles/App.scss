@@ -9,7 +9,7 @@
   justify-content: space-around;
 }
 
-.home-main-container {
+.home-main-container { // main container on homepage
   font-family: $logo-font;
   display: flex;
   height: 60%;
@@ -22,7 +22,7 @@
   margin-top: 50px;
 }
 
-.main-container {
+.main-container { // main container on all other pages
   font-family: $logo-font;
   display: flex;
   height: 60%;
@@ -35,11 +35,7 @@
   margin-top: 50px;
 }
 
-.subheader {
-  font-family: $subheader-font;
-}
-
-.main-navbar {
+.main-navbar { // navbar stylings
   padding-top: 30px;
   padding-bottom: 1rem;
   padding-left: 50px;
@@ -48,16 +44,16 @@
   font-size: larger;
 }
 
-// .logo-header {
-//   font-family: $logo-font;
-// }
-
-.pomodoro {
+.pomodoro { // timer
   font-size: 6em;
 }
 
+<<<<<<< HEAD
 // break message
 .message {
+=======
+.message { // timer message
+>>>>>>> feature/pets
   font-size: 0.5em;
   min-height: 1.3em;
   margin-bottom: 0.5em;
@@ -73,7 +69,6 @@
 
 .text-container {
   margin-left: 8px;
-  // padding-top: 55px;
 }
 
 .about-text-container {
@@ -100,8 +95,8 @@
   padding-top: 25px;
 }
 
-// buttons
 
+// buttons
 .button-div {
   padding-left: 30rem;
 }
@@ -113,7 +108,7 @@
     background-color: $register-button-color !important;
     border-color: $register-button-color;
   }
-  border-color: $register-button-color;
+  border-color: $login-button-color;
   border-width: 2px;
   border-radius: 15px;
   height: 35px;
@@ -126,7 +121,7 @@
     background-color: $login-button-color !important;
     border-color: $login-button-color;
   }
-  border-color: $login-button-color;
+  border-color: $register-button-color;
   border-width: 2px;
   border-radius: 15px;
   height: 35px;
