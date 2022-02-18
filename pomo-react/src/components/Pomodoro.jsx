@@ -10,7 +10,7 @@ export default function Pomodoro(props) {
   const [currentSeconds, setCurrentSeconds] = useState(60 * startingTimer);
   const [maxSeconds, setMaxSeconds] = useState(60 * startingTimer);
 
-  const breakTime = (4*60)+59;
+  const breakTime = 4 * 60 + 59;
 
   useEffect(() => {
     // timer set-up
@@ -19,10 +19,11 @@ export default function Pomodoro(props) {
       clearInterval(interval);
 
       if (currentSeconds === 0) {
-        if (displayMessage) { 
+        if (displayMessage) {
           setDisplayMessage(false); // hide the break
           setCurrentSeconds(props.timeData * 60); // reset initial timer
-        } else { // break timer is running
+        } else {
+          // break timer is running
           setDisplayMessage(true);
           setCurrentSeconds(breakTime);
           setMaxSeconds(breakTime);
@@ -41,6 +42,10 @@ export default function Pomodoro(props) {
     return `${minutes}:${seconds}`;
   };
 
+  const handleClick = () => {
+    console.log("you've clicked Start/Stop");
+  };
+
   return (
     <div className="pomodoro">
       <div className="message text-center">
@@ -49,7 +54,8 @@ export default function Pomodoro(props) {
         )}
         <div
           className="circular-progress-bar"
-          style={{ width: 350, height: 350 }}>
+          style={{ width: 350, height: 350 }}
+        >
           <CircularProgressbar
             counterClockwise={true}
             value={(currentSeconds / maxSeconds) * 100}
@@ -57,7 +63,22 @@ export default function Pomodoro(props) {
           />
         </div>
         <div>
-          <Button    className="start-button"type="submit"variant="primary">Start</Button>
+          <Button
+            className="start-button"
+            type="submit"
+            variant="primary"
+            onClick={handleClick}
+          >
+            Start
+          </Button>
+          <Button
+            className="stop-button"
+            type="submit"
+            variant="danger"
+            onClick={handleClick}
+          >
+            Stop
+          </Button>
         </div>
       </div>
     </div>
