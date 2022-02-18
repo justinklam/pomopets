@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import { Button } from "react-bootstrap";
 import "react-circular-progressbar/dist/styles.css";
 
 export default function Pomodoro(props) {
@@ -48,13 +49,15 @@ export default function Pomodoro(props) {
         )}
         <div
           className="circular-progress-bar"
-          style={{ width: 350, height: 350 }}
-        >
+          style={{ width: 350, height: 350 }}>
           <CircularProgressbar
             counterClockwise={true}
             value={(currentSeconds / maxSeconds) * 100}
             text={formatTime()}
           />
+        </div>
+        <div>
+          <Button    className="start-button"type="submit"variant="primary">Start</Button>
         </div>
       </div>
     </div>
