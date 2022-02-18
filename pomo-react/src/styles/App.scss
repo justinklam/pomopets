@@ -124,6 +124,24 @@
   margin-left: 10px;
 }
 
+.start-button {
+  display: inline;
+  align-items: center;
+  border-radius: 15px;
+  margin: 2.5rem;
+  font-size: large;
+  background-color: $register-button-color;
+
+}
+
+.stop-button {
+  display: inline;
+  align-items: center;
+  border-radius: 15px;
+  margin: 2.5rem;
+  font-size: large;
+}
+
 // egg animations
 .egg {
   margin-top: 5rem;
