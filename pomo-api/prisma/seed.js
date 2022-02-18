@@ -35,18 +35,21 @@ async function main() {
   const new_pet1 = await prisma.pet.create({
     data: {
       name: 'petName1',
+      type: 1
     }
   });
 
   const new_pet2 = await prisma.pet.create({
     data: {
       name: 'petName2',
+      type: 2
     }
   });
 
   const new_pet3 = await prisma.pet.create({
     data: {
       name: 'petName3',
+      type: 3
     }
   });
 
