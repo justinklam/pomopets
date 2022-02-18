@@ -1,5 +1,4 @@
 import Pomodoro from "../components/Pomodoro";
-// import AltNavBar from '../components/AltNavBar';
 
 export default function Timers() {
 

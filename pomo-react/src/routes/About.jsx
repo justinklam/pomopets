@@ -1,4 +1,3 @@
-// import AltNavBar from '../components/AltNavBar';
 
 export default function About() {
   return (
