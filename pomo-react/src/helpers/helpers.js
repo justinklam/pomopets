@@ -2,7 +2,7 @@ const axios = require('axios').default;
 
 const createPets = (pet, userId) => {
   const {name} = pet;
-  // console.log('email', email, 'password', password)
+  // console.log('pet', pet, 'userId', userId)
   return axios.post('//localhost:3030/pets',
   {
     name,
