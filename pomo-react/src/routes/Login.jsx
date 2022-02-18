@@ -49,7 +49,7 @@ export default function Login(props) {
                 <Form.Control type="password" placeholder="Password" name="password" value={user.password} onChange={handleChange}/>
               </Form.Group>
 
-              <Button variant="primary" type="submit" onClick={handleSubmit}>
+              <Button className="login-button" variant="primary" type="submit" onClick={handleSubmit}>
                 Login
               </Button>
             </Form>

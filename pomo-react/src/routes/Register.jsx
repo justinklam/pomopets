@@ -47,7 +47,7 @@ export default function Register() {
               <Form.Control type="password" placeholder="Password" name="password" value={user.password} onChange={handleChange}/>
             </Form.Group>
 
-            <Button variant="primary" type="submit" onClick={handleSubmit}>
+            <Button className="register-button" variant="primary" type="submit" onClick={handleSubmit}>
               Register
             </Button>
           </Form>
