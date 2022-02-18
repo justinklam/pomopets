@@ -38,6 +38,13 @@ router.post('/', async function(req, res) {
     }
   });
 
+  const user_rel1 = await prisma.user_pet.create({
+    data: {
+      user_id: new_user1.id,
+      pet_id: new_pet1.id
+    }
+  });
+
   // console.log('new_pet-----', new_pet);
   
   res.send('Pet created');
