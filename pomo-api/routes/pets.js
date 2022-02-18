@@ -5,13 +5,15 @@ const prisma = new PrismaClient();
 
 router.get('/', async function (req, res) {
 
-  const pet = await prisma.pet.findMany({
+  const findAllPets = await prisma.pet.findMany({
     where: {
-      id: 2
-      // id: req.body.id
+      id: req.body.id
     },
     select: {
+      id: true,
       name: true,
+      stage: true,
+      type: true
     }
   });
 
@@ -26,7 +28,7 @@ router.get('/', async function (req, res) {
   // });
   
   // console.log ('pet', pet)
-  res.send({ title: 'pets' });
+  res.send(findAllPets);
 });
 
 router.post('/', async function(req, res) {
@@ -35,14 +37,16 @@ router.post('/', async function(req, res) {
 
   const new_pet = await prisma.pet.create({
     data: {
-      name: req.body.name
+      name: req.body.name,
+      type: req.body.type
     }
   });
 
   const user_relation = await prisma.user_pet.create({
     data: {
+      // session check for userId
       user_id: req.body.userId,
-      pet_id: req.body.userId
+      pet_id: new_pet.id
     }
   });
 
