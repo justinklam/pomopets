@@ -32,7 +32,7 @@
   margin-left: 8px;
 }
 
-.logo-text { // main "PomoPets" on homepage
+.logo-text { // main "PomoPets" on homepage, header on all other pages
   font-size: -webkit-xxx-large;
   font-family: $logo-font;
   font-weight: bolder;
@@ -62,6 +62,7 @@
 .circular-progress-bar {
   display: inline-block;
   justify-content: center;
+  color: $nav-bar
 }
 
 // ------------------ ABOUT PAGE ------------------ //
@@ -102,6 +103,55 @@
   &:hover {
     color: black;
   }
+}
+
+// ------------------ PETS ------------------ //
+
+.card-title { // pet name
+  font-family: $logo-font;
+  font-weight: bolder;
+  padding-top: 50px;
+}
+
+.card-text {
+  font-family: $text-font;
+  padding-top: 10px;
+}
+
+.pet-button { // "choose your pet" and "submit"
+  font-family: $text-font;
+  background-color: $register-button-color !important;
+  border-color: $register-button-color;
+  &:hover &:focus {
+    background-color: $register-button-color !important;
+    border-color: $register-button-color !important;
+  }
+  // &:first-of-type {
+  //   margin-top: 10px !important;
+  // }
+  // &:last-of-type {
+  //   margin-top: 10px !important;
+  // }
+}
+
+.pets-display {
+  display: flex;
+  margin-top: 50px;
+}
+
+.pets {
+  padding-top: 35px;
+}
+
+.card {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.form-control {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: $text-font;
 }
 
 // ------------------ BUTTONS ------------------ //
