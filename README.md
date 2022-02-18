@@ -2,7 +2,6 @@
 
 **PomoPets** is a pomodoro timer with an animated pet.
 
----
 A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](https://github.com/justinklam), [Rhea Azarraga](https://github.com/Rheaazarraga), and [Arushi Katyal](https://github.com/katy-arushi).
 
 ## Getting Started
