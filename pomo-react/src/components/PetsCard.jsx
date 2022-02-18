@@ -1,8 +1,8 @@
 import React, {useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { createPets } from "../helpers/helpers";
-import { Button } from 'react-bootstrap';
 import { SessionsContext } from "../context/SessionsContext";
+import { Button } from 'react-bootstrap';
+import { createPets } from "../helpers/helpers";
 
 export default function PetsCard(props) {
 
@@ -27,7 +27,7 @@ export default function PetsCard(props) {
     e.preventDefault();
     // console.log('petscard Session', session)
     const userId = session.state.id
-    createPets(petName, userId).then((response) => {
+    createPets(petName, userId, props.type).then((response) => {
       // console.log('response', response);
       // console.log('package', petName, userId);
       // setSession({ state: response.data });
