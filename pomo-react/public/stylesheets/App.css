@@ -54,6 +54,7 @@
 .circular-progress-bar {
   display: inline-block;
   justify-content: center;
+  color: #ddbbd5;
 }
 
 .about-text-container {
