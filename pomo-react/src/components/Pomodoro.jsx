@@ -42,9 +42,10 @@ export default function Pomodoro(props) {
     return `${minutes}:${seconds}`;
   };
 
-  const handleClick = () => {
+  const handleClick = (e)=> {
+    e.preventDefault();
     console.log("you've clicked Start/Stop");
-  };
+  }
 
   return (
     <div className="pomodoro">
