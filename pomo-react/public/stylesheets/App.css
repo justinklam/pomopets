@@ -7,19 +7,6 @@
   justify-content: space-around;
 }
 
-.home-main-container {
-  font-family: "Josefin Sans", sans-serif;
-  display: flex;
-  height: 60%;
-  justify-content: space-evenly;
-  background-color: #feded7;
-  width: 50%;
-  border: 10px #ddbbd5 solid;
-  border-radius: 1%;
-  padding: 50px;
-  margin-top: 50px;
-}
-
 .main-container {
   font-family: "Josefin Sans", sans-serif;
   display: flex;
@@ -33,13 +20,24 @@
   margin-top: 50px;
 }
 
-.main-navbar {
-  padding-top: 30px;
-  padding-bottom: 1rem;
-  padding-left: 50px;
-  font-family: "Hind Guntur", sans-serif;
-  background-color: #ddbbd5 !important;
-  font-size: larger;
+.home {
+  padding: 50px;
+}
+
+.text-container {
+  margin-left: 8px;
+}
+
+.logo-text {
+  font-size: -webkit-xxx-large;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bolder;
+  padding-top: 25px;
+}
+
+.blurb {
+  font-family: "Josefin Sans", sans-serif;
+  padding-top: 25px;
 }
 
 .pomodoro {
@@ -58,10 +56,6 @@
   justify-content: center;
 }
 
-.text-container {
-  margin-left: 8px;
-}
-
 .about-text-container {
   margin-left: 8px;
   padding-left: 50px;
@@ -71,19 +65,24 @@
 .about-text {
   font-family: "Hind Guntur", sans-serif;
   font-size: large;
-  padding-top: 10px;
+  padding-top: 35px;
 }
 
-.logo-text {
-  font-size: -webkit-xxx-large;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: bolder;
+.about {
+  height: 70%;
+}
+
+.about-header {
   padding-top: 25px;
 }
 
-.blurb {
-  font-family: "Josefin Sans", sans-serif;
-  padding-top: 25px;
+.main-navbar {
+  padding-top: 30px;
+  padding-bottom: 1rem;
+  padding-left: 50px;
+  font-family: "Hind Guntur", sans-serif;
+  background-color: #ddbbd5 !important;
+  font-size: larger;
 }
 
 .nav-main-link {
@@ -140,6 +139,7 @@
   margin: 2.5rem;
   font-size: large;
   background-color: #4D90CC;
+  font-family: "Hind Guntur", sans-serif;
 }
 
 .stop-button {
@@ -148,6 +148,7 @@
   border-radius: 15px;
   margin: 2.5rem;
   font-size: large;
+  font-family: "Hind Guntur", sans-serif;
 }
 
 .egg {
