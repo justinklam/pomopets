@@ -1,2 +1,0 @@
--- AlterTable
-ALTER TABLE "pets" ADD COLUMN     "stage" INTEGER NOT NULL DEFAULT 0;
