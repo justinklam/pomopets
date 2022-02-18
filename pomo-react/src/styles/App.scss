@@ -9,18 +9,7 @@
   justify-content: space-around;
 }
 
-.home-main-container { // main container on homepage
-  font-family: $logo-font;
-  display: flex;
-  height: 60%;
-  justify-content: space-evenly;
-  background-color: $main-background;
-  width: 50%;
-  border: 10px $nav-bar solid;
-  border-radius: 1%;
-  padding: 50px;
-  margin-top: 50px;
-}
+// ------------------ HOME PAGE ------------------ //
 
 .main-container { // main container on all other pages
   font-family: $logo-font;
@@ -35,14 +24,27 @@
   margin-top: 50px;
 }
 
-.main-navbar { // navbar stylings
-  padding-top: 30px;
-  padding-bottom: 1rem;
-  padding-left: 50px;
-  font-family: $text-font;
-  background-color: $nav-bar !important;
-  font-size: larger;
+.home { // main container on homepage
+  padding: 50px;
 }
+
+.text-container { // container / div for text
+  margin-left: 8px;
+}
+
+.logo-text { // main "PomoPets" on homepage
+  font-size: -webkit-xxx-large;
+  font-family: $logo-font;
+  font-weight: bolder;
+  padding-top: 25px;
+}
+
+.blurb { // 2 p tags on homepage
+  font-family: $logo-font;
+  padding-top: 25px;
+}
+
+// ------------------ TIMER ------------------ //
 
 .pomodoro { // timer
   font-size: 6em;
@@ -62,9 +64,7 @@
   justify-content: center;
 }
 
-.text-container { // container / div for text
-  margin-left: 8px;
-}
+// ------------------ ABOUT PAGE ------------------ //
 
 .about-text-container { // container - increase padding and margin for about text
   margin-left: 8px;
@@ -75,19 +75,26 @@
 .about-text { // all text on about page
   font-family: $text-font;
   font-size: large;
-  padding-top: 10px;
+  padding-top: 35px;
 }
 
-.logo-text { // main "PomoPets" on homepage
-  font-size: -webkit-xxx-large;
-  font-family: $logo-font;
-  font-weight: bolder;
+.about { // main text container for about page, make longer to accommodate text overflow
+  height: 70%;
+}
+
+.about-header { //h1 "what is the pomodoro technique"
   padding-top: 25px;
 }
 
-.blurb { // 2 p tags on homepage
-  font-family: $logo-font;
-  padding-top: 25px;
+// ------------------ NAV BAR ------------------ //
+
+.main-navbar { // navbar stylings
+  padding-top: 30px;
+  padding-bottom: 1rem;
+  padding-left: 50px;
+  font-family: $text-font;
+  background-color: $nav-bar !important;
+  font-size: larger;
 }
 
 .nav-main-link { // PomoPets home link in nav bar
@@ -97,7 +104,8 @@
   }
 }
 
-// buttons
+// ------------------ BUTTONS ------------------ //
+
 .button-div {
   padding-left: 30rem;
 }
@@ -145,7 +153,7 @@
   margin: 2.5rem;
   font-size: large;
   background-color: $register-button-color;
-
+  font-family: $text-font;
 }
 
 .stop-button {
@@ -154,9 +162,10 @@
   border-radius: 15px;
   margin: 2.5rem;
   font-size: large;
+  font-family: $text-font;
 }
 
-// egg animations
+// ------------------ EGG ANIMATIONS ------------------ //
 .egg {
   margin-top: 5rem;
   animation: wiggle 1s linear infinite;
