@@ -48,12 +48,8 @@
   font-size: 6em;
 }
 
-<<<<<<< HEAD
 // break message
-.message {
-=======
 .message { // timer message
->>>>>>> feature/pets
   font-size: 0.5em;
   min-height: 1.3em;
   margin-bottom: 0.5em;
@@ -64,7 +60,6 @@
 .circular-progress-bar {
   display: inline-block;
   justify-content: center;
-
 }
 
 .text-container {
@@ -95,6 +90,16 @@
   padding-top: 25px;
 }
 
+.nav-link {
+  color: #41373F;
+}
+
+.nav-main-link {
+  color: black;
+  &:hover {
+    color: black;
+  }
+}
 
 // buttons
 .button-div {
@@ -103,29 +108,38 @@
 
 .login-button {
   background-color: $login-button-color;
+  text-decoration: none;
+  font-family: $text-font !important; 
   color: white;
-  &:hover {
-    background-color: $register-button-color !important;
-    border-color: $register-button-color;
-  }
   border-color: $login-button-color;
   border-width: 2px;
   border-radius: 15px;
   height: 35px;
+    &:hover {
+    background-color: $register-button-color !important;
+    border-color: $register-button-color;
+    color: white;
+  }
+    &:link {
+    font-family: $text-font !important; 
+  }
 }
 
 .register-button {
   background-color: $register-button-color;
+  text-decoration: none;
+  font-family: $text-font !important;
   color: white;
-  &:hover {
-    background-color: $login-button-color !important;
-    border-color: $login-button-color;
-  }
   border-color: $register-button-color;
   border-width: 2px;
   border-radius: 15px;
   height: 35px;
   margin-left: 10px;
+    &:hover {
+    background-color: $login-button-color !important;
+    border-color: $login-button-color;
+    color: white;
+  }
 }
 
 // egg animations

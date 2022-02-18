@@ -22,12 +22,12 @@ export default function Pets() {
         <div className="main-container">
           <div className="text-container">
             <h1 className="logo-text text-center"> Choose your PomoPet! </h1>
-<<<<<<< HEAD
+
             <div>
               {pet_info.map((pet) =><PetsCard name={pet.name} image={pet.image}/>
               )}
-=======
-            <div className="pet-pics text-center"> 
+
+            {/* <div className="pet-pics text-center"> 
               <img src={require('../assets/pets/cat1.gif')} alt="pinkpusheen" width="185px" height="185px"/> 
               <img src={require('../assets/pets/cat2.gif')} alt="bluepusheen" width="185px" height="185px"/>
               <br/>
@@ -38,8 +38,8 @@ export default function Pets() {
               <br />
               <img src={require('../assets/pets/hedgehog1.gif')} alt="crownhedgehog" width="200px" height="200px"/> 
               <img src={require('../assets/pets/hedgehog2.gif')} alt="bowinghedgehog" width="200px" height="200px"/> 
-              <img src={require('../assets/pets/hedgehog3.gif')} alt="spinhedgehog" width="200px" height="200px"/> 
->>>>>>> feature/pets
+              <img src={require('../assets/pets/hedgehog3.gif')} alt="spinhedgehog" width="200px" height="200px"/>  */}
+
             </div>
           </div>
         </div>
