@@ -1,14 +1,5 @@
 const axios = require('axios');
 
-const createPets = (pet) => {
-  const {name} = pet;
-  // console.log('email', email, 'password', password)
-  return axios.post('//localhost:3030/pets',
-  {
-    name: name,
-  })
-};
-
 // const getPets = axios.get('/localhost:3030/pets', {
 //   params: {
 //     id: id
@@ -45,7 +36,6 @@ const createPets = (pet) => {
 
 
 export {
-  createPets,
   // getPets,
   // getTimers
 };

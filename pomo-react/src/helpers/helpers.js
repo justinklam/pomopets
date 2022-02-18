@@ -1,16 +1,14 @@
 const axios = require('axios').default;
 
-// const create_pet = axios.post('/localhost:3030/pets',
-//   {
-//     user_pets: user_pets,
-//     description: description
-//   })
-//   .then((response) => {
-//     throw response;
-//   })
-//   .catch((error) => {
-//     throw error;
-//   });
+const createPets = (pet, userId) => {
+  const {name} = pet;
+  // console.log('email', email, 'password', password)
+  return axios.post('//localhost:3030/pets',
+  {
+    name,
+    userId
+  })
+};
 
 // const create_timer = axios.post('/localhost:3030/timers',
 //   {
@@ -51,7 +49,7 @@ const register = (user) => {
 };
 
 export {
-  // create_pet,
+  createPets,
   // create_timer,
   login,
   logout,
