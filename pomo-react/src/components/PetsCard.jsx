@@ -8,9 +8,7 @@ export default function PetsCard(props) {
 
   const [toggleName, setToggleName] = useState(false);
 
-  const [petName, setPetName] = useState({
-    name: ""
-  });
+  const [petName, setPetName] = useState("");
 
   const [session, setSession] = useContext(
     SessionsContext
@@ -22,11 +20,12 @@ export default function PetsCard(props) {
     const name = e.target.name;
     const value = e.target.value;
     // console.log('handlechange', name, value)
-    setPetName({...petName, [name]: value})
+    setPetName(value)
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // console.log('petscard Session', session)
     const userId = session.state.id
     createPets(petName, userId).then((response) => {
       // console.log('response', response);
