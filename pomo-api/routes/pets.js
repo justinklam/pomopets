@@ -12,7 +12,6 @@ router.get('/', async function (req, res) {
     },
     select: {
       name: true,
-      description: true
     }
   });
 
@@ -36,7 +35,6 @@ router.post('/', async function(req, res) {
     data: {
       name: req.body.name,
       user_pets: req.body.user_pets,
-      description: req.body.description
     }
   });
 
