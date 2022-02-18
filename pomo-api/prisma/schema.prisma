@@ -36,7 +36,7 @@ model Timer {
 model Pet {
   @@map(name: "pets")
   id Int @default(autoincrement()) @id @unique
-  name String @db.VarChar(255) @unique
+  name String @db.VarChar(255)
   // description String @db.VarChar(255)
   stage Int @default(0)
 
