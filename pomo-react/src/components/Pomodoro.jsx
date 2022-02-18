@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import { Button } from "react-bootstrap";
 import "react-circular-progressbar/dist/styles.css";
 
 export default function Pomodoro(props) {
@@ -9,7 +10,7 @@ export default function Pomodoro(props) {
   const [currentSeconds, setCurrentSeconds] = useState(60 * startingTimer);
   const [maxSeconds, setMaxSeconds] = useState(60 * startingTimer);
 
-  const breakTime = (4*60)+59;
+  const breakTime = 4 * 60 + 59;
 
   useEffect(() => {
     // timer set-up
@@ -18,10 +19,11 @@ export default function Pomodoro(props) {
       clearInterval(interval);
 
       if (currentSeconds === 0) {
-        if (displayMessage) { 
+        if (displayMessage) {
           setDisplayMessage(false); // hide the break
           setCurrentSeconds(props.timeData * 60); // reset initial timer
-        } else { // break timer is running
+        } else {
+          // break timer is running
           setDisplayMessage(true);
           setCurrentSeconds(breakTime);
           setMaxSeconds(breakTime);
@@ -40,6 +42,11 @@ export default function Pomodoro(props) {
     return `${minutes}:${seconds}`;
   };
 
+  const handleClick = (e)=> {
+    e.preventDefault();
+    console.log("you've clicked Start/Stop");
+  }
+
   return (
     <div className="pomodoro">
       <div className="message text-center">
@@ -55,6 +62,24 @@ export default function Pomodoro(props) {
             value={(currentSeconds / maxSeconds) * 100}
             text={formatTime()}
           />
+        </div>
+        <div>
+          <Button
+            className="start-button"
+            type="submit"
+            variant="primary"
+            onClick={handleClick}
+          >
+            Start
+          </Button>
+          <Button
+            className="stop-button"
+            type="submit"
+            variant="danger"
+            onClick={handleClick}
+          >
+            Stop
+          </Button>
         </div>
       </div>
     </div>

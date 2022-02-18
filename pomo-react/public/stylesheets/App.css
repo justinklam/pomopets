@@ -137,6 +137,23 @@
   color: white;
 }
 
+.start-button {
+  display: inline;
+  align-items: center;
+  border-radius: 15px;
+  margin: 2.5rem;
+  font-size: large;
+  background-color: #4D90CC;
+}
+
+.stop-button {
+  display: inline;
+  align-items: center;
+  border-radius: 15px;
+  margin: 2.5rem;
+  font-size: large;
+}
+
 .egg {
   margin-top: 5rem;
   animation: wiggle 1s linear infinite;

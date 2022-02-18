@@ -4,7 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "nodemon": "nodemon ./bin/www localhost 3030"
+    "nodemon": "nodemon ./bin/www localhost 3030",
+    "migrate": "prisma migrate dev --name init"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
   },
   "dependencies": {
     "@prisma/client": "^3.9.2",
