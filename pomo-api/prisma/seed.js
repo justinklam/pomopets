@@ -8,7 +8,7 @@ async function main() {
     create: {
       username: 'user1',
       email: 'name1@mail.com',
-      password: '123'
+      password: '$2a$10$/zxmTG1XNLC1XSMRkuHcO.bvYHi6VWu93PJMU8p77dBHP3TKsuuI.'
     },
   });
 
@@ -18,7 +18,7 @@ async function main() {
     create: {
       username: 'user2',
       email: 'name2@mail.com',
-      password: '123'
+      password: '$2a$10$/zxmTG1XNLC1XSMRkuHcO.bvYHi6VWu93PJMU8p77dBHP3TKsuuI.'
     },
   });
 
@@ -28,7 +28,7 @@ async function main() {
     create: {
       username: 'user3',
       email: 'name3@mail.com',
-      password: '123'
+      password: '$2a$10$/zxmTG1XNLC1XSMRkuHcO.bvYHi6VWu93PJMU8p77dBHP3TKsuuI.'
     },
   });
 
