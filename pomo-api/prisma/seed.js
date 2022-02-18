@@ -32,29 +32,47 @@ async function main() {
     },
   });
 
-  const new_pet1 = await prisma.pet.upsert({
-    where: { name: 'petName2' },
-    update: {},
-    create: {
+  const new_pet1 = await prisma.pet.create({
+    data: {
+      name: 'petName1',
+    }
+  });
+
+  const new_pet2 = await prisma.pet.create({
+    data: {
       name: 'petName2',
     }
   });
 
-  const new_pet2 = await prisma.pet.upsert({
-    where: { name: 'petName3' },
-    update: {},
-    create: {
+  const new_pet3 = await prisma.pet.create({
+    data: {
       name: 'petName3',
     }
   });
 
-  const new_pet3 = await prisma.pet.upsert({
-    where: { name: 'petName1' },
-    update: {},
-    create: {
-      name: 'petName1',
-    }
-  });
+  // const new_pet1 = await prisma.pet.upsert({
+  //   where: { name: 'petName1' },
+  //   update: {},
+  //   create: {
+  //     name: 'petName1',
+  //   }
+  // });
+
+  // const new_pet2 = await prisma.pet.upsert({
+  //   where: { name: 'petName2' },
+  //   update: {},
+  //   create: {
+  //     name: 'petName2',
+  //   }
+  // });
+
+  // const new_pet3 = await prisma.pet.upsert({
+  //   where: { name: 'petName3' },
+  //   update: {},
+  //   create: {
+  //     name: 'petName3',
+  //   }
+  // });
 
   const user_rel1 = await prisma.user_pet.upsert({
     where: { id: 1 },
