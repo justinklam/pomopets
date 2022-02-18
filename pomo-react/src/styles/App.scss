@@ -56,45 +56,41 @@
   display: block;
 }
 
-// circular-progress-bar
+// circular-progress-bar for timer
 .circular-progress-bar {
   display: inline-block;
   justify-content: center;
 }
 
-.text-container {
+.text-container { // container / div for text
   margin-left: 8px;
 }
 
-.about-text-container {
+.about-text-container { // container - increase padding and margin for about text
   margin-left: 8px;
   padding-left: 50px;
   padding-right: 50px;
 }
 
-.about-text {
+.about-text { // all text on about page
   font-family: $text-font;
   font-size: large;
   padding-top: 10px;
 }
 
-.logo-text {
+.logo-text { // main "PomoPets" on homepage
   font-size: -webkit-xxx-large;
   font-family: $logo-font;
   font-weight: bolder;
   padding-top: 25px;
 }
 
-.blurb {
+.blurb { // 2 p tags on homepage
   font-family: $logo-font;
   padding-top: 25px;
 }
 
-.nav-link {
-  color: #41373F;
-}
-
-.nav-main-link {
+.nav-main-link { // PomoPets home link in nav bar
   color: black;
   &:hover {
     color: black;
