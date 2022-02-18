@@ -92,6 +92,47 @@
   color: black;
 }
 
+.card-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bolder;
+  padding-top: 50px;
+}
+
+.card-text {
+  font-family: "Hind Guntur", sans-serif;
+  padding-top: 10px;
+}
+
+.pet-button {
+  font-family: "Hind Guntur", sans-serif;
+  background-color: #4D90CC !important;
+  border-color: #4D90CC;
+}
+.pet-button:hover .pet-button:focus {
+  background-color: #4D90CC !important;
+  border-color: #4D90CC !important;
+}
+
+.pets-display {
+  display: flex;
+  margin-top: 50px;
+}
+
+.pets {
+  padding-top: 35px;
+}
+
+.card {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.form-control {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Hind Guntur", sans-serif;
+}
+
 .button-div {
   padding-left: 30rem;
 }
