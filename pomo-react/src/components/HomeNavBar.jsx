@@ -31,8 +31,8 @@ export default function HomeNavBar() {
               {!session?.state.email ? '' : <NavDropdown.Item href="/logout">Logout</NavDropdown.Item>}
             </NavDropdown>
             <div className="button-div">
-              {session?.state.email ? '' : <Link className="login-button" to="/login" >&nbsp;&nbsp;Login&nbsp;&nbsp;</Link>}
-              {session?.state.email ? '' : <Link className="register-button" id="regisiter-nav" to="/register">&nbsp;&nbsp;Register&nbsp;&nbsp;</Link>}
+              {session?.state.email ? '' : <Link className="login-button" to="/login" >&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;</Link>}
+              {session?.state.email ? '' : <Link className="register-button" id="regisiter-nav" to="/register">&nbsp;&nbsp;&nbsp;Register&nbsp;&nbsp;&nbsp;</Link>}
             </div>
           </Nav>
         </Navbar.Collapse>
