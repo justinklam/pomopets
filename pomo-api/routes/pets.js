@@ -31,6 +31,8 @@ router.get('/', async function (req, res) {
 
 router.post('/', async function(req, res) {
 
+  console.log('body-----', req.body)
+
   const new_pet = await prisma.pet.create({
     data: {
       name: req.body.name,
@@ -38,10 +40,10 @@ router.post('/', async function(req, res) {
     }
   });
 
-  const user_rel1 = await prisma.user_pet.create({
+  const user_relation = await prisma.user_pet.create({
     data: {
-      user_id: new_user1.id,
-      pet_id: new_pet1.id
+      user_id: req.body.userId,
+      pet_id: req.body.userId
     }
   });
 
