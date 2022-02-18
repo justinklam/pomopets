@@ -7,13 +7,16 @@ export default function Pets() {
 
   const pet_info = [{
     name:"Pup",
-    image: pup
+    image: pup,
+    description:"A very good boy who love naps!"
   }, {
     name:"Hedgehog",
-    image: hedgehog
+    image: hedgehog,
+    description:"A cuddly creature with mysterious spikes..."
   }, {
     name:"Cat",
-    image: cat
+    image: cat,
+    description:"A sassy cat who lives in luxury!"
   }];
 
   return (
@@ -24,7 +27,7 @@ export default function Pets() {
             <h1 className="logo-text text-center"> Choose your PomoPet! </h1>
 
             <div>
-              {pet_info.map((pet) =><PetsCard name={pet.name} image={pet.image}/>
+              {pet_info.map((pet) => <PetsCard name={pet.name} image={pet.image} description={pet.description}/>
               )}
 
             {/* <div className="pet-pics text-center"> 
