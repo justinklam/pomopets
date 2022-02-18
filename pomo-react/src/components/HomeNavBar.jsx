@@ -25,8 +25,8 @@ export default function HomeNavBar() {
             <Link className="nav-link" to="/pets">Pets</Link>
             <Link className="nav-link" to="/timers">Timers</Link>
             <NavDropdown title="My Account" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">Settings</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Change Password</NavDropdown.Item>
               <NavDropdown.Divider />
               {!session?.state.email ? '' : <NavDropdown.Item href="/logout">Logout</NavDropdown.Item>}
             </NavDropdown>
