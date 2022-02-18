@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Navbar, Nav, NavDropdown, Container, Button } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import { SessionsContext } from "../context/SessionsContext";
