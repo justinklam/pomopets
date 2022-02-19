@@ -20,7 +20,7 @@ import Timers from "./routes/Timers";
 import About from "./routes/About";
 
 function App() {
-  const [context, setContext] = useState();
+  const [context, setContext] = useState({state:{}});
   return (
     <BrowserRouter>
     <SessionsContext.Provider value={[context, setContext]}>
