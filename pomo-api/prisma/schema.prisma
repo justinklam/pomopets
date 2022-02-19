@@ -39,6 +39,7 @@ model Pet {
   name String @db.VarChar(255)
   // description String @db.VarChar(255)
   stage Int @default(0)
+  type Int
 
   user_pets User_pet[]
 }

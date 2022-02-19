@@ -1,4 +1,5 @@
 import Pomodoro from "../components/Pomodoro";
+import MyPet from "../components/MyPet";
 
 export default function Timers() {
   const timeData = {
@@ -12,6 +13,7 @@ export default function Timers() {
           <div className="text-container pt-2">
             <h1 className="logo-text text-center"> Timer </h1>
             <Pomodoro startingTimer={timeData.time} />
+            <MyPet/>
           </div>
         </div>
       </div>
