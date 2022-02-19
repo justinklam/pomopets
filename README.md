@@ -14,7 +14,7 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
      - username: `labber` 
      - password: `labber` 
      - database: `pomo_db`
-     - port: `5000`
+     - port: `3030`
 4. Install dependencies: `npm i`
 5. Create database: `sequelize db:create`
 6. Run the server: `npm start`
@@ -23,7 +23,7 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
 
 1. Go to pomo-react: `cd pomo-react`
 2. Update proxy in the package.json with the port you used for the server
-   - `"proxy": "http://localhost:5000",`
+   - `"proxy": "http://localhost:3030",`
 3. Install dependencies: `npm i`
 4. Run the app: `npm start`
   
