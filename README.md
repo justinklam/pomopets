@@ -17,7 +17,7 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
 5. Install dependencies: `npm i`
 6. Create database: `sequelize db:create`
 7. Run the server: `npm start`
-8. Go to `locolhost:3030`
+8. Go to `localhost:3030`
 
 To run migrations: `npx prisma migrate dev --name init`
 
