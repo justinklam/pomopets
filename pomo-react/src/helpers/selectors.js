@@ -7,7 +7,7 @@ const getPets = (userId) =>
   }
 })
 .then(function (response) {
-  console.log('getPets', response);
+  // console.log('getPets', response);
   return response.data;
 })
 .catch(function (error) {
