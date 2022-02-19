@@ -31,4 +31,30 @@ To run migrations: `npx prisma migrate dev --name init`
   
 ## Dependencies
 ### Server-side
+    "@prisma/client": "^3.9.2",
+    "bcryptjs": "^2.4.3",
+    "bundle": "^2.1.0",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pg": "^8.7.3"
+    
 ### Client-side
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.25.0",
+    "bootstrap": "^5.1.3",
+    "react": "^17.0.2",
+    "react-bootstrap": "^2.1.2",
+    "react-circular-progressbar": "^2.0.4",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "5.0.0",
+    "sass": "^1.49.7",
+    "web-vitals": "^2.1.4"
