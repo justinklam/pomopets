@@ -30,7 +30,7 @@ export default function Pets() {
             <h1 className="pets logo-text text-center"> Choose your PomoPet! </h1>
 
             <div className='pets-display'>
-              {pet_info.map((pet) => <PetsCard name={pet.name} image={pet.image} description={pet.description} type={pet.type}/>
+              {pet_info.map((pet) => <PetsCard name={pet.name} image={pet.image} description={pet.description} type={pet.type} key={pet.type}/>
               )}
             </div>
           </div>
