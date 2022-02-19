@@ -9,30 +9,37 @@ export default function Pomodoro(props) {
   const [displayMessage, setDisplayMessage] = useState(false);
   const [currentSeconds, setCurrentSeconds] = useState(60 * startingTimer);
   const [maxSeconds, setMaxSeconds] = useState(60 * startingTimer);
+  const [timeRunning, setTimeRunning] = useState(false);
 
-  const breakTime = 4 * 60 + 59;
+  const breakTime = 5 * 60;
 
   useEffect(() => {
     // timer set-up
-    let interval = setInterval(() => {
-      // NOTE: must clear interval! otherwise bad practice
-      clearInterval(interval);
 
-      if (currentSeconds === 0) {
-        if (displayMessage) {
-          setDisplayMessage(false); // hide the break
-          setCurrentSeconds(props.timeData * 60); // reset initial timer
+    if (timeRunning) {
+      //updates the timer
+      let interval = setInterval(() => {
+        // NOTE: must clear interval! otherwise bad practice
+        clearInterval(interval);
+
+        if (currentSeconds === 0) {
+          if (displayMessage) {
+            setTimeRunning(false);
+            setDisplayMessage(false); // hide the break
+            setCurrentSeconds(startingTimer * 60); // reset initial timer
+          } else {
+            // break timer is running
+            setTimeRunning(false);
+            setDisplayMessage(true);
+            setCurrentSeconds(breakTime);
+            setMaxSeconds(breakTime);
+          }
         } else {
-          // break timer is running
-          setDisplayMessage(true);
-          setCurrentSeconds(breakTime);
-          setMaxSeconds(breakTime);
+          setCurrentSeconds(currentSeconds - 1); // initial timer normal countdown
         }
-      } else {
-        setCurrentSeconds(currentSeconds - 1); // initial timer normal countdown
-      }
-    }, 1000);
-  }, [currentSeconds]);
+      }, 1000);
+    }
+  }, [currentSeconds, timeRunning]);
 
   const formatTime = () => {
     let minutes = Math.floor(currentSeconds / 60);
@@ -42,10 +49,14 @@ export default function Pomodoro(props) {
     return `${minutes}:${seconds}`;
   };
 
-  const handleClick = (e)=> {
+  const handleClick = e => {
     e.preventDefault();
+    if (timeRunning) {
+      // identifies if the timer is running or not
+      setTimeRunning(false);
+    }
     console.log("you've clicked Start/Stop");
-  }
+  };
 
   return (
     <div className="pomodoro">
@@ -68,7 +79,9 @@ export default function Pomodoro(props) {
             className="start-button"
             type="submit"
             variant="primary"
-            onClick={handleClick}
+            onClick={() => {
+              setTimeRunning(true);
+            }}
           >
             Start
           </Button>
@@ -76,7 +89,9 @@ export default function Pomodoro(props) {
             className="stop-button"
             type="submit"
             variant="danger"
-            onClick={handleClick}
+            onClick={() => {
+              setTimeRunning(false);
+            }}
           >
             Stop
           </Button>
