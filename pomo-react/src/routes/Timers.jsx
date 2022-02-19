@@ -1,9 +1,8 @@
 import Pomodoro from "../components/Pomodoro";
 
 export default function Timers() {
-
   const timeData = {
-    time: 25
+    time: 25,
   };
 
   return (
