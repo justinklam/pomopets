@@ -14,25 +14,20 @@ const getAllPets = (userId) =>
   throw error;
 });
 
-// const getTimers = axios.get('/localhost:3030/get_timers', {
+// const getAllTimers = axios.get('//localhost:3030/timers', {
 //   params: {
-//     id: id
+//     id: userId
 //   }
 // })
 // .then(function (response) {
-//   // handle success
-//   throw response;
+//   return response.data;
 // })
 // .catch(function (error) {
-//   // handle error
 //   throw error;
-// })
-// .then(function () {
-//   // always executed
 // });
 
 
 export {
-  getAllPets
-  // getTimers
+  getAllPets,
+  // getAllTimers
 };
