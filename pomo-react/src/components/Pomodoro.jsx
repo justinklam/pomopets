@@ -10,6 +10,7 @@ export default function Pomodoro(props) {
   const [currentSeconds, setCurrentSeconds] = useState(60 * startingTimer);
   const [maxSeconds, setMaxSeconds] = useState(60 * startingTimer);
   const [timeRunning, setTimeRunning] = useState(false);
+  const [resetting, setResetting] = useState(false);
 
   const breakTime = 5 * 60;
 
@@ -22,6 +23,12 @@ export default function Pomodoro(props) {
         // NOTE: must clear interval! otherwise bad practice
         clearInterval(interval);
 
+        if (resetting) {
+          setCurrentSeconds(startingTimer * 60);
+          setTimeRunning(false);
+          setResetting(false);
+          return;
+        }
         if (currentSeconds === 0) {
           if (displayMessage) {
             setTimeRunning(false);
@@ -80,9 +87,12 @@ export default function Pomodoro(props) {
             text={formatTime()}
           />
         </div>
-        
+
         <div>
-          <DropdownButton id="dropdown-basic-button" title="What are you focusing on?">
+          <DropdownButton
+            id="dropdown-basic-button"
+            title="What are you focusing on?"
+          >
             <Dropdown.Item onClick={handleSubmit}>Study</Dropdown.Item>
             <Dropdown.Item onClick={handleSubmit}>Exercise</Dropdown.Item>
             <Dropdown.Item onClick={handleSubmit}>Work</Dropdown.Item>
@@ -106,7 +116,7 @@ export default function Pomodoro(props) {
             type="submit"
             variant="danger"
             onClick={() => {
-              setTimeRunning(false);
+              setResetting(true);
             }}
           >
             Reset
