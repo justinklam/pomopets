@@ -8,11 +8,6 @@ export default function Timers() {
     time: 25,
   };
 
-  const [tag, setTag] = useState("");
-
-  const handleSubmit = e => {
-    e.preventDefault();
-  };
 
   return (
     <>
@@ -21,12 +16,6 @@ export default function Timers() {
           <div className="text-container pt-2">
             <h1 className="logo-text text-center"> Timer </h1>
             <Pomodoro startingTimer={timeData.time} />
-            <DropdownButton id="dropdown-basic-button" title="Timer Tag">
-              <Dropdown.Item onClick={handleSubmit}>Study</Dropdown.Item>
-              <Dropdown.Item onClick={handleSubmit}>Exercise</Dropdown.Item>
-              <Dropdown.Item onClick={handleSubmit}>Work</Dropdown.Item>
-              <Dropdown.Item onClick={handleSubmit}>Tidy-Up</Dropdown.Item>
-            </DropdownButton>
             <MyPet />
           </div>
         </div>
