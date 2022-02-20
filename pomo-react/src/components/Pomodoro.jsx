@@ -71,7 +71,7 @@ export default function Pomodoro(props) {
           <div>Time for a break! Your next session starts in: </div>
         )}
         <div
-          className="circular-progress-bar"
+          className="circular-progress-bar mb-4"
           style={{ width: 350, height: 350 }}
         >
           <CircularProgressbar
@@ -82,7 +82,7 @@ export default function Pomodoro(props) {
         </div>
         
         <div>
-          <DropdownButton id="dropdown-basic-button" title="Timer Tag">
+          <DropdownButton id="dropdown-basic-button" title="What are you focusing on?">
             <Dropdown.Item onClick={handleSubmit}>Study</Dropdown.Item>
             <Dropdown.Item onClick={handleSubmit}>Exercise</Dropdown.Item>
             <Dropdown.Item onClick={handleSubmit}>Work</Dropdown.Item>
