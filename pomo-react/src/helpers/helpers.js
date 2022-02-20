@@ -12,7 +12,16 @@ const createPets = (name, userId, type) => {
   })
 };
 
-// const create_timer = axios.post('/localhost:3030/timers',
+const createTimer = (userId, description) => {
+  // console.log('userId', userId, 'description', description);
+  return axios.post('//localhost:3030/timers',
+  {
+    userId,
+    description
+  })
+};
+
+// const create_timer = axios.post('//localhost:3030/timers',
 //   {
 //     user_id: user_id,
 //     description: description
@@ -52,7 +61,7 @@ const register = (user) => {
 
 export {
   createPets,
-  // create_timer,
+  // createTimer,
   login,
   logout,
   register
