@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
-import { Button } from "react-bootstrap";
+import { Button, Dropdown, DropdownButton } from "react-bootstrap";
 import "react-circular-progressbar/dist/styles.css";
 
 export default function Pomodoro(props) {
@@ -58,6 +58,12 @@ export default function Pomodoro(props) {
     console.log("you've clicked Start/Stop");
   };
 
+  const [tag, setTag] = useState("");
+
+  const handleSubmit = e => {
+    e.preventDefault();
+  };
+
   return (
     <div className="pomodoro">
       <div className="message text-center">
@@ -74,6 +80,16 @@ export default function Pomodoro(props) {
             text={formatTime()}
           />
         </div>
+        
+        <div>
+          <DropdownButton id="dropdown-basic-button" title="Timer Tag">
+            <Dropdown.Item onClick={handleSubmit}>Study</Dropdown.Item>
+            <Dropdown.Item onClick={handleSubmit}>Exercise</Dropdown.Item>
+            <Dropdown.Item onClick={handleSubmit}>Work</Dropdown.Item>
+            <Dropdown.Item onClick={handleSubmit}>Tidy-Up</Dropdown.Item>
+          </DropdownButton>
+        </div>
+
         <div>
           <Button
             className="start-button"
