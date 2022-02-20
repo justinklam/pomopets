@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
-import { Button } from "react-bootstrap";
+import { Button, Dropdown, DropdownButton } from "react-bootstrap";
 import { updatePets } from "../helpers/helpers";
 import { SessionsContext } from "../context/SessionsContext";
 import { createTimer } from "../helpers/helpers";
@@ -18,6 +18,7 @@ export default function Pomodoro(props) {
   const [currentSeconds, setCurrentSeconds] = useState(60 * startingTimer);
   const [maxSeconds, setMaxSeconds] = useState(60 * startingTimer);
   const [timeRunning, setTimeRunning] = useState(false);
+  const [resetting, setResetting] = useState(false);
 
   const breakTime = 5 * 60;
 
@@ -33,6 +34,13 @@ export default function Pomodoro(props) {
         // NOTE: must clear interval! otherwise bad practice
         clearInterval(interval);
 
+        // handles the reset button
+        if (resetting) {
+          setCurrentSeconds(startingTimer * 60);
+          setTimeRunning(false);
+          setResetting(false);
+          return;
+        }
         if (currentSeconds === 0) {
           if (displayMessage) {
             setTimeRunning(false);
@@ -53,7 +61,7 @@ export default function Pomodoro(props) {
         } else {
           setCurrentSeconds(currentSeconds - 1); // initial timer normal countdown
         }
-      }, 1000);
+      }, 100);
     }
   }, [currentSeconds, timeRunning]);
 
@@ -71,7 +79,12 @@ export default function Pomodoro(props) {
       // identifies if the timer is running or not
       setTimeRunning(false);
     }
-    console.log("you've clicked Start/Stop");
+  };
+
+  const [tag, setTag] = useState("");
+
+  const handleSubmit = e => {
+    e.preventDefault();
   };
 
   return (
@@ -81,7 +94,7 @@ export default function Pomodoro(props) {
           <div>Time for a break! Your next session starts in: </div>
         )}
         <div
-          className="circular-progress-bar"
+          className="circular-progress-bar mb-4"
           style={{ width: 350, height: 350 }}
         >
           <CircularProgressbar
@@ -90,6 +103,19 @@ export default function Pomodoro(props) {
             text={formatTime()}
           />
         </div>
+
+        <div>
+          <DropdownButton
+            id="dropdown-basic-button"
+            title="What are you focusing on?"
+          >
+            <Dropdown.Item onClick={handleSubmit}>Study</Dropdown.Item>
+            <Dropdown.Item onClick={handleSubmit}>Exercise</Dropdown.Item>
+            <Dropdown.Item onClick={handleSubmit}>Work</Dropdown.Item>
+            <Dropdown.Item onClick={handleSubmit}>Tidy-Up</Dropdown.Item>
+          </DropdownButton>
+        </div>
+
         <div>
           <Button
             className="start-button"
@@ -102,14 +128,14 @@ export default function Pomodoro(props) {
             Start
           </Button>
           <Button
-            className="stop-button"
+            className="reset-button"
             type="submit"
             variant="danger"
             onClick={() => {
-              setTimeRunning(false);
+              setResetting(true);
             }}
           >
-            Stop
+            Reset
           </Button>
         </div>
       </div>
