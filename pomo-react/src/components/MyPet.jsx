@@ -8,6 +8,7 @@ import pup2 from "../assets/pets/dog2.gif";
 import pup3 from "../assets/pets/dog3.gif";
 import hedgehog1 from "../assets/pets/hedgehog1.gif"
 import hedgehog2 from "../assets/pets/hedgehog2.gif"
+import hedgehog3 from "../assets/pets/hedgehog2.gif"
 import cat1 from "../assets/pets/cat1.gif"
 import cat2 from "../assets/pets/cat2.gif"
 import cat3 from "../assets/pets/cat3.gif"
@@ -38,7 +39,7 @@ export default function MyPet() {
   {
     name:"Hedgehog",
     type: 1,
-    action: "faceplant",
+    action: "surprise",
     image: hedgehog1,
   }, 
   {
@@ -46,6 +47,12 @@ export default function MyPet() {
     type: 1,
     action: "charge",
     image: hedgehog2,
+  },
+  {
+    name:"Hedgehog",
+    type: 1,
+    action: "jump",
+    image: hedgehog3,
   },
   {
     name:"Cat",
@@ -84,7 +91,7 @@ export default function MyPet() {
               currentPet = pet_info[4];
             }
             if (pet.pet.type === 3){
-              currentPet = pet_info[7];
+              currentPet = pet_info[8];
             }
   
             // if conditionals for stage and which pet is needed
