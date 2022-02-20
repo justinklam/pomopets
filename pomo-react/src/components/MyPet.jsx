@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from "react";
 import { SessionsContext } from "../context/SessionsContext";
-import { getPets } from "../helpers/selectors";
+import { getAllPets } from "../helpers/selectors";
 
 // image assets
 import pup1 from "../assets/pets/dog1.gif";
@@ -30,18 +30,19 @@ export default function MyPet() {
   useEffect(() => {
     const userPetsJsx = [];
     if(session.state.id){
-      const getUserPets = getPets(session.state.id)
+      const getUserPets = getAllPets(session.state.id)
         .then((userPets) => {
-          console.log('getUserPets-userPets-----', userPets)
+          console.log('MyPet - getUserPets-alluserPets-----', userPets)
           userPets.map(pet => {
             let currentPet = {};
-            if (pet.type === 1){
+            console.log(pet);
+            if (pet.pet.type === 1){
               currentPet = pet_info[0];
             }
-            if (pet.type === 2){
+            if (pet.pet.type === 2){
               currentPet = pet_info[1];
             }
-            if (pet.type === 3){
+            if (pet.pet.type === 3){
               currentPet = pet_info[2];
             }
   
