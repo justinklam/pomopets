@@ -65,6 +65,12 @@
   color: $nav-bar
 }
 
+#dropdown-basic-button {
+  background-color: $register-button-color;
+  border-color: $register-button-color;
+  border-radius: 15px;
+}
+
 // ------------------ ABOUT PAGE ------------------ //
 
 .about-text-container { // container - increase padding and margin for about text
@@ -202,7 +208,7 @@
   border-radius: 15px;
   margin: 2.5rem;
   font-size: large;
-  background-color: $register-button-color;
+  background-color: #3e98c7;
   font-family: $text-font;
 }
 
