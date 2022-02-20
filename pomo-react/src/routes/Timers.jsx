@@ -10,14 +10,18 @@ export default function Timers() {
 
   const [tag, setTag] = useState("");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
+
   return (
     <>
       <div className="body pt-5">
         <DropdownButton id="dropdown-basic-button" title="Timer Tag">
-          <Dropdown.Item href="#/action-1">Study</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">Entertainment</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">Work</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">Rest</Dropdown.Item>
+          <Dropdown.Item onClick={handleSubmit}>Study</Dropdown.Item>
+          <Dropdown.Item onClick={handleSubmit}>Entertainment</Dropdown.Item>
+          <Dropdown.Item onClick={handleSubmit}>Work</Dropdown.Item>
+          <Dropdown.Item onClick={handleSubmit}>Rest</Dropdown.Item>
         </DropdownButton>
         <div className="main-container">
           <div className="text-container pt-2">
