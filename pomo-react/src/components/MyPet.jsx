@@ -75,8 +75,6 @@ export default function MyPet() {
 
   const [pets, setPets] = useState([]);
 
-  const [petImage, setPetImage] = useState(pet_info[0].image);
-
   const [userPets, setUserPets] = useState();
 
   useEffect(() => {
@@ -85,6 +83,8 @@ export default function MyPet() {
       const getUserPets = getAllPets(session.state.id)
         .then((userPets) => {
           userPets.forEach ((pet, i) => {
+            userPets[i].pet.clicked = false;
+            
             if (pet.pet.type === 1){
               userPets[i].pet.info = pet_info[0]
               userPets[i].pet.info.image2 = pet_info[1].image
@@ -123,35 +123,32 @@ export default function MyPet() {
       }, []);
  
   const handleClick = function(e){
-    const src = e.target.src
-    // console.log('handleClick', pet, Math.random());
+    const dataId = e.target.getAttribute("dataId")
+    console.log('dataid', dataId)
+
+    // if (e.target.src === window.location.origin+pet_info[0].image || e.target.src === window.location.origin+pet_info[1].image){
+      const pets = [...userPets];
+      pets.forEach((pet, i)=> {
+        // console.log('pet.pet.id', pet.pet.id)
+          if (dataId == pet.pet.id) {
+            pets[i].pet.clicked = !pets[i].pet.clicked
+          }
+          // console.log('foreach if');
+        // }
+      });
+      setUserPets(pets);
   };
 
-  // if (e.target.src === window.location.origin+pet_info[0].image){
-  //   // currentPetImage = pet_info[1].image;
-  //   setPetImage(pet_info[1].image);
-  //   console.log('route1')
-  // } else if(e.target.src === window.location.origin+pet_info[1].image){
-  //   // currentPetImage = pet_info[2].image
-  //   setPetImage(pet_info[2].image);
-  //   console.log('route2')
-  // } else if(e.target.src === window.location.origin+pet_info[2].image){
-  //   // currentPetImage = pet_info[0].image
-  //   setPetImage(pet_info[0].image);
-  //   console.log('round3', e.target.src === window.location.origin+pet_info[2].image)                
-  // }
   
   return (
     <>
     {userPets ? userPets.map(pet => (
       <div className="card" style={{width: "18rem"}} key={pet.pet.id}>
               <div className="card-body">
-                <img src={pet.pet.activeImage} alt="pet-image" width="200px" height="200px" onClick={handleClick}/> 
+                <img dataId={pet.pet.id} src={pet.pet.clicked ? pet.pet.info.image3 : pet.pet.activeImage} alt="pet-image" width="200px" height="200px" onClick={handleClick}/> 
                 <h5 className="card-title">{pet.pet.name}</h5>
               </div>
             </div>
       )): ""}
     </>
-    
-    // {(pets.length > 0) ? pets.map(x => x) : ""}
-  )};
+)};
