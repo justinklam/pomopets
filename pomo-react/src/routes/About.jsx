@@ -6,7 +6,7 @@ export default function About() {
         <div className="about main-container">
           <div className="about-title text-center">
             <div className="about-text-container pt-2">
-              <h1 className="about-header"> What is the Pomodoro Technique? </h1>
+              <h1 className="about-header"> <strong>What is the Pomodoro Technique? </strong> </h1>
               <div className="about-text text-start">
 
                 <p> The Pomodoro Technique is a time management method that can be used for any task. For many people, time is an enemy. The anxiety triggered by “the ticking clock”, especially when it involves a deadline, leads to ineffective work and study habits which in turn lead to procrastination.</p>
