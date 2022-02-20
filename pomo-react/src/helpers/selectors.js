@@ -1,13 +1,13 @@
 const axios = require('axios');
 
-const getPets = (userId) =>
+const getAllPets = (userId) =>
   axios.get('//localhost:3030/pets', {
   params: {
     id: userId
   }
 })
 .then(function (response) {
-  // console.log('getPets', response);
+  // console.log('axios getPets', response);
   return response.data;
 })
 .catch(function (error) {
@@ -33,6 +33,6 @@ const getPets = (userId) =>
 
 
 export {
-  getPets
+  getAllPets
   // getTimers
 };
