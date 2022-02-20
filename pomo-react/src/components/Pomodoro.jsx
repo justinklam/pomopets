@@ -109,7 +109,7 @@ export default function Pomodoro(props) {
               setTimeRunning(false);
             }}
           >
-            Stop
+            Reset
           </Button>
         </div>
       </div>
