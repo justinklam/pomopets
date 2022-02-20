@@ -18,6 +18,7 @@ import Register from "./routes/Register";
 import Statistics from "./routes/Statistics";
 import Timers from "./routes/Timers";
 import About from "./routes/About";
+import DoughnutChart from "./components/DoughnutChart";
 
 function App() {
   const [context, setContext] = useState({state:{}});
@@ -36,6 +37,7 @@ function App() {
       <Route path="logout" element={<Main />} />
     </Routes>
     </SessionsContext.Provider>
+    <DoughnutChart />
   </BrowserRouter>
   );
 }
