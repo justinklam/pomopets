@@ -46,7 +46,7 @@ router.post('/', async function(req, res) {
     }
   });
 
-  console.log('new_timer-----', new_timer)
+  // console.log('new_timer-----', new_timer)
   
   res.send('Timer created');
 });
