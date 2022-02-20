@@ -47,16 +47,15 @@ export default function Pomodoro(props) {
             setDisplayMessage(false); // hide the break
             setCurrentSeconds(startingTimer * 60); // reset initial timer
             // console.log('updatePets hit false')
-            // updatePets(userId);
           } else {
             // break timer is running
             setTimeRunning(false);
             setDisplayMessage(true);
             setCurrentSeconds(breakTime);
             setMaxSeconds(breakTime);
-            console.log('updatePets hit true')
             updatePets(userId);
             createTimer(userId, props.tag);
+            // console.log('updatePets hit true')
           }
         } else {
           setCurrentSeconds(currentSeconds - 1); // initial timer normal countdown

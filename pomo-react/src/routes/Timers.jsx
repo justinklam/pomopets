@@ -7,7 +7,7 @@ import { SessionsContext } from "../context/SessionsContext";
 
 export default function Timers() {
   const timeData = {
-    time: 0.05,
+    time: 0.5,
   };
 
   const [session, setSession] = useContext(
