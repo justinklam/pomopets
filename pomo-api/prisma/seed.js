@@ -77,32 +77,53 @@ async function main() {
   //   }
   // });
 
-  const user_rel1 = await prisma.user_pet.upsert({
-    where: { id: 1 },
-    update: {},
-    create: {
+  const user_rel1 = await prisma.user_pet.create({
+    data: {
       user_id: new_user1.id,
       pet_id: new_pet1.id
     }
   });
 
-  const user_rel2 = await prisma.user_pet.upsert({
-    where: { id: 2 },
-    update: {},
-    create: {
+  const user_rel2 = await prisma.user_pet.create({
+    data: {
       user_id: new_user2.id,
       pet_id: new_pet2.id
     }
   });
 
-  const user_rel3 = await prisma.user_pet.upsert({
-    where: { id: 3 },
-    update: {},
-    create: {
+  const user_rel3 = await prisma.user_pet.create({
+    data: {
       user_id: new_user3.id,
       pet_id: new_pet3.id
     }
   });
+
+  // const user_rel1 = await prisma.user_pet.upsert({
+  //   where: { id: 1 },
+  //   update: {},
+  //   create: {
+  //     user_id: new_user1.id,
+  //     pet_id: new_pet1.id
+  //   }
+  // });
+
+  // const user_rel2 = await prisma.user_pet.upsert({
+  //   where: { id: 2 },
+  //   update: {},
+  //   create: {
+  //     user_id: new_user2.id,
+  //     pet_id: new_pet2.id
+  //   }
+  // });
+
+  // const user_rel3 = await prisma.user_pet.upsert({
+  //   where: { id: 3 },
+  //   update: {},
+  //   create: {
+  //     user_id: new_user3.id,
+  //     pet_id: new_pet3.id
+  //   }
+  // });
 
   console.log({ new_user1, new_pet1, new_pet2, new_pet3, user_rel1, user_rel2, user_rel3 })
 }
