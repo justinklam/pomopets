@@ -19,9 +19,9 @@ export default function Timers() {
       <div className="body pt-5">
         <DropdownButton id="dropdown-basic-button" title="Timer Tag">
           <Dropdown.Item onClick={handleSubmit}>Study</Dropdown.Item>
-          <Dropdown.Item onClick={handleSubmit}>Entertainment</Dropdown.Item>
+          <Dropdown.Item onClick={handleSubmit}>Exercise</Dropdown.Item>
           <Dropdown.Item onClick={handleSubmit}>Work</Dropdown.Item>
-          <Dropdown.Item onClick={handleSubmit}>Rest</Dropdown.Item>
+          <Dropdown.Item onClick={handleSubmit}>Tidy-Up</Dropdown.Item>
         </DropdownButton>
         <div className="main-container">
           <div className="text-container pt-2">
