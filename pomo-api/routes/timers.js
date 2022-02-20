@@ -41,12 +41,12 @@ router.post('/', async function(req, res) {
 
   const new_timer = await prisma.timer.create({
     data: {
-      user_id: req.body.user_id,
+      user_id: req.body.userId,
       description: req.body.description
     }
   });
 
-  // console.log('new_timer-----', new_timer)
+  console.log('new_timer-----', new_timer)
   
   res.send('Timer created');
 });
