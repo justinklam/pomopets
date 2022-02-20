@@ -5,17 +5,29 @@ const prisma = new PrismaClient();
 
 router.get('/', async function (req, res) {
 
-  const findAllPets = await prisma.pet.findMany({
+  // console.log('pets-get req-----', req.query);
+
+  // axios is using a get request with params, return for it is req.query as a result
+  const findAllUserPets = await prisma.user_pet.findMany({
     where: {
-      id: req.body.id
+      user_id: parseInt(req.query.id)
     },
-    select: {
-      id: true,
-      name: true,
-      stage: true,
-      type: true
-    }
+    include: {
+      pet: true
+    },
   });
+
+  // const findAllPets = await prisma.pet.findMany({
+  //   where: {
+  //     id: req.body.id
+  //   },
+  //   select: {
+  //     id: true,
+  //     name: true,
+  //     stage: true,
+  //     type: true
+  //   }
+  // });
 
   // const pet = await prisma.pet.findUnique({
   //   where: {
@@ -27,13 +39,12 @@ router.get('/', async function (req, res) {
   //   }
   // });
   
-  // console.log ('pet', pet)
-  res.send(findAllPets);
+  res.send(findAllUserPets);
 });
 
 router.post('/', async function(req, res) {
 
-  console.log('body-----', req.body)
+  console.log('pets post body-----', req.body)
 
   const new_pet = await prisma.pet.create({
     data: {
