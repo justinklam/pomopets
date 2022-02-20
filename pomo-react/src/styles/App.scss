@@ -11,7 +11,8 @@
 
 // ------------------ HOME PAGE ------------------ //
 
-.main-container { // main container on all other pages
+.main-container {
+  // main container on all other pages
   font-family: $logo-font;
   display: flex;
   height: 60%;
@@ -24,34 +25,40 @@
   margin-top: 50px;
 }
 
-.home { // main container on homepage
+.home {
+  // main container on homepage
   padding: 50px;
 }
 
-.text-container { // container / div for text
+.text-container {
+  // container / div for text
   margin-left: 8px;
 }
 
-.logo-text { // main "PomoPets" on homepage, header on all other pages
+.logo-text {
+  // main "PomoPets" on homepage, header on all other pages
   font-size: -webkit-xxx-large;
   font-family: $logo-font;
   font-weight: bolder;
   padding-top: 25px;
 }
 
-.blurb { // 2 p tags on homepage
+.blurb {
+  // 2 p tags on homepage
   font-family: $logo-font;
   padding-top: 25px;
 }
 
 // ------------------ TIMER ------------------ //
 
-.pomodoro { // timer
+.pomodoro {
+  // timer
   font-size: 6em;
 }
 
 // break message
-.message { // timer message
+.message {
+  // timer message
   font-size: 0.5em;
   min-height: 1.3em;
   margin-bottom: 0.5em;
@@ -62,7 +69,7 @@
 .circular-progress-bar {
   display: inline-block;
   justify-content: center;
-  color: $nav-bar
+  color: $nav-bar;
 }
 
 #dropdown-basic-button {
@@ -73,29 +80,34 @@
 
 // ------------------ ABOUT PAGE ------------------ //
 
-.about-text-container { // container - increase padding and margin for about text
+.about-text-container {
+  // container - increase padding and margin for about text
   margin-left: 8px;
   padding-left: 50px;
   padding-right: 50px;
 }
 
-.about-text { // all text on about page
+.about-text {
+  // all text on about page
   font-family: $text-font;
   font-size: large;
   padding-top: 35px;
 }
 
-.about { // main text container for about page, make longer to accommodate text overflow
+.about {
+  // main text container for about page, make longer to accommodate text overflow
   height: 70%;
 }
 
-.about-header { //h1 "what is the pomodoro technique"
+.about-header {
+  //h1 "what is the pomodoro technique"
   padding-top: 25px;
 }
 
 // ------------------ NAV BAR ------------------ //
 
-.main-navbar { // navbar stylings
+.main-navbar {
+  // navbar stylings
   padding-top: 30px;
   padding-bottom: 1rem;
   padding-left: 50px;
@@ -104,7 +116,8 @@
   font-size: larger;
 }
 
-.nav-main-link { // PomoPets home link in nav bar
+.nav-main-link {
+  // PomoPets home link in nav bar
   color: black;
   &:hover {
     color: black;
@@ -113,7 +126,8 @@
 
 // ------------------ PETS ------------------ //
 
-.card-title { // pet name
+.card-title {
+  // pet name
   font-family: $logo-font;
   font-weight: bolder;
   padding-top: 50px;
@@ -124,7 +138,8 @@
   padding-top: 10px;
 }
 
-.pet-button { // "choose your pet" and "submit"
+.pet-button {
+  // "choose your pet" and "submit"
   font-family: $text-font;
   background-color: $register-button-color !important;
   border-color: $register-button-color;
@@ -169,19 +184,19 @@
 .login-button {
   background-color: $login-button-color;
   text-decoration: none;
-  font-family: $text-font !important; 
+  font-family: $text-font !important;
   color: white;
   border-color: $login-button-color;
   border-width: 2px;
   border-radius: 15px;
   height: 35px;
-    &:hover {
+  &:hover {
     background-color: $register-button-color !important;
     border-color: $register-button-color;
     color: white;
   }
-    &:link {
-    font-family: $text-font !important; 
+  &:link {
+    font-family: $text-font !important;
   }
 }
 
@@ -195,7 +210,7 @@
   border-radius: 15px;
   height: 35px;
   margin-left: 10px;
-    &:hover {
+  &:hover {
     background-color: $login-button-color !important;
     border-color: $login-button-color;
     color: white;
@@ -212,7 +227,7 @@
   font-family: $text-font;
 }
 
-.stop-button {
+.reset-button {
   display: inline;
   align-items: center;
   border-radius: 15px;
