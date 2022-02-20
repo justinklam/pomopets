@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 import Pomodoro from "../components/Pomodoro";
 import MyPet from "../components/MyPet";
@@ -6,6 +7,8 @@ export default function Timers() {
   const timeData = {
     time: 25,
   };
+
+  const [tag, setTag] = useState("");
 
   return (
     <>
