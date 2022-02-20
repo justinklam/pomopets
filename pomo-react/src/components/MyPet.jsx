@@ -69,7 +69,7 @@ export default function MyPet() {
           console.log('MyPet - getUserPets-alluserPets-----', userPets)
           userPets.map(pet => {
             let currentPet = {};
-            console.log(pet);
+            // console.log(pet);
             if (pet.pet.type === 1){
               currentPet = pet_info[1];
             }
