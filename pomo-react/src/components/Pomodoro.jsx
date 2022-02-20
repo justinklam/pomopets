@@ -112,7 +112,7 @@ export default function Pomodoro(props) {
             Start
           </Button>
           <Button
-            className="stop-button"
+            className="reset-button"
             type="submit"
             variant="danger"
             onClick={() => {
