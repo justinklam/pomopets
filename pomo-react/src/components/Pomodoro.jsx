@@ -1,9 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import { Button } from "react-bootstrap";
+import { updatePets } from "../helpers/helpers";
+import { SessionsContext } from "../context/SessionsContext";
+import { createTimer } from "../helpers/helpers";
+
 import "react-circular-progressbar/dist/styles.css";
 
 export default function Pomodoro(props) {
+  const [session, setSession] = useContext(
+    SessionsContext
+  );
+
   const startingTimer = props.startingTimer || 0;
 
   const [displayMessage, setDisplayMessage] = useState(false);
@@ -13,7 +21,10 @@ export default function Pomodoro(props) {
 
   const breakTime = 5 * 60;
 
+  const userId = session.state.id;
+
   useEffect(() => {
+
     // timer set-up
 
     if (timeRunning) {
@@ -27,12 +38,17 @@ export default function Pomodoro(props) {
             setTimeRunning(false);
             setDisplayMessage(false); // hide the break
             setCurrentSeconds(startingTimer * 60); // reset initial timer
+            // console.log('updatePets hit false')
+            // updatePets(userId);
           } else {
             // break timer is running
             setTimeRunning(false);
             setDisplayMessage(true);
             setCurrentSeconds(breakTime);
             setMaxSeconds(breakTime);
+            console.log('updatePets hit true')
+            updatePets(userId);
+            createTimer(userId, props.tag);
           }
         } else {
           setCurrentSeconds(currentSeconds - 1); // initial timer normal countdown
