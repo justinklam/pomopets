@@ -23,6 +23,7 @@ export default function Pomodoro(props) {
         // NOTE: must clear interval! otherwise bad practice
         clearInterval(interval);
 
+        // handles the reset button
         if (resetting) {
           setCurrentSeconds(startingTimer * 60);
           setTimeRunning(false);
@@ -44,7 +45,7 @@ export default function Pomodoro(props) {
         } else {
           setCurrentSeconds(currentSeconds - 1); // initial timer normal countdown
         }
-      }, 1000);
+      }, 100);
     }
   }, [currentSeconds, timeRunning]);
 
@@ -62,7 +63,6 @@ export default function Pomodoro(props) {
       // identifies if the timer is running or not
       setTimeRunning(false);
     }
-    console.log("you've clicked Start/Stop");
   };
 
   const [tag, setTag] = useState("");
