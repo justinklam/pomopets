@@ -74,7 +74,7 @@ export default function MyPet() {
               currentPet = pet_info[1];
             }
             if (pet.pet.type === 2){
-              currentPet = pet_info[4];
+              currentPet = pet_info[3];
             }
             if (pet.pet.type === 3){
               currentPet = pet_info[6];
