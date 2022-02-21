@@ -97,6 +97,8 @@ export default function Pomodoro(props) {
             <Dropdown.Item onClick={handleSubmit}>Exercise</Dropdown.Item>
             <Dropdown.Item onClick={handleSubmit}>Work</Dropdown.Item>
             <Dropdown.Item onClick={handleSubmit}>Tidy-Up</Dropdown.Item>
+            <Dropdown.Item onClick={handleSubmit}>Reading</Dropdown.Item>
+            <Dropdown.Item onClick={handleSubmit}>Meditation</Dropdown.Item>
           </DropdownButton>
         </div>
 

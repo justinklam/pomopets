@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import {
   BrowserRouter,
@@ -21,24 +21,23 @@ import About from "./routes/About";
 import DoughnutChart from "./components/DoughnutChart";
 
 function App() {
-  const [context, setContext] = useState({state:{}});
+  const [ context, setContext ] = useState({ state: {} });
   return (
     <BrowserRouter>
-    <SessionsContext.Provider value={[context, setContext]}>
-    <HomeNavBar/>
-    <Routes>
-      <Route path="/" element={<Main title="PomoPets"/>} />
-      <Route path="timers" element={<Timers />} />
-      <Route path="pets" element={<Pets />} />
-      <Route path="login" element={<Login />} />
-      <Route path="register" element={<Register />} />
-      <Route path="statistics" element={<Statistics />} />
-      <Route path="about" element={<About />} />
-      <Route path="logout" element={<Main />} />
-    </Routes>
-    </SessionsContext.Provider>
-    <DoughnutChart />
-  </BrowserRouter>
+      <SessionsContext.Provider value={[ context, setContext ]}>
+        <HomeNavBar />
+        <Routes>
+          <Route path="/" element={<Main title="PomoPets" />} />
+          <Route path="timers" element={<Timers />} />
+          <Route path="pets" element={<Pets />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="statistics" element={<DoughnutChart />} />
+          <Route path="about" element={<About />} />
+          <Route path="logout" element={<Main />} />
+        </Routes>
+      </SessionsContext.Provider>
+    </BrowserRouter>
   );
 }
 
