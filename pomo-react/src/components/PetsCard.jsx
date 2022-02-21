@@ -47,7 +47,7 @@ export default function PetsCard(props) {
           <p className="card-text">{props.description}</p>
           <div className="form-group">
             <Button className="pet-button" for="exampleFormControlTextarea1" onClick={() =>setToggleName(!toggleName)}>Choose This Pet</Button>
-            {toggleName?<div><input className="form-control" placeholder="Name Your Pet" name="pet_name" id="exampleFormControlTextarea1" rows="1" onChange={handleChange}></input>
+            {toggleName?<div><input className="pets-form form-control" placeholder="Name Your Pet" name="pet_name" id="exampleFormControlTextarea1" rows="1" onChange={handleChange}></input>
             <Button className="pet-button" type="submit" onClick={handleSubmit}>Submit</Button></div>:""}
           </div>
         </div>
