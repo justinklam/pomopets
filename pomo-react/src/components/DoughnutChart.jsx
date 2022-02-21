@@ -73,7 +73,7 @@ const options = {
 
 export default function DoughnutChart() {
   return (
-    <div>
+    <div classname="doughnut">
       <Doughnut data={data} options={options} />;
     </div>
   );
