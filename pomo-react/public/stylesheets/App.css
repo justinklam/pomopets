@@ -158,6 +158,33 @@
   font-family: "Hind Guntur", sans-serif;
 }
 
+.single-pet {
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+.single-pet .petimg {
+  opacity: 0;
+  top: 0;
+  position: absolute;
+  transition: 1000ms;
+  transform: scale(0.1);
+}
+.single-pet .eggimg {
+  opacity: 1;
+  top: 0;
+  position: absolute;
+  transition: 1000ms;
+}
+.single-pet:hover .petimg {
+  opacity: 1;
+  transform: scale(1);
+}
+.single-pet:hover .eggimg {
+  opacity: 0;
+  transform: scale(1.5);
+}
+
 .pet-card-timer {
   height: 40%;
 }
@@ -166,7 +193,9 @@
   display: flex;
 }
 
-.login-h1, .register-h1, .chart-h1 {
+.login-h1,
+.register-h1,
+.chart-h1 {
   text-align: center;
 }
 
@@ -192,18 +221,21 @@
   margin-left: 20%;
 }
 
-.login-tagline, .register-tagline {
+.login-tagline,
+.register-tagline {
   font-family: "Hind Guntur", sans-serif;
   font-weight: bold;
   font-size: larger;
   text-align: center;
   color: #4D90CC;
 }
-.login-tagline:first-of-type, .register-tagline:first-of-type {
+.login-tagline:first-of-type,
+.register-tagline:first-of-type {
   margin-top: 35px;
   margin-bottom: 0px;
 }
-.login-tagline:last-of-type, .register-tagline:last-of-type {
+.login-tagline:last-of-type,
+.register-tagline:last-of-type {
   margin-bottom: 35px;
 }
 
