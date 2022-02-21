@@ -38,11 +38,11 @@ export default function Login(props) {
     <>
       <div className="body pt-5">
         <div className="login main-container">
-          <div className="text-container">
+          <div>
             <h1 className="login-h1 logo-text"> Login </h1>
             <p className="login-tagline"> Already have an account?</p>
             <p className="login-tagline"> Log in now to begin your focus session and view your digital pet! </p>
-            <Form className="login-register-form" action="/login" method="post">
+            <Form className="login-form" action="/login" method="post">
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>

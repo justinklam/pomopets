@@ -38,31 +38,33 @@ export default function Register() {
   return (
     <>
       <div className="body pt-5">
-        <div className="main-container">
+        <div className="register main-container">
           <div className="text-container">
-            <h1 className="logo-text"> Register </h1>
-            <Form action="/register" method="post"> 
+            <h1 className="register-h1 logo-text"> Register </h1>
+            <p className='register-tagline'>Ready to register?</p>
+            <p className='register-tagline'>Join PomoPets now to get your own digital pet!</p>
+            <Form className="register-form" action="/register" method="post"> 
 
             <Form.Group className="mb-3" controlId="formBasicUser">
               <Form.Label>Username</Form.Label>
-              <Form.Control type="text" placeholder="Enter Username" name="username" value={user.username} onChange={handleChange}/>
+              <Form.Control className="register-form-input" type="text" placeholder="Enter Username" name="username" value={user.username} onChange={handleChange}/>
               <Form.Text className="text-muted">
               </Form.Text>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email Address</Form.Label>
-              <Form.Control type="email" placeholder="Enter Email" name="email" value={user.email} onChange={handleChange}/>
+              <Form.Control className="register-form-input" type="email" placeholder="Enter Email" name="email" value={user.email} onChange={handleChange}/>
               <Form.Text className="text-muted">
               </Form.Text>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" name="password" value={user.password} onChange={handleChange}/>
+              <Form.Control className="register-form-input" type="password" placeholder="Password" name="password" value={user.password} onChange={handleChange}/>
             </Form.Group>
 
-            <Button className="register-button" variant="primary" type="submit" onClick={handleSubmit}>
+            <Button className="register-page-button register-button" variant="primary" type="submit" onClick={handleSubmit}>
               Register
             </Button>
           </Form>
