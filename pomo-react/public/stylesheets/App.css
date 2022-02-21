@@ -66,8 +66,9 @@
   height: 35px;
 }
 
-.timer-container, .chart-container {
+.timer-container {
   height: 70%;
+  position: fixed;
 }
 
 .dropdown {
@@ -158,6 +159,14 @@
   font-family: "Hind Guntur", sans-serif;
 }
 
+.pet-card-timer {
+  height: 40%;
+}
+
+.timer-pet-container {
+  display: flex;
+}
+
 .login-h1, .register-h1, .chart-h1 {
   text-align: center;
 }
@@ -221,6 +230,10 @@
 .chart-blurb {
   font-family: "Hind Guntur", sans-serif;
   font-size: larger;
+}
+
+.chart-container {
+  height: 70%;
 }
 
 .button-div {

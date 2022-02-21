@@ -81,8 +81,9 @@
   height: 35px;
 }
 
-.timer-container, .chart-container {
+.timer-container {
   height: 70%;
+  position: fixed;
 }
 
 .dropdown {
@@ -187,6 +188,14 @@
   font-family: $text-font;
 }
 
+// ------------------ PET ON TIMER PAGE ------------------ //
+.pet-card-timer {
+  height: 40%;
+}
+
+.timer-pet-container {
+  display: flex;
+}
 // ------------------ LOGIN / REGISTER ------------------ //
 
 .login-h1, .register-h1, .chart-h1 { //h1 "Login" "Register"
@@ -254,6 +263,10 @@
 .chart-blurb {
   font-family: $text-font;
   font-size: larger;
+}
+
+.chart-container {
+  height: 70%;
 }
 
 // ------------------ BUTTONS ------------------ //
