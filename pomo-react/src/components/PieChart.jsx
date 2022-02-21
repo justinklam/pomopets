@@ -74,7 +74,7 @@ const options = {
 export default function PieChart() {
   return (
     <div className="pie-chart">
-      <Pie data={data} options={options} />;
+      <Pie data={data} options={options} />
     </div>
   );
 }
