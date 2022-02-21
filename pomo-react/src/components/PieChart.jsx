@@ -33,6 +33,13 @@ export const data = {
 
 const options = {
   plugins: {
+    legend: {
+      labels: {
+        font: {
+          size: 20,
+        },
+      },
+    },
     tooltip: {
       callbacks: {
         label: function (context) {
@@ -69,7 +76,7 @@ const options = {
       animateScale: true,
     },
   },
-};
+}
 
 export default function PieChart() {
   return (
