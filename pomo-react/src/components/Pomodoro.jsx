@@ -84,10 +84,10 @@ export default function Pomodoro(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const userId = session.state.id;
+    // const userId = session.state.id;
     const description = e.target.text;
     setTag(description);
-    console.log('description-----', description)
+    // console.log('description-----', description)
   };
 
   return (

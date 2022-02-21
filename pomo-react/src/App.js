@@ -16,7 +16,7 @@ import DoughnutChart from "./components/DoughnutChart";
 import Login from "./routes/Login";
 import Pets from "./routes/Pets";
 import Register from "./routes/Register";
-import Statistics from "./routes/Statistics";
+// import Statistics from "./routes/Statistics";
 import Timers from "./routes/Timers";
 import About from "./routes/About";
 
