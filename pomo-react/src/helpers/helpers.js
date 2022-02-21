@@ -48,6 +48,14 @@ const logout = () => {
   return axios.post('//localhost:3030/logout')
 };
 
+const updatePets = (userId) => {
+  // console.log('email', email, 'password', password)
+  return axios.post('//localhost:3030/pets/update',
+  {
+    userId: userId
+  })
+};
+
 const register = (user) => {
   const {username, email, password} = user;
   // console.log('email', email, 'password', password)
@@ -61,8 +69,9 @@ const register = (user) => {
 
 export {
   createPets,
-  // createTimer,
+  createTimer,
   login,
   logout,
+  updatePets,
   register
 };

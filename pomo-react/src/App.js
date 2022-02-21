@@ -18,12 +18,12 @@ import Register from "./routes/Register";
 import Statistics from "./routes/Statistics";
 import Timers from "./routes/Timers";
 import About from "./routes/About";
-import DoughnutChart from "./components/DoughnutChart";
 
 function App() {
   const [ context, setContext ] = useState({ state: {} });
   return (
     <BrowserRouter>
+<<<<<<< HEAD
       <SessionsContext.Provider value={[ context, setContext ]}>
         <HomeNavBar />
         <Routes>
@@ -38,6 +38,22 @@ function App() {
         </Routes>
       </SessionsContext.Provider>
     </BrowserRouter>
+=======
+    <SessionsContext.Provider value={[context, setContext]}>
+    <HomeNavBar/>
+    <Routes>
+      <Route path="/" element={<Main title="PomoPets"/>} />
+      <Route path="timers" element={<Timers />} />
+      <Route path="pets" element={<Pets />} />
+      <Route path="login" element={<Login />} />
+      <Route path="register" element={<Register />} />
+      <Route path="statistics" element={<Statistics />} />
+      <Route path="about" element={<About />} />
+      <Route path="logout" element={<Main />} />
+    </Routes>
+    </SessionsContext.Provider>
+  </BrowserRouter>
+>>>>>>> c521641d26cb88618809dc2c21d9aa7d2c0d39f8
   );
 }
 

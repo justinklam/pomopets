@@ -41,7 +41,7 @@ router.post('/', async function(req, res) {
 
   const new_timer = await prisma.timer.create({
     data: {
-      user_id: req.body.user_id,
+      user_id: req.body.userId,
       description: req.body.description
     }
   });
