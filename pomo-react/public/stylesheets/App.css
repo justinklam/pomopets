@@ -55,6 +55,23 @@
   display: inline-block;
   justify-content: center;
   color: #ddbbd5;
+  margin-top: 25px;
+}
+
+#dropdown-basic-button {
+  background-color: #3e98c7;
+  border-color: #3e98c7;
+  border-radius: 15px;
+  font-family: "Hind Guntur", sans-serif;
+  height: 35px;
+}
+
+.timer-container {
+  height: 70%;
+}
+
+.dropdown {
+  font-family: "Hind Guntur", sans-serif;
 }
 
 .about-text-container {
@@ -93,6 +110,10 @@
   color: black;
 }
 
+.pets-container {
+  height: 65%;
+}
+
 .card-title {
   font-family: "Josefin Sans", sans-serif;
   font-weight: bolder;
@@ -108,6 +129,8 @@
   font-family: "Hind Guntur", sans-serif;
   background-color: #4D90CC !important;
   border-color: #4D90CC;
+  height: 35px;
+  border-radius: 15px;
 }
 .pet-button:hover .pet-button:focus {
   background-color: #4D90CC !important;
@@ -128,10 +151,60 @@
   border-color: transparent;
 }
 
-.form-control {
+.pets-form {
+  width: 70%;
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: "Hind Guntur", sans-serif;
+}
+
+.login-h1, .register-h1 {
+  text-align: center;
+}
+
+.login {
+  height: 50%;
+  width: 30%;
+}
+
+.register {
+  height: 55%;
+  width: 30%;
+}
+
+.login-form {
+  margin-top: 25px;
+  font-family: "Hind Guntur", sans-serif;
+  margin-left: 25%;
+}
+
+.register-form {
+  margin-top: 25px;
+  font-family: "Hind Guntur", sans-serif;
+  margin-left: 20%;
+}
+
+.login-tagline, .register-tagline {
+  font-family: "Hind Guntur", sans-serif;
+  font-weight: bold;
+  font-size: larger;
+  text-align: center;
+  color: #4D90CC;
+}
+.login-tagline:first-of-type, .register-tagline:first-of-type {
+  margin-top: 35px;
+  margin-bottom: 0px;
+}
+.login-tagline:last-of-type, .register-tagline:last-of-type {
+  margin-bottom: 35px;
+}
+
+.login-form-input {
+  width: 65%;
+}
+
+.register-form-input {
+  width: 75%;
 }
 
 .button-div {
@@ -180,17 +253,19 @@
   border-radius: 15px;
   margin: 2.5rem;
   font-size: large;
-  background-color: #4D90CC;
+  background-color: #3e98c7;
   font-family: "Hind Guntur", sans-serif;
+  height: 35px;
 }
 
-.stop-button {
+.reset-button {
   display: inline;
   align-items: center;
   border-radius: 15px;
   margin: 2.5rem;
   font-size: large;
   font-family: "Hind Guntur", sans-serif;
+  height: 35px;
 }
 
 .egg {
@@ -234,6 +309,9 @@
   100% {
     transform: translateX(0px) rotate(0deg);
   }
+}
+.register-page-button {
+  margin-left: 0px;
 }
 
 /*# sourceMappingURL=App.css.map */
