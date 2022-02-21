@@ -1,16 +1,18 @@
 import React, { useContext, useState, useEffect } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import { Button, Dropdown, DropdownButton } from "react-bootstrap";
-import { updatePets } from "../helpers/helpers";
-import { SessionsContext } from "../context/SessionsContext";
-import { createTimer } from "../helpers/helpers";
-
 import "react-circular-progressbar/dist/styles.css";
+import { SessionsContext } from "../context/SessionsContext";
+
+// helper functions
+import { createTimer, updatePets } from "../helpers/helpers";
 
 export default function Pomodoro(props) {
   const [session, setSession] = useContext(
     SessionsContext
   );
+
+  const [tag, setTag] = useState("Misc");
 
   const startingTimer = props.startingTimer || 0;
 
@@ -54,7 +56,7 @@ export default function Pomodoro(props) {
             setCurrentSeconds(breakTime);
             setMaxSeconds(breakTime);
             updatePets(userId);
-            createTimer(userId, props.tag);
+            createTimer(userId, tag);
             // console.log('updatePets hit true')
           }
         } else {
@@ -80,10 +82,12 @@ export default function Pomodoro(props) {
     }
   };
 
-  const [tag, setTag] = useState("");
-
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    const userId = session.state.id;
+    const description = e.target.text;
+    setTag(description);
+    console.log('description-----', description)
   };
 
   return (
