@@ -28,7 +28,7 @@ export default function Pets() {
   return (
     <>
       <div className="body pt-5">
-        <div className="main-container">
+        <div className="pets-container main-container">
           <div className="text-container">
             <h1 className="pets logo-text text-center">
               {" "}
