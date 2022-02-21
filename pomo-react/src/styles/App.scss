@@ -178,6 +178,9 @@
 // ------------------ GRAPH ------------------ //
 
 .pie-chart {
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
 // ------------------ BUTTONS ------------------ //
