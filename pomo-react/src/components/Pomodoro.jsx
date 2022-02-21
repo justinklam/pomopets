@@ -108,10 +108,10 @@ export default function Pomodoro(props) {
             id="dropdown-basic-button"
             title="What are you focusing on?"
           >
-            <Dropdown.Item onClick={handleSubmit}>Study</Dropdown.Item>
-            <Dropdown.Item onClick={handleSubmit}>Exercise</Dropdown.Item>
-            <Dropdown.Item onClick={handleSubmit}>Work</Dropdown.Item>
-            <Dropdown.Item onClick={handleSubmit}>Tidy-Up</Dropdown.Item>
+            <Dropdown.Item className="dropdown" onClick={handleSubmit}>Study</Dropdown.Item>
+            <Dropdown.Item className="dropdown" onClick={handleSubmit}>Exercise</Dropdown.Item>
+            <Dropdown.Item className="dropdown" onClick={handleSubmit}>Work</Dropdown.Item>
+            <Dropdown.Item className="dropdown" onClick={handleSubmit}>Tidy-Up</Dropdown.Item>
           </DropdownButton>
         </div>
 
