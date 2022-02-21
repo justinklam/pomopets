@@ -10,7 +10,7 @@ import { SessionsContext } from './context/SessionsContext';
 // component imports
 import Main from "./components/Main";
 import HomeNavBar from "./components/HomeNavBar";
-import PieChart from "./components/ PieChart";
+import PieChart from "./components/PieChart";
 
 // route imports
 import Login from "./routes/Login";
