@@ -180,13 +180,50 @@
   border-color: transparent;
 }
 
-.pets-form { // name your pet input box
+.pets-form {
+  // name your pet input box
   width: 70%;
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: $text-font;
 }
 
+// egg to pet animations on pets page
+.single-pet {
+  // parent
+  position: relative;
+  height: 200px;
+  width: 200px;
+  .petimg {
+    //child
+    // border: 2px solid red;
+    opacity: 0;
+    top: 0;
+    position: absolute;
+    transition: 1000ms;
+    transform: scale(0.1);
+  }
+  .eggimg {
+    //child
+    // border: 2px solid purple;
+    opacity: 1;
+    top: 0;
+    position: absolute;
+    transition: 1000ms;
+  }
+  &:hover {
+    .petimg {
+      // border: 2px solid purple;
+      opacity: 1;
+      transform: scale(1);
+    }
+    .eggimg {
+      // border: 2px solid red;
+      opacity: 0;
+      transform: scale(1.5);
+    }
+  }
+}
 // ------------------ PET ON TIMER PAGE ------------------ //
 .pet-card-timer {
   height: 40%;
@@ -197,33 +234,42 @@
 }
 // ------------------ LOGIN / REGISTER ------------------ //
 
-.login-h1, .register-h1, .chart-h1 { //h1 "Login" "Register"
+.login-h1,
+.register-h1,
+.chart-h1 {
+  //h1 "Login" "Register"
   text-align: center;
 }
 
-.login { // size of main container
+.login {
+  // size of main container
   height: 50%;
   width: 30%;
 }
 
-.register { // size of main container
+.register {
+  // size of main container
   height: 55%;
   width: 30%;
 }
 
-.login-form { // entire form container
+.login-form {
+  // entire form container
   margin-top: 25px;
   font-family: $text-font;
   margin-left: 25%;
 }
 
-.register-form { // entire form container
+.register-form {
+  // entire form container
   margin-top: 25px;
   font-family: $text-font;
   margin-left: 20%;
 }
 
-.login-tagline, .register-tagline { // "already have an account?"
+.login-tagline,
+.register-tagline {
+  // "already have an account?"
   &:first-of-type {
     margin-top: 35px;
     margin-bottom: 0px;
@@ -238,11 +284,13 @@
   color: $register-button-color;
 }
 
-.login-form-input { // length of input boxes in form
+.login-form-input {
+  // length of input boxes in form
   width: 65%;
 }
 
-.register-form-input { // length of input boxes in form
+.register-form-input {
+  // length of input boxes in form
   width: 75%;
 }
 
