@@ -66,7 +66,7 @@
   height: 35px;
 }
 
-.timer-container {
+.timer-container, .chart-container {
   height: 70%;
 }
 
@@ -158,7 +158,7 @@
   font-family: "Hind Guntur", sans-serif;
 }
 
-.login-h1, .register-h1 {
+.login-h1, .register-h1, .chart-h1 {
   text-align: center;
 }
 
@@ -208,9 +208,19 @@
 }
 
 .pie-chart {
-  max-width: 50%;
   margin-left: auto;
   margin-right: auto;
+  height: 525px;
+  width: 525px;
+}
+
+.chart-h1 {
+  margin-bottom: 25px;
+}
+
+.chart-blurb {
+  font-family: "Hind Guntur", sans-serif;
+  font-size: larger;
 }
 
 .button-div {
