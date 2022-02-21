@@ -55,7 +55,7 @@ const options = {
             ((currentValue / total) * 100).toFixed(1)
           );
 
-          return label + ": " + currentValue + " cycles (" + percentage + "%)";
+          return label + ": " + currentValue + " sessions (" + percentage + "%)";
         },
       },
     },
