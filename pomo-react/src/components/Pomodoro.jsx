@@ -62,7 +62,7 @@ export default function Pomodoro(props) {
         } else {
           setCurrentSeconds(currentSeconds - 1); // initial timer normal countdown
         }
-      }, 100);
+      }, 100); // 1000 = 25 min, 100 = 2.5 min total time
     }
   }, [currentSeconds, timeRunning]);
 
