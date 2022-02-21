@@ -37,21 +37,23 @@ export default function Login(props) {
   return (
     <>
       <div className="body pt-5">
-        <div className="main-container">
+        <div className="login main-container">
           <div className="text-container">
-            <h1 className="logo-text"> Login </h1>
-            <Form action="/login" method="post">
+            <h1 className="login-h1 logo-text"> Login </h1>
+            <p className="login-tagline"> Already have an account?</p>
+            <p className="login-tagline"> Log in now to begin your focus session and view your digital pet! </p>
+            <Form className="login-register-form" action="/login" method="post">
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" name="email" value={user.email} onChange={handleChange}/>
+                <Form.Control className="login-form-input" type="email" placeholder="Enter email" name="email" value={user.email} onChange={handleChange}/>
                 <Form.Text className="text-muted">
                 </Form.Text>
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" name="password" value={user.password} onChange={handleChange}/>
+                <Form.Control className="login-form-input" type="password" placeholder="Password" name="password" value={user.password} onChange={handleChange}/>
               </Form.Group>
 
               <Button className="login-button" variant="primary" type="submit" onClick={handleSubmit}>
