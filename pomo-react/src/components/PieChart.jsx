@@ -36,7 +36,7 @@ const options = {
     legend: {
       labels: {
         font: {
-          size: 20,
+          size: 15,
         },
       },
     },
@@ -55,7 +55,7 @@ const options = {
             ((currentValue / total) * 100).toFixed(1)
           );
 
-          return label + ": " + currentValue + " (" + percentage + "%)";
+          return label + ": " + currentValue + " cycles (" + percentage + "%)";
         },
       },
     },
@@ -75,13 +75,23 @@ const options = {
     animation: {
       animateScale: true,
     },
-  },
+  }
 }
 
 export default function PieChart() {
   return (
-    <div className="pie-chart">
-      <Pie data={data} options={options} />
-    </div>
+    <>
+      <div className="body pt-5">
+        <div className="chart-container main-container">
+          <div>
+            <h1 className="chart-h1 logo-text"> Your Pomodoros! </h1>
+            <p className="chart-blurb"> This pie chart is a reflection of your focus progress and summarizes how you spent your time</p>
+              <div className="pie-chart">
+                <Pie data={data} options={options} />
+              </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

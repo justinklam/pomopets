@@ -81,7 +81,7 @@
   height: 35px;
 }
 
-.timer-container {
+.timer-container, .chart-container {
   height: 70%;
 }
 
@@ -189,7 +189,7 @@
 
 // ------------------ LOGIN / REGISTER ------------------ //
 
-.login-h1, .register-h1{ //h1 "Login" "Register"
+.login-h1, .register-h1, .chart-h1 { //h1 "Login" "Register"
   text-align: center;
 }
 
@@ -241,9 +241,19 @@
 // ------------------ GRAPH ------------------ //
 
 .pie-chart {
-  max-width: 50%;
   margin-left: auto;
   margin-right: auto;
+  height: 525px;
+  width: 525px;
+}
+
+.chart-h1 {
+  margin-bottom: 25px;
+}
+
+.chart-blurb {
+  font-family: $text-font;
+  font-size: larger;
 }
 
 // ------------------ BUTTONS ------------------ //
