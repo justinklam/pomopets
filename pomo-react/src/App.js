@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import {
   BrowserRouter,
@@ -10,33 +10,34 @@ import { SessionsContext } from './context/SessionsContext';
 // component imports
 import Main from "./components/Main";
 import HomeNavBar from "./components/HomeNavBar";
+import PieChart from "./components/PieChart";
 
 // route imports
 import Login from "./routes/Login";
 import Pets from "./routes/Pets";
 import Register from "./routes/Register";
-import Statistics from "./routes/Statistics";
+// import Statistics from "./routes/Statistics";
 import Timers from "./routes/Timers";
 import About from "./routes/About";
 
 function App() {
-  const [context, setContext] = useState({state:{}});
+  const [ context, setContext ] = useState({ state: {} });
   return (
     <BrowserRouter>
-    <SessionsContext.Provider value={[context, setContext]}>
-    <HomeNavBar/>
-    <Routes>
-      <Route path="/" element={<Main title="PomoPets"/>} />
-      <Route path="timers" element={<Timers />} />
-      <Route path="pets" element={<Pets />} />
-      <Route path="login" element={<Login />} />
-      <Route path="register" element={<Register />} />
-      <Route path="statistics" element={<Statistics />} />
-      <Route path="about" element={<About />} />
-      <Route path="logout" element={<Main />} />
-    </Routes>
-    </SessionsContext.Provider>
-  </BrowserRouter>
+      <SessionsContext.Provider value={[ context, setContext ]}>
+        <HomeNavBar />
+        <Routes>
+          <Route path="/" element={<Main title="PomoPets" />} />
+          <Route path="timers" element={<Timers />} />
+          <Route path="pets" element={<Pets />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="statistics" element={<PieChart />} />
+          <Route path="about" element={<About />} />
+          <Route path="logout" element={<Main />} />
+        </Routes>
+      </SessionsContext.Provider>
+    </BrowserRouter>
   );
 }
 

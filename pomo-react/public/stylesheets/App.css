@@ -207,6 +207,12 @@
   width: 75%;
 }
 
+.pie-chart {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .button-div {
   padding-left: 30rem;
 }

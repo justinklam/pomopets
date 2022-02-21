@@ -73,7 +73,7 @@ export default function MyPet() {
     image: cat3,
   }];
 
-  const [pets, setPets] = useState([]);
+  // const [pets, setPets] = useState([]);
 
   const [userPets, setUserPets] = useState();
 
@@ -124,7 +124,7 @@ export default function MyPet() {
  
   const handleClick = function(e){
     const dataId = e.target.getAttribute("dataId")
-    console.log('dataid', dataId)
+    // console.log('dataid', dataId)
 
     // if (e.target.src === window.location.origin+pet_info[0].image || e.target.src === window.location.origin+pet_info[1].image){
       const pets = [...userPets];
@@ -145,7 +145,7 @@ export default function MyPet() {
     {userPets ? userPets.map(pet => (
       <div className="card" style={{width: "18rem"}} key={pet.pet.id}>
               <div className="card-body">
-                <img dataId={pet.pet.id} src={pet.pet.clicked ? pet.pet.info.image3 : pet.pet.activeImage} alt="pet-image" width="200px" height="200px" onClick={handleClick}/> 
+                <img dataId={pet.pet.id} src={pet.pet.clicked ? pet.pet.info.image3 : pet.pet.activeImage} width="200px" height="200px" onClick={handleClick}/> 
                 <h5 className="card-title">{pet.pet.name}</h5>
               </div>
             </div>
