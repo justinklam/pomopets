@@ -31,7 +31,7 @@
 }
 
 .text-container {
-  // container / div for text
+  // container / div for text on home page
   margin-left: 8px;
 }
 
@@ -70,12 +70,23 @@
   display: inline-block;
   justify-content: center;
   color: $nav-bar;
+  margin-top: 25px;
 }
 
 #dropdown-basic-button {
   background-color: $progress-bar-color;
   border-color: $progress-bar-color;
   border-radius: 15px;
+  font-family: $text-font;
+  height: 35px;
+}
+
+.timer-container {
+  height: 70%;
+}
+
+.dropdown {
+  font-family: $text-font;
 }
 
 // ------------------ ABOUT PAGE ------------------ //
@@ -126,6 +137,10 @@
 
 // ------------------ PETS ------------------ //
 
+.pets-container {
+  height: 65%;
+}
+
 .card-title {
   // pet name
   font-family: $logo-font;
@@ -147,12 +162,8 @@
     background-color: $register-button-color !important;
     border-color: $register-button-color !important;
   }
-  // &:first-of-type {
-  //   margin-top: 10px !important;
-  // }
-  // &:last-of-type {
-  //   margin-top: 10px !important;
-  // }
+  height: 35px;
+  border-radius: 15px;
 }
 
 .pets-display {
@@ -169,10 +180,62 @@
   border-color: transparent;
 }
 
-.form-control {
+.pets-form { // name your pet input box
+  width: 70%;
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: $text-font;
+}
+
+// ------------------ LOGIN / REGISTER ------------------ //
+
+.login-h1, .register-h1{ //h1 "Login" "Register"
+  text-align: center;
+}
+
+.login { // size of main container
+  height: 50%;
+  width: 30%;
+}
+
+.register { // size of main container
+  height: 55%;
+  width: 30%;
+}
+
+.login-form { // entire form container
+  margin-top: 25px;
+  font-family: $text-font;
+  margin-left: 25%;
+}
+
+.register-form { // entire form container
+  margin-top: 25px;
+  font-family: $text-font;
+  margin-left: 20%;
+}
+
+.login-tagline, .register-tagline { // "already have an account?"
+  &:first-of-type {
+    margin-top: 35px;
+    margin-bottom: 0px;
+  }
+  &:last-of-type {
+    margin-bottom: 35px;
+  }
+  font-family: $text-font;
+  font-weight: bold;
+  font-size: larger;
+  text-align: center;
+  color: $register-button-color;
+}
+
+.login-form-input { // length of input boxes in form
+  width: 65%;
+}
+
+.register-form-input { // length of input boxes in form
+  width: 75%;
 }
 
 // ------------------ BUTTONS ------------------ //
@@ -225,6 +288,7 @@
   font-size: large;
   background-color: #3e98c7;
   font-family: $text-font;
+  height: 35px;
 }
 
 .reset-button {
@@ -234,6 +298,7 @@
   margin: 2.5rem;
   font-size: large;
   font-family: $text-font;
+  height: 35px;
 }
 
 // ------------------ EGG ANIMATIONS ------------------ //
@@ -287,4 +352,9 @@
   100% {
     transform: translateX(0px) rotate(0deg);
   }
+}
+
+// register button page, get rid of margin
+.register-page-button {
+  margin-left: 0px;
 }
