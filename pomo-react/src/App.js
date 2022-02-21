@@ -10,7 +10,7 @@ import { SessionsContext } from './context/SessionsContext';
 // component imports
 import Main from "./components/Main";
 import HomeNavBar from "./components/HomeNavBar";
-import DoughnutChart from "./components/DoughnutChart";
+import PieChart from "./components/ PieChart";
 
 // route imports
 import Login from "./routes/Login";
@@ -32,7 +32,7 @@ function App() {
           <Route path="pets" element={<Pets />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
-          <Route path="statistics" element={<DoughnutChart />} />
+          <Route path="statistics" element={<PieChart />} />
           <Route path="about" element={<About />} />
           <Route path="logout" element={<Main />} />
         </Routes>
