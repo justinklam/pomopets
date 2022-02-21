@@ -8,11 +8,9 @@ import { SessionsContext } from "../context/SessionsContext";
 import { createTimer, updatePets } from "../helpers/helpers";
 
 export default function Pomodoro(props) {
-  const [session, setSession] = useContext(
-    SessionsContext
-  );
+  const [session, setSession] = useContext(SessionsContext);
 
-  const [tag, setTag] = useState("Misc");
+  const [tag, setTag] = useState("What are you focusing on?");
 
   const startingTimer = props.startingTimer || 0;
 
@@ -27,7 +25,6 @@ export default function Pomodoro(props) {
   const userId = session.state.id;
 
   useEffect(() => {
-
     // timer set-up
 
     if (timeRunning) {
@@ -82,7 +79,7 @@ export default function Pomodoro(props) {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     // const userId = session.state.id;
     const description = e.target.text;
@@ -108,16 +105,25 @@ export default function Pomodoro(props) {
         </div>
 
         <div>
-          <DropdownButton
-            id="dropdown-basic-button"
-            title="What are you focusing on?"
-          >
-            <Dropdown.Item className="dropdown" onClick={handleSubmit}>Study</Dropdown.Item>
-            <Dropdown.Item className="dropdown" onClick={handleSubmit}>Exercise</Dropdown.Item>
-            <Dropdown.Item className="dropdown" onClick={handleSubmit}>Work</Dropdown.Item>
-            <Dropdown.Item className="dropdown" onClick={handleSubmit}>Tidy-Up</Dropdown.Item>
-            <Dropdown.Item className="dropdown" onClick={handleSubmit}>Reading</Dropdown.Item>
-            <Dropdown.Item className="dropdown" onClick={handleSubmit}>Meditation</Dropdown.Item>
+          <DropdownButton id="dropdown-basic-button" title={tag}>
+            <Dropdown.Item className="dropdown" onClick={handleSubmit}>
+              Study
+            </Dropdown.Item>
+            <Dropdown.Item className="dropdown" onClick={handleSubmit}>
+              Exercise
+            </Dropdown.Item>
+            <Dropdown.Item className="dropdown" onClick={handleSubmit}>
+              Work
+            </Dropdown.Item>
+            <Dropdown.Item className="dropdown" onClick={handleSubmit}>
+              Tidy-Up
+            </Dropdown.Item>
+            <Dropdown.Item className="dropdown" onClick={handleSubmit}>
+              Reading
+            </Dropdown.Item>
+            <Dropdown.Item className="dropdown" onClick={handleSubmit}>
+              Meditation
+            </Dropdown.Item>
           </DropdownButton>
         </div>
 
