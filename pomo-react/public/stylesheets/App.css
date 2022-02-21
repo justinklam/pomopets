@@ -1,6 +1,6 @@
 .body {
   background-image: url("../assets/backgrounds/5.jpg");
-  background-size: 100%;
+  background-size: cover;
   height: 100vh;
   font-family: "Hind Guntur", sans-serif;
   display: flex;
