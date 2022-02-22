@@ -10,13 +10,14 @@ import egg3 from "../assets/eggs/egg3.png";
 import egg4 from "../assets/eggs/egg4.png";
 import egg5 from "../assets/eggs/egg5.png";
 import egg6 from "../assets/eggs/egg6.png";
+import egg7 from "../assets/eggs/egg7.png";
 
-const _ = require('lodash');
+const _ = require("lodash");
 
 export default function Pets() {
   // splice and randomize for unique eggs to display each time
-  const arr = [egg2, egg3, egg4, egg5, egg6];
-  const eggsPicked = _.sampleSize(arr, 3)
+  const arr = [egg2, egg3, egg4, egg5, egg6, egg7];
+  const eggsPicked = _.sampleSize(arr, 3);
 
   const pet_info = [
     {
