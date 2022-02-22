@@ -73,8 +73,6 @@ export default function MyPet() {
     image: cat3,
   }];
 
-  // const [pets, setPets] = useState([]);
-
   const [userPets, setUserPets] = useState();
 
   useEffect(() => {
@@ -117,24 +115,18 @@ export default function MyPet() {
             }
           }
         )
-        console.log('foreach Update', userPets);
       setUserPets(userPets);
         })}
       }, []);
  
   const handleClick = function(e){
     const dataId = e.target.getAttribute("dataId")
-    // console.log('dataid', dataId)
-
     // if (e.target.src === window.location.origin+pet_info[0].image || e.target.src === window.location.origin+pet_info[1].image){
       const pets = [...userPets];
       pets.forEach((pet, i)=> {
-        // console.log('pet.pet.id', pet.pet.id)
           if (dataId == pet.pet.id) {
             pets[i].pet.clicked = !pets[i].pet.clicked
           }
-          // console.log('foreach if');
-        // }
       });
       setUserPets(pets);
   };
