@@ -7,7 +7,7 @@ export default function Main(props) {
       <div className="body pt-5">
         <div className="home main-container">
           <div className="text-container">
-            <h1 className="logo-text"> {props.title} </h1>
+            <h1 className="logo-text"> PomoPets </h1>
             <br />
             <h3>
               <p className="blurb">
@@ -18,7 +18,7 @@ export default function Main(props) {
               <br />
               <p className="blurb">
                 Pomodoro sessions are typically 25 minutes in length, with a 5
-                minute break between sessions. After every session, take a
+                minute break between sessions. After every few sessions, take a
                 longer break to recharge and refresh your mind!{" "}
               </p>
             </h3>

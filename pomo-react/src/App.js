@@ -33,7 +33,7 @@ function App() {
       <SessionsContext.Provider value={[ context, setContext ]}>
         <HomeNavBar user={user} />
         <Routes>
-          <Route path="/" element={<Main title="PomoPets" />} />
+          <Route path="/" element={<Main />} />
           <Route path="timers" element={<Timers />} />
           <Route path="pets" element={<Pets />} />
           <Route path="login" element={<Login user={user} setUser={setUser} />} />
