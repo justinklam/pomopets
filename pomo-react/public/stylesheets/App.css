@@ -40,6 +40,22 @@
   padding-top: 25px;
 }
 
+.main-navbar {
+  padding-top: 30px;
+  padding-bottom: 1rem;
+  padding-left: 50px;
+  font-family: "Hind Guntur", sans-serif;
+  background-color: #ddbbd5 !important;
+  font-size: larger;
+}
+
+.nav-main-link {
+  color: black;
+}
+.nav-main-link:hover {
+  color: black;
+}
+
 .pomodoro {
   font-size: 6em;
 }
@@ -68,6 +84,7 @@
 
 .timer-container {
   height: 70%;
+  width: 45%;
 }
 
 .dropdown {
@@ -92,22 +109,6 @@
 
 .about-header {
   padding-top: 25px;
-}
-
-.main-navbar {
-  padding-top: 30px;
-  padding-bottom: 1rem;
-  padding-left: 50px;
-  font-family: "Hind Guntur", sans-serif;
-  background-color: #ddbbd5 !important;
-  font-size: larger;
-}
-
-.nav-main-link {
-  color: black;
-}
-.nav-main-link:hover {
-  color: black;
 }
 
 .pets-container {
@@ -189,8 +190,10 @@
   height: 40%;
 }
 
-.timer-pet-container {
-  display: flex;
+.pet-timer {
+  position: fixed;
+  left: 1350px;
+  top: 600px;
 }
 
 .login-h1,
