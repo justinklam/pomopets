@@ -43,6 +43,18 @@ export default function MyPet() {
     image: pup3,
   },
   {
+    name:"Pup",
+    type: 1,
+    action:"jump",
+    image: pup4,
+  },
+  {
+    name:"Pup",
+    type: 1,
+    action:"swim",
+    image: pup5,
+  },
+  {
     name:"Hedgehog",
     type: 2,
     action: "surprise",
@@ -61,6 +73,18 @@ export default function MyPet() {
     image: hedgehog3,
   },
   {
+    name:"Hedgehog",
+    type: 2,
+    action: "heart",
+    image: hedgehog4,
+  }, 
+  {
+    name:"Hedgehog",
+    type: 2,
+    action: "dance",
+    image: hedgehog5,
+  }, 
+  {
     name:"Cat",
     type: 3,
     action: "eat",
@@ -77,6 +101,18 @@ export default function MyPet() {
     type: 3,
     action: "float",
     image: cat3,
+  },  
+  {
+    name:"Cat",
+    type: 3,
+    action: "swim",
+    image: cat4,
+  },
+  {
+    name:"Cat",
+    type: 3,
+    action: "dance",
+    image: cat5,
   }];
 
   const [userPets, setUserPets] = useState();
@@ -93,6 +129,8 @@ export default function MyPet() {
               userPets[i].pet.info = pet_info[0]
               userPets[i].pet.info.image2 = pet_info[1].image
               userPets[i].pet.info.image3 = pet_info[2].image
+              userPets[i].pet.info.image4 = pet_info[3].image
+              userPets[i].pet.info.image5 = pet_info[4].image
               if(pet.pet.stage === 0) {
                 userPets[i].pet.activeImage = pet_info[0].image
               } else if (pet.pet.stage > 0) {
@@ -100,23 +138,27 @@ export default function MyPet() {
               }
             }
             if (pet.pet.type === 2){
-              userPets[i].pet.info = pet_info[3]
-              userPets[i].pet.info.image2 = pet_info[4].image
-              userPets[i].pet.info.image3 = pet_info[5].image
+              userPets[i].pet.info = pet_info[5]
+              userPets[i].pet.info.image2 = pet_info[6].image
+              userPets[i].pet.info.image3 = pet_info[7].image
+              userPets[i].pet.info.image4 = pet_info[8].image
+              userPets[i].pet.info.image5 = pet_info[9].image
               if(pet.pet.stage === 0) {
-                userPets[i].pet.activeImage = pet_info[3].image
+                userPets[i].pet.activeImage = pet_info[5].image
               } else if (pet.pet.stage > 0) {
-                userPets[i].pet.activeImage = pet_info[4].image
+                userPets[i].pet.activeImage = pet_info[6].image
               }
             }
             if (pet.pet.type === 3){
-              userPets[i].pet.info = pet_info[6]
-              userPets[i].pet.info.image2 = pet_info[7].image
-              userPets[i].pet.info.image3 = pet_info[8].image
+              userPets[i].pet.info = pet_info[10]
+              userPets[i].pet.info.image2 = pet_info[11].image
+              userPets[i].pet.info.image3 = pet_info[12].image
+              userPets[i].pet.info.image4 = pet_info[13].image
+              userPets[i].pet.info.image5 = pet_info[14].image
               if(pet.pet.stage === 0) {
-                userPets[i].pet.activeImage = pet_info[6].image
+                userPets[i].pet.activeImage = pet_info[10].image
               } else if (pet.pet.stage > 0) {
-                userPets[i].pet.activeImage = pet_info[7].image
+                userPets[i].pet.activeImage = pet_info[11].image
               }
             }
           }
