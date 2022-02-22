@@ -10,6 +10,35 @@ router.get('/', function(req, res) {
   res.send({ title: '/users' });
 });
 
+// /users/update
+router.post('/update', async function(req, res) {
+
+  // const findAllUserPets = await prisma.user_pet.findMany({
+  //   where: {
+  //     user_id: req.body.userId
+  //   },
+  //   include: {
+  //     pet: true
+  //   },
+  // });
+
+  const updateUserDetails = await prisma.user.updateMany({
+    where: {
+      id: req.body.id
+    },
+    data: {
+      username: req.body.username,
+      // email: req.body.email,
+      // password: req.body.password
+    }
+  });
+
+  // console.log('updateUser', updateUserDetails)
+
+  res.status(200).send('User Updated');
+  
+});
+
 // /users/register
 router.post('/register', async function(req, res) {
   const email = req.body.email;
