@@ -33,9 +33,11 @@ export default function HomeNavBar(props) {
             <Link className="nav-link" to="/timers">
               Timers
             </Link>
-            <Link className="nav-link" to="/statistics">
-              Statistics
-            </Link>
+            {session?.state.username ? (
+              <Link className="nav-link" to="/statistics">
+                Statistics
+              </Link>
+            ) : null}
             <Link className="nav-link" to="/about">
               About Pomodoro
             </Link>{" "}
