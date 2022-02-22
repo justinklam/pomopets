@@ -135,7 +135,7 @@ async function main() {
   //   }
   // });
 
-  console.log({ new_user4, new_pet1, new_pet2, new_pet3, user_rel1, user_rel2, user_rel3 })
+  console.log({new_user1, new_user4, new_pet1, new_pet2, new_pet3, user_rel1, user_rel2, user_rel3 })
 }
 
 main()
