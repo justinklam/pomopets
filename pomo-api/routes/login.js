@@ -14,7 +14,6 @@ router.post('/', async function(req, res) {
   const user = await prisma.user.findUnique({
     where: { email: req.body.email}
   });
-  // console.log('current_user-----', current_user)
 
   if (!email || !password) {
     return res.send('A field is empty!')  

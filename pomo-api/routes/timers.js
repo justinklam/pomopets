@@ -22,8 +22,7 @@ router.get('/', async function(req, res) {
     }
   });
 
-  console.log('timers-----', timers);
-
+  // query to find one user
   // const user = await prisma.user.findUnique({
   //   where: {
   //     id: 2
@@ -45,10 +44,9 @@ router.post('/', async function(req, res) {
       description: req.body.description
     }
   });
-
-  // console.log('new_timer-----', new_timer)
   
   res.send('Timer created');
+  
 });
 
 module.exports = router;
