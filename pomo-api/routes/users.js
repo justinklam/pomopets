@@ -10,16 +10,13 @@ router.get('/', function(req, res) {
   res.send({ title: '/users' });
 });
 
-// POST register
-    // /users/register
+// /users/register
 router.post('/register', async function(req, res) {
   const email = req.body.email;
   const password = req.body.password;
   const user = await prisma.user.findUnique({
     where: { email: req.body.email}
   });
-
-  console.log('userID----->', user);
 
   if (!email || !password) {
     return res.status(400).send("Error - A field is empty!");

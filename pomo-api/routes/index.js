@@ -9,11 +9,3 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
-
-  // Test - Find Users
-  // const findUsers = User.findAll();
-  // findUsers.then(result => {
-  //   console.log('RESULT', result)
-  // })
-  
-  // console.log("USERS", findUsers);

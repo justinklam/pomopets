@@ -5,9 +5,7 @@ const prisma = new PrismaClient();
 
 router.get('/', async function (req, res) {
 
-  // console.log('pets-get req-----', req.query);
-
-  // axios is using a get request with params, return for it is req.query as a result
+  // axios is using a get request with params, the return for it is req.query as a result
   const findAllUserPets = await prisma.user_pet.findMany({
     where: {
       user_id: parseInt(req.query.id)
@@ -44,8 +42,6 @@ router.get('/', async function (req, res) {
 
 router.post('/', async function(req, res) {
 
-  // console.log('pets post body-----', req.body)
-
   const new_pet = await prisma.pet.create({
     data: {
       name: req.body.name,
@@ -60,8 +56,6 @@ router.post('/', async function(req, res) {
       pet_id: new_pet.id
     }
   });
-
-  // console.log('new_pet-----', new_pet);
   
   res.send('Pet created');
 
@@ -76,16 +70,10 @@ router.post('/update', async function(req, res) {
     include: {
       pet: true
     },
-  });
-
-  // console.log('findAllUserPets-----', findAllUserPets)
-
-  // console.log('pets post update req.body-----', req.body.userId)
-  
+  });  
   
   if (findAllUserPets.length > 0) {
     for (const pet of findAllUserPets) {
-      // console.log('pets post update pet.pet-----', pet.pet)
        await prisma.pet.updateMany({
         where: {
           id: pet.pet.id
