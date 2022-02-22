@@ -21,16 +21,22 @@ import Timers from "./routes/Timers";
 import About from "./routes/About";
 
 function App() {
+
+  const [ user, setUser ] = useState({
+    email: "",
+    password: ""
+  });
+
   const [ context, setContext ] = useState({ state: {} });
   return (
     <BrowserRouter>
       <SessionsContext.Provider value={[ context, setContext ]}>
-        <HomeNavBar />
+        <HomeNavBar user={user} />
         <Routes>
           <Route path="/" element={<Main title="PomoPets" />} />
           <Route path="timers" element={<Timers />} />
           <Route path="pets" element={<Pets />} />
-          <Route path="login" element={<Login />} />
+          <Route path="login" element={<Login user={user} setUser={setUser} />} />
           <Route path="register" element={<Register />} />
           <Route path="statistics" element={<PieChart />} />
           <Route path="about" element={<About />} />
