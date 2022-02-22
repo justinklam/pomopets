@@ -6,12 +6,18 @@ import { getAllPets } from "../helpers/selectors";
 import pup1 from "../assets/pets/dog1.gif";
 import pup2 from "../assets/pets/dog2.gif";
 import pup3 from "../assets/pets/dog3.gif";
+import pup4 from "../assets/pets/dog4.gif";
+import pup5 from "../assets/pets/dog5.gif";
 import hedgehog1 from "../assets/pets/hedgehog1.gif"
 import hedgehog2 from "../assets/pets/hedgehog2.gif"
 import hedgehog3 from "../assets/pets/hedgehog3.gif"
+import hedgehog4 from "../assets/pets/hedgehog4.gif"
+import hedgehog5 from "../assets/pets/hedgehog5.gif"
 import cat1 from "../assets/pets/cat1.gif"
 import cat2 from "../assets/pets/cat2.gif"
 import cat3 from "../assets/pets/cat3.gif"
+import cat4 from "../assets/pets/cat4.gif"
+import cat5 from "../assets/pets/cat5.gif"
 
 export default function MyPet() {
 
