@@ -58,10 +58,10 @@ export default function EditUser() {
               </Form.Text>
             </Form.Group>
 
-            {/* <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
               <Form.Control className="register-form-input" type="password" placeholder="Edit Password" name="password" value={user.password} onChange={handleChange}/>
-            </Form.Group> */}
+            </Form.Group>
 
             <Button className="register-page-button register-button" variant="primary" type="submit" onClick={handleSubmit}>
               Submit Changes
