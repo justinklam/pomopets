@@ -115,7 +115,6 @@ export default function MyPet() {
             }
           }
         )
-        console.log('foreach Update', userPets);
       setUserPets(userPets);
         })}
       }, []);

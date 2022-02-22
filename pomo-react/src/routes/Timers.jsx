@@ -1,16 +1,10 @@
-// import React, { useContext } from "react";
 import Pomodoro from "../components/Pomodoro";
 import MyPet from "../components/MyPet";
-// import { SessionsContext } from "../context/SessionsContext";
 
 export default function Timers() {
   const timeData = {
     time: 1,
   };
-
-  // const [session, setSession] = useContext(
-  //   SessionsContext
-  // );
 
   return (
     <>
