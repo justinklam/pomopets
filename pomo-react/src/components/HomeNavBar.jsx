@@ -5,8 +5,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { SessionsContext } from "../context/SessionsContext";
 
-export default function HomeNavBar() {
+export default function HomeNavBar(props) {
   const [session, setSession] = useContext(SessionsContext);
+
+  console.log(session?.state);
+  const { user } = props;
 
   // useEffect(() => {
   //   console.log('session', session);
@@ -21,12 +24,9 @@ export default function HomeNavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link className="nav-link" to="/">
+            {/* <Link className="nav-link" to="/">
               Home
-            </Link>
-            <Link className="nav-link" to="/about">
-              About Pomodoro
-            </Link>
+            </Link> */}
             <Link className="nav-link" to="/pets">
               Pets
             </Link>
@@ -36,18 +36,22 @@ export default function HomeNavBar() {
             <Link className="nav-link" to="/statistics">
               Statistics
             </Link>
-            <NavDropdown title="My Account" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Settings</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Change Password
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              {!session?.state.email ? (
-                ""
-              ) : (
+            <Link className="nav-link" to="/about">
+              About Pomodoro
+            </Link>{" "}
+            {session?.state.username ? (
+              <NavDropdown
+                title={`${session?.state.username}'s Account`}
+                id="basic-nav-dropdown"
+              >
+                <NavDropdown.Item href="#action/3.1">Settings</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">
+                  Change Password
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
                 <NavDropdown.Item href="/logout">Logout</NavDropdown.Item>
-              )}
-            </NavDropdown>
+              </NavDropdown>
+            ) : null}
             <div className="button-div">
               {session?.state.email ? (
                 ""
