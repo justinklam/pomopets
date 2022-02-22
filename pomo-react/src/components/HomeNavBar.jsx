@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -7,10 +7,6 @@ import { SessionsContext } from "../context/SessionsContext";
 
 export default function HomeNavBar() {
   const [session, setSession] = useContext(SessionsContext);
-
-  // useEffect(() => {
-  //   console.log('session', session);
-  // },[session?.state.email]);
 
   return (
     <Navbar className="main-navbar" bg="light" expand="lg">

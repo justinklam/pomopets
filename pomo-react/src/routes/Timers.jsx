@@ -5,7 +5,7 @@ import MyPet from "../components/MyPet";
 
 export default function Timers() {
   const timeData = {
-    time: 25,
+    time: 1,
   };
 
   // const [session, setSession] = useContext(

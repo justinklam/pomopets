@@ -24,9 +24,6 @@ export default function PetsCard(props) {
     const userId = session.state.id;
     createPets(petName, userId, props.type)
       .then(response => {
-        // console.log('response', response);
-        // console.log('package', petName, userId);
-        // setSession({ state: response.data });
         navigate("/timers");
       })
       .catch(error => {
