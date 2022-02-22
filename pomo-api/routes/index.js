@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.send("<h1> Hello World! This is the Express Backend for PomoPets </h1>");
+  res.send("<h1> This is the Backend for PomoPets </h1>");
 });
 
 module.exports = router;
