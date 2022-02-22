@@ -16,13 +16,11 @@ export default function PetsCard(props) {
   const handleChange = e => {
     const name = e.target.name;
     const value = e.target.value;
-    // console.log('handlechange', name, value)
     setPetName(value);
   };
 
   const handleSubmit = e => {
     e.preventDefault();
-    // console.log('petscard Session', session)
     const userId = session.state.id;
     createPets(petName, userId, props.type)
       .then(response => {

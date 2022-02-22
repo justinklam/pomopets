@@ -19,7 +19,6 @@ export default function Login(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     login(user).then((response) => {
-      // console.log('Login response', response);
       setSession({ state: response.data });
       navigate("/");
     })

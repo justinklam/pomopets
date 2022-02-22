@@ -18,10 +18,12 @@ export default function Timers() {
         <div className="timer-container main-container">
           <div>
             <h1 className="logo-text text-center"> Timer </h1>
-            <div className="timer-pet-container">
+            <div>
               <Pomodoro startingTimer={timeData.time}/>
             </div>
-            <MyPet/>
+            <div className="pet-timer">
+              <MyPet/>
+            </div>
           </div>
         </div>
       </div>

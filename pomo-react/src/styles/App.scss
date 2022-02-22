@@ -9,10 +9,9 @@
   justify-content: space-around;
 }
 
-// ------------------ HOME PAGE ------------------ //
+// ---------------------------- HOME PAGE ---------------------------- //
 
 .main-container {
-  // main container on all other pages
   font-family: $logo-font;
   display: flex;
   height: 60%;
@@ -49,7 +48,27 @@
   padding-top: 25px;
 }
 
-// ------------------ TIMER ------------------ //
+// ---------------------------- NAV BAR ---------------------------- //
+
+.main-navbar {
+  // navbar stylings
+  padding-top: 30px;
+  padding-bottom: 1rem;
+  padding-left: 50px;
+  font-family: $text-font;
+  background-color: $nav-bar !important;
+  font-size: larger;
+}
+
+.nav-main-link {
+  // PomoPets home link in nav bar
+  color: black;
+  &:hover {
+    color: black;
+  }
+}
+
+// ---------------------------- TIMER ---------------------------- //
 
 .pomodoro {
   // timer
@@ -83,13 +102,14 @@
 
 .timer-container {
   height: 70%;
+  width: 45%;
 }
 
 .dropdown {
   font-family: $text-font;
 }
 
-// ------------------ ABOUT PAGE ------------------ //
+// ---------------------------- ABOUT PAGE ---------------------------- //
 
 .about-text-container {
   // container - increase padding and margin for about text
@@ -115,27 +135,7 @@
   padding-top: 25px;
 }
 
-// ------------------ NAV BAR ------------------ //
-
-.main-navbar {
-  // navbar stylings
-  padding-top: 30px;
-  padding-bottom: 1rem;
-  padding-left: 50px;
-  font-family: $text-font;
-  background-color: $nav-bar !important;
-  font-size: larger;
-}
-
-.nav-main-link {
-  // PomoPets home link in nav bar
-  color: black;
-  &:hover {
-    color: black;
-  }
-}
-
-// ------------------ PETS ------------------ //
+// ---------------------------- PETS ---------------------------- //
 
 .pets-container {
   height: 65%;
@@ -224,15 +224,17 @@
     }
   }
 }
-// ------------------ PET ON TIMER PAGE ------------------ //
+// ---------------------------- PET ON TIMER PAGE ---------------------------- //
 .pet-card-timer {
   height: 40%;
 }
 
-.timer-pet-container {
-  display: flex;
+.pet-timer {
+  position: fixed;
+  left: 1350px;
+  top: 600px;
 }
-// ------------------ LOGIN / REGISTER ------------------ //
+// ---------------------------- LOGIN / REGISTER ---------------------------- //
 
 .login-h1,
 .register-h1,
@@ -294,7 +296,7 @@
   width: 75%;
 }
 
-// ------------------ GRAPH ------------------ //
+// ---------------------------- GRAPH ---------------------------- //
 
 .pie-chart {
   margin-left: auto;
@@ -316,7 +318,7 @@
   height: 70%;
 }
 
-// ------------------ BUTTONS ------------------ //
+// ---------------------------- BUTTONS ---------------------------- //
 
 .button-div {
   padding-left: 25rem;
@@ -379,7 +381,7 @@
   height: 35px;
 }
 
-// ------------------ EGG ANIMATIONS ------------------ //
+// ---------------------------- EGG ANIMATIONS ---------------------------- //
 .egg {
   margin-top: 5rem;
   animation: wiggle 1s linear infinite;

@@ -85,7 +85,7 @@ export default function PieChart() {
         <div className="chart-container main-container">
           <div>
             <h1 className="chart-h1 logo-text"> Your Pomodoros! </h1>
-            <p className="chart-blurb"> This pie chart is a reflection of your focus progress and summarizes how you spent your time</p>
+            <p className="chart-blurb"> This pie chart is a reflection of your focus progress and summarizes how you have spent your time.</p>
               <div className="pie-chart">
                 <Pie data={data} options={options} />
               </div>

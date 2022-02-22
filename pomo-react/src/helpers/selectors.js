@@ -7,7 +7,6 @@ const getAllPets = (userId) =>
   }
 })
 .then(function (response) {
-  // console.log('axios getPets', response);
   return response.data;
 })
 .catch(function (error) {
