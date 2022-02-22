@@ -56,6 +56,17 @@ const updatePets = (userId) => {
   })
 };
 
+const updateUser = (userInfo, userId) => {
+  const {username, email, password} = userInfo;
+  return axios.post('//localhost:3030/users/update',
+  {
+    id: userId,
+    username: username,
+    email: email,
+    password: password
+  })
+};
+
 const register = (user) => {
   const {username, email, password} = user;
   // console.log('email', email, 'password', password)
@@ -73,5 +84,6 @@ export {
   login,
   logout,
   updatePets,
+  updateUser,
   register
 };
