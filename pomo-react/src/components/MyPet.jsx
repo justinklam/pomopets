@@ -118,49 +118,42 @@ export default function MyPet() {
   const [userPets, setUserPets] = useState();
 
   useEffect(() => {
-    const userPetsJsx = [];
+    // const userPetsJsx = [];
     if(session.state.id){
       const getUserPets = getAllPets(session.state.id)
         .then((userPets) => {
-          userPets.forEach ((pet, i) => {
-            userPets[i].pet.clicked = false;
-            
+          userPets.forEach ((pet, i) => {            
             if (pet.pet.type === 1){
               userPets[i].pet.info = pet_info[0]
-              userPets[i].pet.info.image2 = pet_info[1].image
-              userPets[i].pet.info.image3 = pet_info[2].image
-              userPets[i].pet.info.image4 = pet_info[3].image
-              userPets[i].pet.info.image5 = pet_info[4].image
-              if(pet.pet.stage === 0) {
-                userPets[i].pet.activeImage = pet_info[0].image
-              } else if (pet.pet.stage > 0) {
-                userPets[i].pet.activeImage = pet_info[1].image
-              }
+              userPets[i].pet.info.images = [
+                pet_info[0].image,
+                pet_info[1].image,
+                pet_info[2].image,
+                pet_info[3].image,
+                pet_info[4].image
+              ];
             }
             if (pet.pet.type === 2){
               userPets[i].pet.info = pet_info[5]
-              userPets[i].pet.info.image2 = pet_info[6].image
-              userPets[i].pet.info.image3 = pet_info[7].image
-              userPets[i].pet.info.image4 = pet_info[8].image
-              userPets[i].pet.info.image5 = pet_info[9].image
-              if(pet.pet.stage === 0) {
-                userPets[i].pet.activeImage = pet_info[5].image
-              } else if (pet.pet.stage > 0) {
-                userPets[i].pet.activeImage = pet_info[6].image
-              }
+              userPets[i].pet.info.images = [
+                pet_info[5].image,
+                pet_info[6].image,
+                pet_info[7].image,
+                pet_info[8].image,
+                pet_info[9].image
+              ];
             }
             if (pet.pet.type === 3){
               userPets[i].pet.info = pet_info[10]
-              userPets[i].pet.info.image2 = pet_info[11].image
-              userPets[i].pet.info.image3 = pet_info[12].image
-              userPets[i].pet.info.image4 = pet_info[13].image
-              userPets[i].pet.info.image5 = pet_info[14].image
-              if(pet.pet.stage === 0) {
-                userPets[i].pet.activeImage = pet_info[10].image
-              } else if (pet.pet.stage > 0) {
-                userPets[i].pet.activeImage = pet_info[11].image
-              }
+              userPets[i].pet.info.images = [
+                pet_info[10].image,
+                pet_info[11].image,
+                pet_info[12].image,
+                pet_info[13].image,
+                pet_info[14].image
+              ];
             }
+            userPets[i].pet.info.activeImage = userPets[i].pet.info.images[0];
           }
         )
       setUserPets(userPets);
@@ -168,17 +161,21 @@ export default function MyPet() {
       }, []);
  
   const handleClick = function(e){
-    const dataId = e.target.getAttribute("dataId")
-    // if (e.target.src === window.location.origin+pet_info[0].image || e.target.src === window.location.origin+pet_info[1].image){
-      const pets = [...userPets];
-      pets.forEach((pet, i)=> {
+    const dataId = e.target.getAttribute("dataId");
+      // work-around for deep cloning pets
+      const pets = JSON.parse(JSON.stringify(userPets));
+      pets.forEach((pet)=> {
           if (dataId == pet.pet.id) {
-            pets[i].pet.clicked = !pets[i].pet.clicked
+            const imageIndex = pet.pet.info.images.indexOf(pet.pet.info.activeImage)
+            let newIndex = imageIndex+1;
+            if(imageIndex >= pet.pet.info.images.length - 1){
+              newIndex = 0;
+            }
+            pet.pet.info.activeImage = pet.pet.info.images[newIndex];    
           }
       });
       setUserPets(pets);
   };
-
   
   return (
     <>
@@ -186,7 +183,7 @@ export default function MyPet() {
       <div className="card pet-card-timer" style={{width: "18rem"}} key={pet.pet.id}>
               <div className="card-body pet-card-body-timer">
                 <h5 className="card-title">{pet.pet.name}</h5>
-                <img dataId={pet.pet.id} src={pet.pet.clicked ? pet.pet.info.image3 : pet.pet.activeImage} width="200px" height="200px" onClick={handleClick}/> 
+                <img dataId={pet.pet.id} src={pet.pet.info.activeImage} width="200px" height="200px" onClick={handleClick}/> 
               </div>
             </div>
       )): ""}
