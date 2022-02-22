@@ -8,7 +8,7 @@ import { SessionsContext } from "../context/SessionsContext";
 export default function HomeNavBar(props) {
   const [session, setSession] = useContext(SessionsContext);
 
-  console.log(session?.state);
+  // console.log(session?.state);
   const { user } = props;
 
   // useEffect(() => {
