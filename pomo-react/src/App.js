@@ -13,12 +13,13 @@ import HomeNavBar from "./components/HomeNavBar";
 import PieChart from "./components/PieChart";
 
 // route imports
+import About from "./routes/About";
 import Login from "./routes/Login";
 import Pets from "./routes/Pets";
 import Register from "./routes/Register";
-// import Statistics from "./routes/Statistics";
 import Timers from "./routes/Timers";
-import About from "./routes/About";
+import EditUser from "./routes/EditUser";
+// import Statistics from "./routes/Statistics";
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
           <Route path="statistics" element={<PieChart />} />
           <Route path="about" element={<About />} />
           <Route path="logout" element={<Main />} />
+          <Route path="editUser" element={<EditUser />} />
         </Routes>
       </SessionsContext.Provider>
     </BrowserRouter>
