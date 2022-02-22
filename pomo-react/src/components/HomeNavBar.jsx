@@ -65,7 +65,7 @@ export default function HomeNavBar(props) {
               ) : (
                 <Link
                   className="register-button"
-                  id="regisiter-nav"
+                  id="register-nav"
                   to="/register"
                 >
                   &nbsp;&nbsp;&nbsp;Register&nbsp;&nbsp;&nbsp;
