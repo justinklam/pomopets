@@ -1,37 +1,41 @@
+// component imports
 import PetsCard from "../components/PetsCard";
+
+// asset imports
 import pup from "../assets/pets/dog1.gif";
 import hedgehog from "../assets/pets/hedgehog2.gif";
 import cat from "../assets/pets/cat1.gif";
-import egg from "../assets/eggs/egg.png";
 import egg2 from "../assets/eggs/egg2.png";
 import egg3 from "../assets/eggs/egg3.png";
 import egg4 from "../assets/eggs/egg4.png";
 import egg5 from "../assets/eggs/egg5.png";
 import egg6 from "../assets/eggs/egg6.png";
 
+const _ = require('lodash');
+
 export default function Pets() {
   // splice and randomize for unique eggs to display each time
-  // const arr = [egg, egg2, egg3, egg4, egg5, egg6];
-  // const eggimgs = [Math.floor(Math.random() * arr.length)];
+  const arr = [egg2, egg3, egg4, egg5, egg6];
+  const eggsPicked = _.sampleSize(arr, 3)
 
   const pet_info = [
     {
       name: "Pup",
-      eggimg: egg6,
+      eggimg: eggsPicked[0],
       image: pup,
       description: "A very good boy who love naps!",
       type: 1,
     },
     {
       name: "Hedgehog",
-      eggimg: egg3,
+      eggimg: eggsPicked[1],
       image: hedgehog,
       description: "A cuddly creature with many spikes!",
       type: 2,
     },
     {
       name: "Cat",
-      eggimg: egg5,
+      eggimg: eggsPicked[2],
       image: cat,
       description: "A sassy cat who lives in luxury!",
       type: 3,
