@@ -20,7 +20,6 @@ export default function Register() {
   const handleSubmit = (e) => {
     e.preventDefault();
     register(user).then((response) => {
-      // console.log('response', response);
       setSession({ state: response.data });
       navigate("/");
     })

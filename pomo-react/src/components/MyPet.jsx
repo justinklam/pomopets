@@ -145,8 +145,8 @@ export default function MyPet() {
     {userPets ? userPets.map(pet => (
       <div className="card pet-card-timer" style={{width: "18rem"}} key={pet.pet.id}>
               <div className="card-body pet-card-body-timer">
-                <img dataId={pet.pet.id} src={pet.pet.clicked ? pet.pet.info.image3 : pet.pet.activeImage} width="200px" height="200px" onClick={handleClick}/> 
                 <h5 className="card-title">{pet.pet.name}</h5>
+                <img dataId={pet.pet.id} src={pet.pet.clicked ? pet.pet.info.image3 : pet.pet.activeImage} width="200px" height="200px" onClick={handleClick}/> 
               </div>
             </div>
       )): ""}
