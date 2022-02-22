@@ -32,6 +32,16 @@ async function main() {
     },
   });
 
+  const new_user4 = await prisma.user.upsert({
+    where: { email: 'arushi@gmail.com' },
+    update: {},
+    create: {
+      username: 'arushi',
+      email: 'arushi@gmail.com',
+      password: '$2a$10$/zxmTG1XNLC1XSMRkuHcO.bvYHi6VWu93PJMU8p77dBHP3TKsuuI.'
+    },
+  });
+
   const new_pet1 = await prisma.pet.create({
     data: {
       name: 'petName1',
@@ -125,7 +135,7 @@ async function main() {
   //   }
   // });
 
-  console.log({ new_user1, new_pet1, new_pet2, new_pet3, user_rel1, user_rel2, user_rel3 })
+  console.log({ new_user4, new_pet1, new_pet2, new_pet3, user_rel1, user_rel2, user_rel3 })
 }
 
 main()
