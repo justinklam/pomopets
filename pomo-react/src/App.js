@@ -19,7 +19,6 @@ import Pets from "./routes/Pets";
 import Register from "./routes/Register";
 import Timers from "./routes/Timers";
 import EditUser from "./routes/EditUser";
-// import Statistics from "./routes/Statistics";
 
 function App() {
 
