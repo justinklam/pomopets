@@ -20,16 +20,16 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
 
 1. Go to pomo-api: `cd pomo-api`
 2. Create the `.env` by using `.env.example` as a reference: `cp .env.example .env`
-3. Create a database in pSQL named `pomo_db`
+3. Create a database in PostgreSQL named `pomo_db`
+   - `CREATE DATABASE pomo_db;`
 4. Update the .env file with your correct local information 
      - PORT: `3030`
      - DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/pomo_db"
 5. Install dependencies: `npm i`
 6. Create database: `sequelize db:create`
-7. Run the server: `npm start`
-8. Go to `localhost:3030`
-
-To run migrations: `npx prisma migrate dev --name init`
+7. Run migrations: `npx prisma migrate dev --name init`
+8. Run the server: `npm start`
+9. Go to `localhost:3030`
 
 ### Setting up the Client
 
@@ -55,9 +55,7 @@ To run migrations: `npx prisma migrate dev --name init`
     "pg": "^8.7.3"
     
 ### Client-side
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
+    "@faker-js/faker": "^6.0.0-alpha.7",
     "axios": "^0.25.0",
     "bootstrap": "^5.1.3",
     "chart.js": "^3.7.1",
