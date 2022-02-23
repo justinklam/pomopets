@@ -4,6 +4,12 @@
 
 A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](https://github.com/justinklam), [Rhea Azarraga](https://github.com/Rheaazarraga), and [Arushi Katyal](https://github.com/katy-arushi).
 
+## Screenshots
+!["pomopets homepage"]()
+!["pomopets pets"]()
+!["pomopets timer"]()
+!["pomopets stats]()
+
 ## Getting Started
 
 ### Setting up the Server
