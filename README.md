@@ -4,6 +4,17 @@
 
 A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](https://github.com/justinklam), [Rhea Azarraga](https://github.com/Rheaazarraga), and [Arushi Katyal](https://github.com/katy-arushi).
 
+## Features
+- Allows users to choose and name their own digital pets
+- Has a Pomodoro timer that has 25 minute focus sessions and 5 minute breaks
+- Users can start and reset the timer as they wish
+- Users can choose their area of focus for the timer
+- Statistics page tracks number of Pomodoro sessions completed by area of focus
+
+## Future Features
+- Integrate Spotify
+- Unlock new pets based on number of Pomodoro sessions completed
+
 ## Screenshots
 #### Homepage
 !["pomopets homepage"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/home.png?raw=true)
