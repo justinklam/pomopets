@@ -33,9 +33,11 @@ export default function HomeNavBar(props) {
                 Statistics
               </Link>
             ) : null}
-            <Link className="nav-link" to="/statistics2">
-              Focused-Periods
-            </Link>{" "}
+            {session?.state.username ? (
+              <Link className="nav-link" to="/statistics2">
+                Focused-Periods
+              </Link>
+            ) : null}
             <Link className="nav-link" to="/about">
               About Pomodoro
             </Link>{" "}
@@ -44,7 +46,9 @@ export default function HomeNavBar(props) {
                 title={`${session?.state.username}'s Account`}
                 id="basic-nav-dropdown"
               >
-                <Link className="logout-nav nav-link" to="/editUser">Edit User</Link>
+                <Link className="logout-nav nav-link" to="/editUser">
+                  Edit User
+                </Link>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/logout">Logout</NavDropdown.Item>
               </NavDropdown>
