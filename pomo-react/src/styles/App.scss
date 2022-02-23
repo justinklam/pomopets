@@ -68,6 +68,10 @@
   }
 }
 
+.logout-nav { // spacing for edit user link
+  padding-left: 15px !important;
+}
+
 // ---------------------------- TIMER ---------------------------- //
 
 .pomodoro {
@@ -231,12 +235,12 @@
 
 .pet-timer {
   position: fixed;
-  left: 1350px;
+  left: 1300px;
   top: 600px;
 }
 
-.pet-timer-pet-name {
-  padding-right: 15px;
+.pet-timer-pet-title{
+  padding-left: 70px;
 }
 // ---------------------------- LOGIN / REGISTER ---------------------------- //
 
@@ -325,7 +329,7 @@
 // ---------------------------- BUTTONS ---------------------------- //
 
 .button-div {
-  padding-left: 25rem;
+  padding-left: 40rem;
 }
 
 .login-button {

@@ -56,6 +56,10 @@
   color: black;
 }
 
+.logout-nav {
+  padding-left: 15px !important;
+}
+
 .pomodoro {
   font-size: 6em;
 }
@@ -192,12 +196,12 @@
 
 .pet-timer {
   position: fixed;
-  left: 1350px;
+  left: 1300px;
   top: 600px;
 }
 
-.pet-timer-pet-name {
-  padding-right: 15px;
+.pet-timer-pet-title {
+  padding-left: 70px;
 }
 
 .login-h1,
@@ -275,7 +279,7 @@
 }
 
 .button-div {
-  padding-left: 25rem;
+  padding-left: 40rem;
 }
 
 .login-button {
