@@ -5,10 +5,10 @@
 A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](https://github.com/justinklam), [Rhea Azarraga](https://github.com/Rheaazarraga), and [Arushi Katyal](https://github.com/katy-arushi).
 
 ## Screenshots
-!["pomopets homepage"]()
-!["pomopets pets"]()
-!["pomopets timer"]()
-!["pomopets stats]()
+!["pomopets homepage"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/home.png?raw=true)
+!["pomopets pets"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/pets.png?raw=true)
+!["pomopets timer"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/timer.png?raw=true)
+!["pomopets stats](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/stats.png?raw=true)
 
 ## Getting Started
 
