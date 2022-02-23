@@ -35,7 +35,7 @@ export default function HomeNavBar(props) {
             ) : null}
             {session?.state.username ? (
               <Link className="nav-link" to="/statistics2">
-                Focused-Periods
+                Focus Periods
               </Link>
             ) : null}
             <Link className="nav-link" to="/about">
@@ -47,7 +47,7 @@ export default function HomeNavBar(props) {
                 id="basic-nav-dropdown"
               >
                 <Link className="logout-nav nav-link" to="/editUser">
-                  Edit User
+                  Edit Info
                 </Link>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/logout">Logout</NavDropdown.Item>
