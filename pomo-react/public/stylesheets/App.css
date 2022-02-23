@@ -196,6 +196,10 @@
   top: 600px;
 }
 
+.pet-timer-pet-name {
+  padding-right: 15px;
+}
+
 .login-h1,
 .register-h1,
 .chart-h1 {
