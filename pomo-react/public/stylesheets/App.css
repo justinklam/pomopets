@@ -278,6 +278,14 @@
   height: 70%;
 }
 
+.line-chart {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 525px;
+  width: 525px;
+}
+
 .button-div {
   padding-left: 30rem;
 }
