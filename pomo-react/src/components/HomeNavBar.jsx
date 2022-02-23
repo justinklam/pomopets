@@ -33,6 +33,9 @@ export default function HomeNavBar(props) {
                 Statistics
               </Link>
             ) : null}
+            <Link className="nav-link" to="/statistics2">
+              Focused-Periods
+            </Link>{" "}
             <Link className="nav-link" to="/about">
               About Pomodoro
             </Link>{" "}
