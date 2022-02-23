@@ -47,7 +47,7 @@ export default function Pets() {
     <>
       <div className="body pt-5">
         <div className="pets-container main-container">
-          <div className="text-container">
+          <div>
             <h1 className="pets logo-text text-center">
               {" "}
               Choose your PomoPet!{" "}
