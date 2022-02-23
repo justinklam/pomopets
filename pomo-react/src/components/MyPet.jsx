@@ -179,13 +179,14 @@ export default function MyPet() {
   
   return (
     <>
-    {userPets ? userPets.map(pet => (
-      <div className="card pet-card-timer" style={{width: "18rem"}} key={pet.pet.id}>
-              <div className="card-body pet-card-body-timer">
-                <h5 className="pet-timer-pet-title card-title">{pet.pet.name}</h5>
-                <img dataId={pet.pet.id} src={pet.pet.info.activeImage} width="200px" height="200px" onClick={handleClick}/> 
-              </div>
-            </div>
-      )): ""}
+    {/* {userPets ? userPets.map(pet => ( */}
+    {userPets ? 
+      <div className="card pet-card-timer" style={{width: "18rem"}} key={userPets[0].pet.id}>
+        <div className="card-body pet-card-body-timer">
+          <h5 className="pet-timer-pet-title card-title">{userPets[0].pet.name}</h5>
+          <img dataId={userPets[0].pet.id} src={userPets[0].pet.info.activeImage} width="200px" height="200px" onClick={handleClick}/> 
+        </div>
+      </div> : ""}
+      {/* )): ""} */}
     </>
 )};
