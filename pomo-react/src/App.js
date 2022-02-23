@@ -11,7 +11,7 @@ import { SessionsContext } from './context/SessionsContext';
 import Main from "./components/Main";
 import HomeNavBar from "./components/HomeNavBar";
 import PieChart from "./components/PieChart";
-// import LineChart from "./components/LineChart";
+import LineChart from "./components/LineChart";
 
 // route imports
 import About from "./routes/About";
@@ -41,7 +41,7 @@ function App() {
           <Route path="login" element={<Login user={user} setUser={setUser} />} />
           <Route path="register" element={<Register />} />
           <Route path="statistics" element={<PieChart />} />
-          <Route path="statistics2" element={<Statistics />} />
+          <Route path="focused-periods" element={<LineChart />} />
           <Route path="about" element={<About />} />
           <Route path="logout" element={<Main />} />
           <Route path="editUser" element={<EditUser />} />
