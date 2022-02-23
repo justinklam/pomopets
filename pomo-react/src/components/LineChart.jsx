@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -8,9 +8,9 @@ import {
   Title,
   Tooltip,
   Legend,
-} from 'chart.js';
-import { Line } from 'react-chartjs-2';
-const { faker } = require('@faker-js/faker');
+} from "chart.js";
+import { Line } from "react-chartjs-2";
+const { faker } = require("@faker-js/faker");
 
 ChartJS.register(
   CategoryScale,
@@ -23,28 +23,39 @@ ChartJS.register(
 );
 
 export const options = {
-  responsive: true,
   plugins: {
     legend: {
-      // position: 'top' as const,
+      labels: {
+        font: {
+          size: 15,
+        },
+      },
     },
     title: {
       display: true,
-      // text: 'Most Focused Periods',
+      text: "Most Focused Periods",
+    },
+    padding: {
+      top: 30,
+      bottom: 30,
+    },
+    responsive: true,
+    animation: {
+      animateScale: true,
     },
   },
 };
 
-const labels = ['00:00', '6:00', '12:00', '18:00', '23:00'];
+const labels = ["00:00", "6:00", "12:00", "18:00", "23:00"];
 
 export const data = {
   labels,
   datasets: [
     {
-      label: 'Number of Focused Periods',
+      label: "Number of Focused Periods",
       data: labels.map(() => faker.datatype.number({ min: 1, max: 10 })),
-      borderColor: 'rgb(255, 99, 132)',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      borderColor: "rgb(255, 99, 132)",
+      backgroundColor: "rgba(255, 99, 132, 0.5)",
     },
     // {
     //   label: 'Dataset 2',
@@ -57,8 +68,8 @@ export const data = {
 
 export default function LineChart() {
   return (
-  <div className="chart-container main-container">  
-    <Line options={options} data={data} />
-  </div>
+    <div className="line-chart main-container">
+      <Line options={options} data={data} />
+    </div>
   );
 }

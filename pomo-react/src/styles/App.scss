@@ -68,7 +68,8 @@
   }
 }
 
-.logout-nav { // spacing for edit user link
+.logout-nav {
+  // spacing for edit user link
   padding-left: 15px !important;
 }
 
@@ -239,7 +240,7 @@
   top: 600px;
 }
 
-.pet-timer-pet-title{
+.pet-timer-pet-title {
   padding-left: 70px;
 }
 // ---------------------------- LOGIN / REGISTER ---------------------------- //
@@ -304,7 +305,7 @@
   width: 75%;
 }
 
-// ---------------------------- GRAPH ---------------------------- //
+// ---------------------------- GRAPHS ---------------------------- //
 
 .pie-chart {
   margin-left: auto;
@@ -323,6 +324,20 @@
 }
 
 .chart-container {
+  height: 70%;
+}
+
+
+.line-chart {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 525px;
+  width: 525px;
+}
+
+
+.main-container {
   height: 70%;
 }
 

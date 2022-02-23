@@ -40,8 +40,7 @@ function App() {
           <Route path="pets" element={<Pets />} />
           <Route path="login" element={<Login user={user} setUser={setUser} />} />
           <Route path="register" element={<Register />} />
-          <Route path="statistics" element={<PieChart />} />
-          <Route path="focused-periods" element={<LineChart />} />
+          <Route path="statistics" element={<Statistics />} />
           <Route path="about" element={<About />} />
           <Route path="logout" element={<Main />} />
           <Route path="editUser" element={<EditUser />} />
