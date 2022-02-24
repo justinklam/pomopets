@@ -20,14 +20,14 @@ export default function ThemeButton() {
     dark: {
       navBar: "#151010",
       navMainLink: "#FFFFFF", // white
-      navOtherLink: "#FFFFFF", // white
+      navOtherLink: "#FFFFFF", // light grey
       backgroundColor: "#302A2A",
       loginButton: "#453750",
       registerButtonColor: "#4D90CC",
       progressBarColor: "#FFFFFF", // white
       textColor: "#FFFFFF", // white
       glow: "drop-shadow(0px 0px 3px pink) brightness(375%)",
-      lightsOut: "saturate(10%) brightness(10%)",
+      lightsOut: "saturate(40%) brightness(30%)",
     },
   };
 
