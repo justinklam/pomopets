@@ -34,7 +34,7 @@ export default function PetsCard(props) {
   return (
     <>
       <div className="card" style={{ width: "18rem" }}>
-        <div className="card-body">
+        <div className="pets-card-body card-body">
           <div className="single-pet">
             <img
               className="petimg"

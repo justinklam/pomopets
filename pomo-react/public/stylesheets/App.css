@@ -156,6 +156,12 @@
   border-color: transparent;
 }
 
+.pets-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .pets-form {
   width: 70%;
   margin-top: 10px;
