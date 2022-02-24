@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Container, Button } from "react-bootstrap";
+import ThemeSwitch from "./ThemeSwitch";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { SessionsContext } from "../context/SessionsContext";
@@ -9,9 +10,6 @@ export default function HomeNavBar(props) {
   const [session, setSession] = useContext(SessionsContext);
   const { user } = props;
 
-  // useEffect(() => {
-  //   console.log('session', session);
-  // },[session?.state.email]);
 
   return (
     <Navbar className="main-navbar" bg="light" expand="lg">
@@ -75,6 +73,7 @@ export default function HomeNavBar(props) {
             </div>
           </Nav>
         </Navbar.Collapse>
+        <ThemeSwitch />
       </Container>
     </Navbar>
   );
