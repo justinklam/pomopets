@@ -73,7 +73,7 @@
   padding-bottom: 1rem;
   padding-left: 50px;
   font-family: $text-font;
-   color: var(--navBarText) !important;
+  color: var(--navBarText) !important;
   background-color: var(--navBar) !important;
   transition: 1000ms;
   font-size: larger;
@@ -82,15 +82,23 @@
 
 .nav-main-link {
   // PomoPets home link in nav bar
-  color: black;
+  color: var(--navMainLink) !important;
   &:hover {
-    color: black;
+    color: var(--navMainLink) !important;
   }
+}
+
+.nav-other-links {
+  color: var(--navOtherLink) !important;
 }
 
 .logout-nav {
   // spacing for edit user link
   padding-left: 15px !important;
+}
+
+.light-bulb {
+  padding-bottom: 10px;
 }
 
 // ---------------------------- TIMER ---------------------------- //
@@ -163,7 +171,7 @@
 // ---------------------------- PETS ---------------------------- //
 
 .pets-container {
-  height: 65%;
+  height: 60%;
 }
 
 .card-title {
@@ -189,9 +197,6 @@
   }
   height: 35px;
   border-radius: 15px;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
 }
 
 .pets-display {
@@ -220,9 +225,6 @@
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: $text-font;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
 }
 
 .pets-form-group {
@@ -376,10 +378,12 @@
 // ---------------------------- BUTTONS ---------------------------- //
 
 .button-div {
-  padding-left: 30rem;
+  padding-left: 36rem;
+  margin-top: 7.5px;
 }
 
 .login-button {
+  padding-top: 2px;
   background-color: $login-button-color;
   text-decoration: none;
   font-family: $text-font !important;
@@ -399,6 +403,7 @@
 }
 
 .register-button {
+  padding-top: 2px;
   background-color: $register-button-color;
   text-decoration: none;
   font-family: $text-font !important;
@@ -434,6 +439,15 @@
   font-size: large;
   font-family: $text-font;
   height: 35px;
+}
+
+.login-page-button, .register-page-button {
+  padding-bottom: 0px;
+}
+
+// register button page, get rid of margin
+.register-page-button {
+  margin-left: 0px;
 }
 
 // ---------------------------- EGG ANIMATIONS ---------------------------- //
@@ -489,7 +503,4 @@
   }
 }
 
-// register button page, get rid of margin
-.register-page-button {
-  margin-left: 0px;
-}
+
