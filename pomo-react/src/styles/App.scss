@@ -92,6 +92,10 @@
   color: var(--navOtherLink) !important;
 }
 
+.test > a {
+  color: var(--navOtherLink) !important;
+}
+
 .logout-nav {
   // spacing for edit user link
   padding-left: 15px !important;

@@ -78,6 +78,10 @@
   color: var(--navOtherLink) !important;
 }
 
+.test > a {
+  color: var(--navOtherLink) !important;
+}
+
 .logout-nav {
   padding-left: 15px !important;
 }
