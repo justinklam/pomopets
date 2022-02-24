@@ -1,4 +1,3 @@
-// import { Button } from "react-bootstrap";
 import { useState } from "react";
 import lightBulb from "../assets/cuteBulb.png";
 
@@ -13,9 +12,6 @@ export default function ThemeButton() {
       loginButton: "#453750",
       registerButtonColor: "#4D90CC",
       progressBarColor: "#3e98c7",
-      // logoFont: "'Josefin Sans', sans-serif",
-      // subheaderFont: "'Mada', sans-serif",
-      // textFont: "'Hind Guntur', sans-serif",
       textColor: "#000",
       glow: "none",
       lightsOut: "none",
@@ -27,11 +23,8 @@ export default function ThemeButton() {
       loginButton: "#453750",
       registerButtonColor: "#4D90CC",
       progressBarColor: "#FFF",
-      // logoFont: "'Josefin Sans', sans-serif",
-      // subheaderFont: "'Mada', sans-serif",
-      // textFont: "'Hind Guntur', sans-serif",
       textColor: "#FFF",
-      glow: "drop-shadow(0px 0px 3px pink) brightness(250%)",
+      glow: "drop-shadow(0px 0px 3px pink) brightness(375%)",
       lightsOut: " saturate(50%) brightness(40%)",
     },
   };
@@ -49,7 +42,6 @@ export default function ThemeButton() {
         --loginButton:${theme.loginButton};
         --registerButtonColor: ${theme.registerButtonColor};
         --progressBarColor: ${theme.progressBarColor};
-
         --textColor: ${theme.textColor};
         --glow: ${theme.glow};
         --lightsOut: ${theme.lightsOut};
