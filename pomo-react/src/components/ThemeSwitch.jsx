@@ -7,25 +7,27 @@ export default function ThemeButton() {
   const themes = {
     cute: {
       navBar: "#ddbbd5",
-      navBarText: "#000",
+      navMainLink: "#000000", // black
+      navOtherLink: "rgba(0,0,0,.55)", // light grey
       backgroundColor: "#feded7",
       loginButton: "#453750",
       registerButtonColor: "#4D90CC",
       progressBarColor: "#3e98c7",
-      textColor: "#000",
+      textColor: "#000000", // black
       glow: "none",
       lightsOut: "none",
     },
     dark: {
       navBar: "#151010",
-      navBarText: "#FFF",
+      navMainLink: "#FFFFFF", // white
+      navOtherLink: "#FFFFFF", // light grey
       backgroundColor: "#302A2A",
       loginButton: "#453750",
       registerButtonColor: "#4D90CC",
-      progressBarColor: "#FFF",
-      textColor: "#FFF",
+      progressBarColor: "#FFFFFF", // white
+      textColor: "#FFFFFF", // white
       glow: "drop-shadow(0px 0px 3px pink) brightness(375%)",
-      lightsOut: " saturate(50%) brightness(40%)",
+      lightsOut: "saturate(50%) brightness(40%)",
     },
   };
 
@@ -37,7 +39,8 @@ export default function ThemeButton() {
         {` :root {
 
         --navBar: ${theme.navBar}; 
-        --navBarText:${theme.navBarText};
+        --navMainLink:${theme.navMainLink};
+        --navOtherLink:${theme.navOtherLink};
         --backgroundColor: ${theme.backgroundColor};
         --loginButton:${theme.loginButton};
         --registerButtonColor: ${theme.registerButtonColor};
