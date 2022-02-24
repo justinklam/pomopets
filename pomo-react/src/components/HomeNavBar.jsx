@@ -31,11 +31,6 @@ export default function HomeNavBar(props) {
                 Statistics
               </Link>
             ) : null}
-            {/* {session?.state.username ? (
-              <Link className="nav-link" to="/statistics2">
-                Focus Periods
-              </Link>
-            ) : null} */}
             <Link className="nav-link" to="/about">
               About Pomodoro
             </Link>{" "}
@@ -72,8 +67,8 @@ export default function HomeNavBar(props) {
               )}
             </div>
           </Nav>
+          <ThemeSwitch />
         </Navbar.Collapse>
-        <ThemeSwitch />
       </Container>
     </Navbar>
   );
