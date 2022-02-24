@@ -185,6 +185,12 @@
   border-color: transparent;
 }
 
+.pets-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .pets-form {
   // name your pet input box
   width: 70%;
@@ -334,6 +340,8 @@
   height: 525px;
   width: 525px;
 }
+
+
 
 // ---------------------------- BUTTONS ---------------------------- //
 

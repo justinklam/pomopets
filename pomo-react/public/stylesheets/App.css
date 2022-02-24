@@ -156,6 +156,12 @@
   border-color: transparent;
 }
 
+.pets-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .pets-form {
   width: 70%;
   margin-top: 10px;
@@ -276,6 +282,14 @@
 
 .chart-container {
   height: 70%;
+}
+
+.line-chart {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 525px;
+  width: 525px;
 }
 
 .button-div {

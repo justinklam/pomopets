@@ -19,7 +19,7 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
 #### Homepage
 !["pomopets homepage"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/home.png?raw=true)
 #### Choose your PomoPet
-!["pomopets pets"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/pets.png?raw=true)
+!["pomopets pets"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/pomopets%20pets.png?raw=true)
 #### Timer
 !["pomopets timer"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/timer.png?raw=true)
 #### Statistics
@@ -81,3 +81,11 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
     "react-scripts": "5.0.0",
     "sass": "^1.49.7",
     "web-vitals": "^2.1.4"
+
+#### To drop and recreate the database
+1. Connect to PostgreSQL using `psql`
+2. Drop the database by running `DROP DATABASE pomo_db;`
+3. Create the database by running `CREATE DATABASE pomo_db;`
+4. Run `npm run migrate`
+5. Run `npx prisma migrate dev --name init`
+6. Run `npx prisma db seed`
