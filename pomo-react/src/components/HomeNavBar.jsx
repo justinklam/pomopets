@@ -37,7 +37,7 @@ export default function HomeNavBar(props) {
             {session?.state.username ? (
               <NavDropdown
                 title={`${session?.state.username}'s Account`}
-                id="basic-nav-dropdown"
+                className="nav-other-links basic-nav-dropdown"
               >
                 <Link className="logout-nav nav-link" to="/editUser">
                   Edit Info

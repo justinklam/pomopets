@@ -20,7 +20,7 @@ export default function ThemeButton() {
     dark: {
       navBar: "#151010",
       navMainLink: "#FFFFFF", // white
-      navOtherLink: "#FFFFFF", // light grey
+      navOtherLink: "#FFFFFF", // white
       backgroundColor: "#302A2A",
       loginButton: "#453750",
       registerButtonColor: "#4D90CC",
