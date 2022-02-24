@@ -18,6 +18,8 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
 - Unlock new pets based on number of Pomodoro sessions completed
 - Adding more page themes
 - Dark Mode
+- Responsive design for app to be used on any device
+- Audio notification when focus session is completed
 
 ## Screenshots
 
