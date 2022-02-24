@@ -81,3 +81,11 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
     "react-scripts": "5.0.0",
     "sass": "^1.49.7",
     "web-vitals": "^2.1.4"
+
+#### To drop and recreate the database
+1. Connect to PostgreSQL using `psql`
+2. Drop the database by running `DROP DATABASE pomo_db;`
+3. Create the database by running `CREATE DATABASE pomo_db;`
+4. Run `npm run migrate`
+5. Run `npx prisma migrate dev --name init`
+6. Run `npx prisma db seed`
