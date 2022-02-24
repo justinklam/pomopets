@@ -36,7 +36,7 @@ async function main() {
     where: { email: 'arushi@gmail.com' },
     update: {},
     create: {
-      username: 'arushi',
+      username: 'Arushi',
       email: 'arushi@gmail.com',
       password: '$2a$10$/zxmTG1XNLC1XSMRkuHcO.bvYHi6VWu93PJMU8p77dBHP3TKsuuI.'
     },
