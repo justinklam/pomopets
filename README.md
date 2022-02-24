@@ -36,12 +36,12 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
 #### Timer
 !["pomopets timer"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/timer.png?raw=true)
 #### Timer (Dark Mode)
-!["pomopets timer dark mode"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/timer.png?raw=true)
+!["pomopets timer dark mode"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/timerdark.png?raw=true)
 
 #### Statistics
 !["pomopets stats](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/stats.png?raw=true)
 #### Statistics (Dark Mode)
-!["pomopets stats dark mode"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/stats.png?raw=true)
+!["pomopets stats dark mode"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/statsdark.png?raw=true)
 
 ## Getting Started
 
