@@ -20,18 +20,18 @@ export default function HomeNavBar(props) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link className="nav-link" to="/pets">
+            <Link className="nav-other-links nav-link" to="/pets">
               Pets
             </Link>
-            <Link className="nav-link" to="/timers">
+            <Link className="nav-other-links nav-link" to="/timers">
               Timers
             </Link>
             {session?.state.username ? (
-              <Link className="nav-link" to="/statistics">
+              <Link className="nav-other-links nav-link" to="/statistics">
                 Statistics
               </Link>
             ) : null}
-            <Link className="nav-link" to="/about">
+            <Link className="nav-other-links nav-link" to="/about">
               About Pomodoro
             </Link>{" "}
             {session?.state.username ? (
@@ -73,3 +73,14 @@ export default function HomeNavBar(props) {
     </Navbar>
   );
 }
+
+
+// if (session?.state.username) { // evaluates to true when a user IS logged in
+//   .button - div {
+//     padding - left: 30rem;
+//   }
+// } else {
+//   .button - div {
+//     padding - left: 40rem;
+//   }
+// }
