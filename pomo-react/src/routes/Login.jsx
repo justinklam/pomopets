@@ -67,7 +67,7 @@ export default function Login(props) {
               </Form.Group>
 
               <Button
-                className="login-button"
+                className="login-page-button login-button"
                 variant="primary"
                 type="submit"
                 onClick={handleSubmit}
