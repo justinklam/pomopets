@@ -58,7 +58,7 @@ export default function MyPet() {
     name:"Hedgehog",
     type: 2,
     action: "surprise",
-    image: hedgehog1,
+    image: hedgehog4,
   }, 
   {
     name:"Hedgehog",
@@ -76,7 +76,7 @@ export default function MyPet() {
     name:"Hedgehog",
     type: 2,
     action: "heart",
-    image: hedgehog4,
+    image: hedgehog1,
   }, 
   {
     name:"Hedgehog",
