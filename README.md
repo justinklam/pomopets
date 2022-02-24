@@ -19,7 +19,7 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
 #### Homepage
 !["pomopets homepage"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/home.png?raw=true)
 #### Choose your PomoPet
-!["pomopets pets"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/pets.png?raw=true)
+!["pomopets pets"]()
 #### Timer
 !["pomopets timer"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/timer.png?raw=true)
 #### Statistics
