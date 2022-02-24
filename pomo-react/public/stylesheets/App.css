@@ -169,6 +169,12 @@
   font-family: "Hind Guntur", sans-serif;
 }
 
+.pets-form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .single-pet {
   position: relative;
   height: 200px;

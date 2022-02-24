@@ -53,7 +53,7 @@ export default function PetsCard(props) {
           </div>
           <h5 className="card-title">{props.name}</h5>
           <p className="card-text">{props.description}</p>
-          <div className="form-group">
+          <div className="pets-form-group form-group">
             <Button
               className="pet-button"
               for="exampleFormControlTextarea1"
@@ -62,7 +62,7 @@ export default function PetsCard(props) {
               Choose This Pet
             </Button>
             {toggleName ? (
-              <div>
+              <div className="pets-form-group">
                 <input
                   className="pets-form form-control"
                   placeholder="Name Your Pet"
