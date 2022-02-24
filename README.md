@@ -73,6 +73,7 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
 ### Server-side
 
     "@prisma/client": "^3.9.2",
+    "prisma": "^3.9.2",
     "bcryptjs": "^2.4.3",
     "bundle": "^2.1.0",
     "cookie-parser": "~1.4.4",
