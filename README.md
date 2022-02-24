@@ -11,19 +11,19 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
 - ⭐ Users can start and reset the timer as they wish
 - ⭐ Users can choose their area of focus for the timer
 - ⭐ Statistics page tracks number of Pomodoro sessions completed by area of focus
+- ⭐ Dark Mode
 
 ## Future Features
 
 - Integrate Spotify
 - Unlock new pets based on number of Pomodoro sessions completed
 - Adding more page themes
-- Dark Mode
 - Responsive design for app to be used on any device
 - Audio notification when focus session is completed
 
 ## Screenshots
 
-#### Homepage
+#### Homepage 
 
 !["pomopets homepage"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/home.png?raw=true)
 
@@ -38,6 +38,22 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
 #### Statistics
 
 !["pomopets stats](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/stats.png?raw=true)
+
+#### Homepage (Dark Mode)
+
+!["pomopets homepage dark mode"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/home.png?raw=true)
+
+#### Choose your PomoPet (Dark Mode)
+
+!["pomopets pets dark mode"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/pomopets%20pets.png?raw=true)
+
+#### Timer (Dark Mode)
+
+!["pomopets timer dark mode"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/timer.png?raw=true)
+
+#### Statistics (Dark Mode)
+
+!["pomopets stats dark mode"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/stats.png?raw=true)
 
 ## Getting Started
 

@@ -27,7 +27,7 @@ export default function ThemeButton() {
       progressBarColor: "#FFFFFF", // white
       textColor: "#FFFFFF", // white
       glow: "drop-shadow(0px 0px 3px pink) brightness(375%)",
-      lightsOut: "saturate(50%) brightness(40%)",
+      lightsOut: "saturate(10%) brightness(10%)",
     },
   };
 
