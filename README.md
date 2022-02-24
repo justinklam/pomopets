@@ -5,6 +5,7 @@
 A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](https://github.com/justinklam), [Rhea Azarraga](https://github.com/Rheaazarraga), and [Arushi Katyal](https://github.com/katy-arushi).
 
 ## Features
+
 - ⭐ Allows users to choose and name their own digital pets
 - ⭐ Has a Pomodoro timer that has 25 minute focus sessions and 5 minute breaks
 - ⭐ Users can start and reset the timer as they wish
@@ -12,17 +13,28 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
 - ⭐ Statistics page tracks number of Pomodoro sessions completed by area of focus
 
 ## Future Features
+
 - Integrate Spotify
 - Unlock new pets based on number of Pomodoro sessions completed
+- Adding more page themes
+- Dark Mode
 
 ## Screenshots
+
 #### Homepage
+
 !["pomopets homepage"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/home.png?raw=true)
+
 #### Choose your PomoPet
+
 !["pomopets pets"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/pomopets%20pets.png?raw=true)
+
 #### Timer
+
 !["pomopets timer"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/timer.png?raw=true)
+
 #### Statistics
+
 !["pomopets stats](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/stats.png?raw=true)
 
 ## Getting Started
@@ -33,9 +45,9 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
 2. Create the `.env` by using `.env.example` as a reference: `cp .env.example .env`
 3. Create a database in PostgreSQL named `pomo_db`
    - `CREATE DATABASE pomo_db;`
-4. Update the .env file with your correct local information 
-     - PORT: `3030`
-     - DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/pomo_db"
+4. Update the .env file with your correct local information
+   - PORT: `3030`
+   - DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/pomo_db"
 5. Install dependencies: `npm i`
 6. Create database: `sequelize db:create`
 7. Run migrations: `npx prisma migrate dev --name init`
@@ -49,9 +61,11 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
    - `"proxy": "http://localhost:3030",`
 3. Install dependencies: `npm i`
 4. Run the app: `npm start`
-  
+
 ## Dependencies
+
 ### Server-side
+
     "@prisma/client": "^3.9.2",
     "bcryptjs": "^2.4.3",
     "bundle": "^2.1.0",
@@ -64,8 +78,9 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "pg": "^8.7.3"
-    
+
 ### Client-side
+
     "@faker-js/faker": "^6.0.0-alpha.7",
     "axios": "^0.25.0",
     "bootstrap": "^5.1.3",
@@ -83,6 +98,7 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
     "web-vitals": "^2.1.4"
 
 #### To drop and recreate the database
+
 1. Connect to PostgreSQL using `psql`
 2. Drop the database by running `DROP DATABASE pomo_db;`
 3. Create the database by running `CREATE DATABASE pomo_db;`
