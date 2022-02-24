@@ -41,11 +41,11 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
 
 #### Homepage (Dark Mode)
 
-!["pomopets homepage dark mode"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/home.png?raw=true)
+!["pomopets homepage dark mode"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/homedark.png?raw=true)
 
 #### Choose your PomoPet (Dark Mode)
 
-!["pomopets pets dark mode"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/pomopets%20pets.png?raw=true)
+!["pomopets pets dark mode"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/petsdark.png?raw=true)
 
 #### Timer (Dark Mode)
 
