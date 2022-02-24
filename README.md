@@ -26,10 +26,17 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
 #### Homepage 
 
 !["pomopets homepage"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/home.png?raw=true)
+#### Homepage (Dark Mode)
+
+!["pomopets homepage dark mode"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/home.png?raw=true)
 
 #### Choose your PomoPet
 
 !["pomopets pets"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/pomopets%20pets.png?raw=true)
+
+#### Choose your PomoPet (Dark Mode)
+
+!["pomopets pets dark mode"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/pomopets%20pets.png?raw=true)
 
 #### Timer
 
@@ -39,9 +46,6 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
 
 !["pomopets stats](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/stats.png?raw=true)
 
-#### Homepage (Dark Mode)
-
-!["pomopets homepage dark mode"](https://github.com/justinklam/pomopets/blob/main/pomo-react/public/screenshots/home.png?raw=true)
 
 #### Choose your PomoPet (Dark Mode)
 
