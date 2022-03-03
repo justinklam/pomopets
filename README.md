@@ -56,7 +56,7 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
    - DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/pomo_db"
 5. Install dependencies: `npm i`
 6. Create database: `sequelize db:create`
-7. Run migrations: `npx prisma migrate dev --name init`
+7. Run migrations: `npm run migrate` or `npx prisma migrate dev --name init`
 8. Run the server: `npm start`
 9. Go to `localhost:3030`
 
@@ -109,6 +109,5 @@ A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](http
 1. Connect to PostgreSQL using `psql`
 2. Drop the database by running `DROP DATABASE pomo_db;`
 3. Create the database by running `CREATE DATABASE pomo_db;`
-4. Run `npm run migrate`
-5. Run `npx prisma migrate dev --name init`
-6. Run `npx prisma db seed`
+4. Run `npm run migrate` or `npx prisma migrate dev --name init`
+5. Run `npx prisma db seed`
