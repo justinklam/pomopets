@@ -1,7 +1,10 @@
 .body {
   position: relative;
+  /* size is the issue */
   background-size: cover;
-  height: 100vh;
+  /* vh here modifies page */
+  /* height: 100vh; */
+  min-height: 100vh;
   font-family: "Hind Guntur", sans-serif;
   color: var(--textColor);
   display: flex;
@@ -10,6 +13,7 @@
 
 .body:after {
   content: "";
+  /* position */
   position: absolute;
   left: 0;
   top: 0;
