@@ -1,5 +1,7 @@
-const createError = require('http-errors');
 const express = require('express');
+
+// Middleware and Libaries 
+const createError = require('http-errors');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const bcrypt = require('bcryptjs');
