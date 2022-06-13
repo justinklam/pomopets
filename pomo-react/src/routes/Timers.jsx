@@ -1,3 +1,4 @@
+// component imports
 import Pomodoro from "../components/Pomodoro";
 import MyPet from "../components/MyPet";
 

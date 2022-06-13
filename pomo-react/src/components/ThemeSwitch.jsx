@@ -1,4 +1,6 @@
 import { useState } from "react";
+
+// image asset
 import lightBulb from "../assets/cuteBulb.png";
 
 export default function ThemeButton() {

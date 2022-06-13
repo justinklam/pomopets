@@ -1,7 +1,7 @@
 // component imports
 import PetsCard from "../components/PetsCard";
 
-// asset imports
+// image asset imports
 import pup from "../assets/pets/dog1.gif";
 import hedgehog from "../assets/pets/hedgehog2.gif";
 import cat from "../assets/pets/cat1.gif";
