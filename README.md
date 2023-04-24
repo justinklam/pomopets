@@ -4,8 +4,6 @@
 
 A [Lighthouse Labs](https://www.lighthouselabs.ca/) project by [Justin Lam](https://github.com/justinklam), [Rhea Azarraga](https://github.com/Rheaazarraga), and [Arushi Katyal](https://github.com/katy-arushi).
 
-**Access the app [here](https://pomopets.netlify.app/), live!**
-
 ## Features
 
 - ⭐ Allows users to choose and name their own digital pets
